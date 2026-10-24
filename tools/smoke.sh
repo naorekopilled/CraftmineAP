@@ -1,6 +1,7 @@
 #!/bin/bash
 # End-to-end smoke test: a local Archipelago server and a headless dev Minecraft server that auto-connects to it,
 # both driven through their consoles. usage: smoke.sh [connect|checks|items|all]  (default all)
+# PROD=1 runs the built jar on a real Fabric server (tools-ext/prod-server, see README) instead of the dev run.
 D=$(cd "$(dirname "$0")/.." && pwd)
 STAGE=${1:-all}
 W=$D/tools-ext/smoke
@@ -17,7 +18,15 @@ rm -f "${zip%.zip}.apsave"  # MultiServer resumes from it, and checks from an ea
 
 (cd "$D/tools-ext/ap" && tail -f "$W/ap.in" | SKIP_REQUIREMENTS_UPDATE=1 ../apvenv/bin/python MultiServer.py \
   --port 38281 --host localhost "$zip" > "$W/ap.log" 2>&1) &
-(cd "$D/mod" && tail -f "$W/mc.in" | ./gradlew runSmoke --console=plain > "$W/mc.log" 2>&1) &
+if [ -n "$PROD" ]; then
+  P=$D/tools-ext/prod-server
+  rm -rf "$P/world" && echo eula=true > "$P/eula.txt" && printf 'online-mode=false\n' > "$P/server.properties"
+  (cd "$D/mod" && ./gradlew build -q -x test) && cp "$D"/mod/build/libs/craftmineap-*.jar "$P/mods/craftmineap.jar"
+  (cd "$P" && tail -f "$W/mc.in" | "$JAVA_HOME/bin/java" -Dcraftmineap.autoconnect=localhost:38281,Miner \
+    -Dcraftmineap.dev=true -jar fabric-server-launch.jar nogui > "$W/mc.log" 2>&1) &
+else
+  (cd "$D/mod" && tail -f "$W/mc.in" | ./gradlew runSmoke --console=plain > "$W/mc.log" 2>&1) &
+fi
 
 mc() { echo "$1" >> "$W/mc.in"; }
 ap() { echo "$1" >> "$W/ap.in"; }

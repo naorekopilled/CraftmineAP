@@ -24,6 +24,12 @@ loom {
 			vmArg "-Dcraftmineap.dump=${dumpFile}"
 			programArgs "--nogui"
 		}
+		audit {
+			client()
+			name = "Mixin Audit"
+			runDir = "run-audit"
+			vmArg "-Dcraftmineap.mixinaudit=true"
+		}
 		smoke {
 			server()
 			name = "Smoke Server"

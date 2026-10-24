@@ -12,6 +12,9 @@
 	"entrypoints": {
 		"main": [
 			"craftmineap.CraftmineAP"
+		],
+		"client": [
+			"craftmineap.CraftmineAPClient"
 		]
 	},
 	"depends": {
