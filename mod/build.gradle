@@ -5,6 +5,10 @@ plugins {
 version = project.mod_version
 group = project.maven_group
 
+repositories {
+	mavenCentral()
+}
+
 base {
 	archivesName = project.archives_base_name
 }
@@ -20,7 +24,18 @@ loom {
 			vmArg "-Dcraftmineap.dump=${dumpFile}"
 			programArgs "--nogui"
 		}
+		smoke {
+			server()
+			name = "Smoke Server"
+			runDir = "run-smoke"
+			vmArg "-Dcraftmineap.autoconnect=${findProperty('apAuto') ?: 'localhost:38281,Miner'}"
+			programArgs "--nogui"
+		}
 	}
+}
+
+tasks.matching { it.name == "runSmoke" }.configureEach {
+	standardInput = System.in
 }
 
 dependencies {
@@ -28,6 +43,10 @@ dependencies {
 	mappings loom.officialMojangMappings()
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	include implementation("io.github.archipelagomw:Java-Client:0.2.1") { transitive = false }
+	include implementation("org.java-websocket:Java-WebSocket:1.6.0") { transitive = false }
+	include implementation("org.apache.httpcomponents.core5:httpcore5:5.3.6")
 
 	testImplementation "org.junit.jupiter:junit-jupiter:5.11.4"
 	testRuntimeOnly "org.junit.platform:junit-platform-launcher"
