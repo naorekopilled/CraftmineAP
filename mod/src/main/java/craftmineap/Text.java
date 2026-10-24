@@ -53,6 +53,11 @@ public final class Text {
 	}
 
 	// placeholder
+	public static Component wrongRoom() {
+		return Component.literal("This world belongs to another Archipelago room or slot. Make a new world for this one.");
+	}
+
+	// placeholder
 	public static Component synced() {
 		return Component.literal("Asked Archipelago to resend everything.");
 	}

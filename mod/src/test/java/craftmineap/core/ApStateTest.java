@@ -38,6 +38,7 @@ class ApStateTest {
 		state.specialMinesWon.add("raid");
 		state.keysGiven = 3;
 		state.xpGiven = 4;
+		state.claimRoom("seed-1", "Miner");
 		Path file = dir.resolve("craftmineap.json");
 		state.save(file);
 		ApState loaded = ApState.load(file);
@@ -49,6 +50,7 @@ class ApStateTest {
 		assertEquals(Set.of("raid"), loaded.specialMinesWon);
 		assertEquals(3, loaded.keysGiven);
 		assertEquals(4, loaded.xpGiven);
+		assertFalse(loaded.claimRoom("seed-2", "Miner"));
 		assertEquals(2, loaded.slotData.specialMinesNeeded());
 		assertEquals("mine:raid", loaded.slotData.locations().get(101L));
 	}
@@ -58,6 +60,25 @@ class ApStateTest {
 		ApState state = ApState.load(dir.resolve("none.json"));
 		assertNull(state.slotData);
 		assertFalse(state.started);
+	}
+
+	@Test
+	void loadToleratesMissingFields(@TempDir Path dir) throws Exception {
+		Path file = dir.resolve("craftmineap.json");
+		Files.writeString(file, "{\"address\": \"localhost:38281\"}");
+		ApState state = ApState.load(file);
+		assertEquals("localhost:38281", state.address);
+		assertEquals(0, state.keysGiven);
+		assertTrue(state.receivedItems.isEmpty());
+	}
+
+	@Test
+	void aWorldStaysWithItsFirstRoom() {
+		ApState state = state();
+		assertTrue(state.claimRoom("seed-1", "Miner"));
+		assertTrue(state.claimRoom("seed-1", "Miner"));
+		assertFalse(state.claimRoom("seed-2", "Miner"));
+		assertFalse(state.claimRoom("seed-1", "Other"));
 	}
 
 	@Test

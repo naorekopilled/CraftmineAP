@@ -35,7 +35,7 @@ public class ApClient extends Client {
 	@ArchipelagoEventListener
 	public void onConnectionResult(ConnectionResultEvent event) {
 		if (event.getResult() == ConnectionResult.Success) {
-			session.onConnected(SlotData.fromJson(event.getSlotData(JsonObject.class)));
+			session.onConnected(event.getSeedName(), SlotData.fromJson(event.getSlotData(JsonObject.class)));
 		} else {
 			session.onRefused(event.getResult().name());
 		}

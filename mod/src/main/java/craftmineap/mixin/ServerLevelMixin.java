@@ -25,7 +25,7 @@ public abstract class ServerLevelMixin {
 	@Inject(method = "unlockEffect", at = @At("HEAD"), cancellable = true)
 	private void craftmineap$checkInsteadOfUnlock(WorldEffect effect, CallbackInfo ci) {
 		ApSession session = ApSession.current();
-		if (session == null || !session.isActive() || ItemApplier.isGranting()) {
+		if (session == null || !session.isActive() || ItemApplier.isGranting(effect)) {
 			return;
 		}
 		String id = BuiltInRegistries.WORLD_EFFECT.getKey(effect).getPath();

@@ -188,9 +188,14 @@ public final class ApSession {
 		});
 	}
 
-	void onConnected(SlotData slotData) {
+	void onConnected(String seedName, SlotData slotData) {
 		onServer(() -> {
 			if (client == null) {
+				return;
+			}
+			if (!state.claimRoom(seedName, state.slot)) {
+				broadcast(Text.wrongRoom());
+				disconnect();
 				return;
 			}
 			state.slotData = slotData;

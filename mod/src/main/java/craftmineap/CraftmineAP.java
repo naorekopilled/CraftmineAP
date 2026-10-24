@@ -10,6 +10,8 @@ import java.nio.file.Path;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
+import net.fabricmc.fabric.api.entity.event.v1.ServerEntityWorldChangeEvents;
+import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.message.v1.ServerMessageEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 
@@ -47,11 +49,21 @@ public class CraftmineAP implements ModInitializer {
 				ItemApplier.applyAll(session);
 			}
 		});
+		// keys and XP wait for the hub; leaving a mine is a world change, dying in one a respawn
+		ServerEntityWorldChangeEvents.AFTER_PLAYER_CHANGE_WORLD.register((player, from, to) -> applyIfActive());
+		ServerPlayerEvents.AFTER_RESPAWN.register((oldPlayer, newPlayer, alive) -> applyIfActive());
 		ServerMessageEvents.CHAT_MESSAGE.register((message, sender, params) -> {
 			ApSession session = ApSession.current();
 			if (session != null) {
 				session.sendChat(message.signedContent());
 			}
 		});
+	}
+
+	private static void applyIfActive() {
+		ApSession session = ApSession.current();
+		if (session != null) {
+			ItemApplier.applyAll(session);
+		}
 	}
 }

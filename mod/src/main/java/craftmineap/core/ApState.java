@@ -13,7 +13,6 @@ import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 /** Everything the mod keeps per world, saved as craftmineap.json in the world folder. */
@@ -23,6 +22,9 @@ public class ApState {
 	public String address;
 	public String slot;
 	public String password;
+	/** The room this world belongs to, set on the first connect. */
+	public String seedName;
+	public String roomSlot;
 	public boolean started;
 	public SlotData slotData;
 	public final List<Long> receivedItems = new ArrayList<>();
@@ -39,25 +41,28 @@ public class ApState {
 		if (!Files.isRegularFile(file)) {
 			return state;
 		}
+		JsonObject json;
 		try {
-			JsonObject json = JsonParser.parseString(Files.readString(file)).getAsJsonObject();
-			state.address = string(json, "address");
-			state.slot = string(json, "slot");
-			state.password = string(json, "password");
-			state.started = json.has("started") && json.get("started").getAsBoolean();
-			if (json.has("slot_data")) {
-				state.slotData = SlotData.fromJson(json.getAsJsonObject("slot_data"));
-			}
-			json.getAsJsonArray("received_items").forEach(e -> state.receivedItems.add(e.getAsLong()));
-			json.getAsJsonArray("checked_locations").forEach(e -> state.checkedLocations.add(e.getAsLong()));
-			state.doorsOpened = json.get("doors_opened").getAsInt();
-			json.getAsJsonArray("special_mines_won").forEach(e -> state.specialMinesWon.add(e.getAsString()));
-			state.goalSent = json.get("goal_sent").getAsBoolean();
-			state.keysGiven = json.get("keys_given").getAsInt();
-			state.xpGiven = json.get("xp_given").getAsInt();
+			json = JsonParser.parseString(Files.readString(file)).getAsJsonObject();
 		} catch (IOException e) {
 			throw new UncheckedIOException(e);
 		}
+		state.address = string(json, "address");
+		state.slot = string(json, "slot");
+		state.password = string(json, "password");
+		state.seedName = string(json, "seed_name");
+		state.roomSlot = string(json, "room_slot");
+		state.started = json.has("started") && json.get("started").getAsBoolean();
+		if (json.has("slot_data")) {
+			state.slotData = SlotData.fromJson(json.getAsJsonObject("slot_data"));
+		}
+		array(json, "received_items").forEach(e -> state.receivedItems.add(e.getAsLong()));
+		array(json, "checked_locations").forEach(e -> state.checkedLocations.add(e.getAsLong()));
+		array(json, "special_mines_won").forEach(e -> state.specialMinesWon.add(e.getAsString()));
+		state.doorsOpened = integer(json, "doors_opened");
+		state.goalSent = json.has("goal_sent") && json.get("goal_sent").getAsBoolean();
+		state.keysGiven = integer(json, "keys_given");
+		state.xpGiven = integer(json, "xp_given");
 		return state;
 	}
 
@@ -65,11 +70,21 @@ public class ApState {
 		return json.has(key) && !json.get(key).isJsonNull() ? json.get(key).getAsString() : null;
 	}
 
+	private static JsonArray array(JsonObject json, String key) {
+		return json.has(key) ? json.getAsJsonArray(key) : new JsonArray();
+	}
+
+	private static int integer(JsonObject json, String key) {
+		return json.has(key) ? json.get(key).getAsInt() : 0;
+	}
+
 	public void save(Path file) {
 		JsonObject json = new JsonObject();
 		json.addProperty("address", address);
 		json.addProperty("slot", slot);
 		json.addProperty("password", password);
+		json.addProperty("seed_name", seedName);
+		json.addProperty("room_slot", roomSlot);
 		json.addProperty("started", started);
 		if (slotData != null) {
 			json.add("slot_data", slotData.toJson());
@@ -98,15 +113,20 @@ public class ApState {
 
 	/** The id of the location for a game key like "node:archer", or null when this slot doesn't have it. */
 	public Long locationId(String gameKey) {
-		if (slotData == null) {
-			return null;
+		return slotData == null ? null : slotData.locationId(gameKey);
+	}
+
+	/**
+	 * A world belongs to the first room and slot it connects to: its received items, checks and given keys only
+	 * make sense there. Returns false for any other room or slot.
+	 */
+	public boolean claimRoom(String seed, String slotName) {
+		if (seedName == null) {
+			seedName = seed;
+			roomSlot = slotName;
+			return true;
 		}
-		for (Map.Entry<Long, String> e : slotData.locations().entrySet()) {
-			if (e.getValue().equals(gameKey)) {
-				return e.getKey();
-			}
-		}
-		return null;
+		return seedName.equals(seed) && roomSlot.equals(slotName);
 	}
 
 	public boolean markChecked(long id) {

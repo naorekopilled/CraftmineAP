@@ -2,7 +2,7 @@ package craftmineap.mixin;
 
 import craftmineap.ap.ApSession;
 import craftmineap.ap.UnlockGate;
-import java.util.HashSet;
+import craftmineap.core.ActiveUnlocks;
 import java.util.Set;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -59,18 +59,11 @@ public abstract class ServerPlayerUnlocksMixin {
 
 	@Inject(method = "getActiveUnlocks", at = @At("RETURN"), cancellable = true)
 	private void craftmineap$activeFromGranted(CallbackInfoReturnable<Set<Holder<PlayerUnlock>>> cir) {
-		if (!UnlockGate.active()) {
-			return;
+		if (UnlockGate.active()) {
+			cir.setReturnValue(ActiveUnlocks.compute(
+				BuiltInRegistries.PLAYER_UNLOCK.listElements().filter(UnlockGate::granted).map(h -> (Holder<PlayerUnlock>) h).toList(),
+				h -> h.value().disables(),
+				h -> !h.value().exclusiveKey().isEmpty() && !isActiveExclusive(h)));
 		}
-		Set<Holder<PlayerUnlock>> granted = new HashSet<>();
-		BuiltInRegistries.PLAYER_UNLOCK.listElements().filter(UnlockGate::granted).forEach(granted::add);
-		Set<Holder<PlayerUnlock>> active = new HashSet<>(granted);
-		for (Holder<PlayerUnlock> holder : granted) {
-			holder.value().disables().forEach(active::remove);
-			if (!holder.value().exclusiveKey().isEmpty() && !isActiveExclusive(holder)) {
-				active.remove(holder);
-			}
-		}
-		cir.setReturnValue(active);
 	}
 }

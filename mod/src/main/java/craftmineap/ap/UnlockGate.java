@@ -23,6 +23,10 @@ public final class UnlockGate {
 		return holder.unwrapKey().map(k -> granted.contains(k.location().getPath())).orElse(false);
 	}
 
+	static Set<String> grantedIds() {
+		return granted;
+	}
+
 	static void set(boolean isActive, Set<String> grantedUnlocks) {
 		granted = Set.copyOf(grantedUnlocks);
 		active = isActive;
