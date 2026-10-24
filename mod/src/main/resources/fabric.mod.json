@@ -1,0 +1,18 @@
+{
+	"schemaVersion": 1,
+	"id": "craftmineap",
+	"version": "${version}",
+	"name": "Craftmine AP",
+	"description": "",
+	"authors": ["jesskortes"],
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["craftmineap.CraftmineAP"]
+	},
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "25w14craftmine",
+		"fabric-api": "*"
+	}
+}
