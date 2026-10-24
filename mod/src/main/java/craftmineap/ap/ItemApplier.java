@@ -1,5 +1,6 @@
 package craftmineap.ap;
 
+import craftmineap.core.ActiveUnlocks;
 import craftmineap.core.Grants;
 import craftmineap.mixin.ServerPlayerAccessor;
 import craftmineap.mixin.ServerPlayerUnlocksInvoker;
@@ -9,6 +10,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.ServerPlayerUnlocks;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.players.PlayerUnlock;
 import net.minecraft.world.item.ItemStack;
@@ -83,16 +85,16 @@ public final class ItemApplier {
 	}
 
 	/**
-	 * Runs granted unlocks' activation (idempotent: attribute modifiers are replaced, not stacked). Exclusive ones
-	 * (pets) only when newly granted: activating one switches the others in its group off, and that is the player's
-	 * choice once they have it.
+	 * Runs granted unlocks' activation (idempotent: attribute modifiers are replaced, not stacked), in registry order
+	 * like the game's own login, so a pet is set up before its upgrades. See ActiveUnlocks.activateOnApply for pets.
 	 */
 	private static void activateGranted(ServerPlayer player, Grants grants, Set<String> grantedBefore) {
-		ServerPlayerUnlocksInvoker unlocks = (ServerPlayerUnlocksInvoker) ((ServerPlayerAccessor) player).craftmineap$unlocks();
+		ServerPlayerUnlocks playerUnlocks = ((ServerPlayerAccessor) player).craftmineap$unlocks();
+		ServerPlayerUnlocksInvoker unlocks = (ServerPlayerUnlocksInvoker) playerUnlocks;
 		for (Holder<PlayerUnlock> holder : BuiltInRegistries.PLAYER_UNLOCK.listElements().toList()) {
 			String id = holder.unwrapKey().orElseThrow().location().getPath();
-			boolean exclusive = !holder.value().exclusiveKey().isEmpty();
-			if (grants.unlocks().contains(id) && (!exclusive || !grantedBefore.contains(id))) {
+			if (grants.unlocks().contains(id) && ActiveUnlocks.activateOnApply(!holder.value().exclusiveKey().isEmpty(),
+				!grantedBefore.contains(id), playerUnlocks.isActiveExclusive(holder))) {
 				unlocks.craftmineap$activate(holder);
 			}
 		}

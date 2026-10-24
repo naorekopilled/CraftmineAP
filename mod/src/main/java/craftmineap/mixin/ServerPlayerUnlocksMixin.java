@@ -8,6 +8,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.server.ServerPlayerUnlocks;
 import net.minecraft.server.players.PlayerUnlock;
+import org.slf4j.LoggerFactory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -47,12 +48,21 @@ public abstract class ServerPlayerUnlocksMixin {
 		}
 	}
 
-	/** Vanilla only runs mine-start effects for bought nodes; here every active (granted) one runs. */
+	/**
+	 * Vanilla only runs mine-start effects for bought nodes; here every active (granted) one runs. One failing must not
+	 * stop the rest, and the game runs this inside a future that drops exceptions, so each is caught and logged.
+	 */
 	@Inject(method = "onMineEnter()V", at = @At("HEAD"), cancellable = true)
 	private void craftmineap$mineEnterGranted(CallbackInfo ci) {
 		if (UnlockGate.active()) {
 			ServerPlayerUnlocksInvoker self = (ServerPlayerUnlocksInvoker) this;
-			getActiveUnlocks().forEach(self::craftmineap$onMineEnter);
+			for (Holder<PlayerUnlock> holder : getActiveUnlocks()) {
+				try {
+					self.craftmineap$onMineEnter(holder);
+				} catch (RuntimeException e) {
+					LoggerFactory.getLogger("craftmineap").error("Mine start effect of {} failed", holder.getRegisteredName(), e);
+				}
+			}
 			ci.cancel();
 		}
 	}

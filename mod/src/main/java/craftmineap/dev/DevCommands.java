@@ -48,6 +48,20 @@ public final class DevCommands {
 				ctx.getSource().sendSuccess(() -> Component.literal("apdev " + id + " active=" + active), false);
 				return 1;
 			})))
+			.then(literal("mine_gear").then(argument("item", StringArgumentType.word()).executes(ctx -> {
+				String item = ctx.getArgument("item", String.class);
+				FakePlayer player = FakePlayer.get(hub(ctx.getSource()));
+				player.getInventory().clearContent();
+				player.onMineEntered();
+				int count = player.getInventory().countItem(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(item)));
+				ctx.getSource().sendSuccess(() -> Component.literal("apdev mine_gear " + item + "=" + count), false);
+				return 1;
+			})))
+			// what entering a mine does to the server: the game restarts inside it, without a server stop
+			.then(literal("restart").executes(ctx -> {
+				ctx.getSource().theGame().server().sayGoodbye();
+				return 1;
+			}))
 			.then(literal("crafter_xp").then(argument("amount", IntegerArgumentType.integer(1)).executes(ctx -> {
 				ServerLevel hub = hub(ctx.getSource());
 				hub.addExperienceToMineCrafter(ctx.getArgument("amount", Integer.class));
