@@ -38,9 +38,12 @@ wait_for "$W/mc.log" "Connected to Archipelago as Miner" 300 || finish 1
 
 mc "start"
 wait_for "$W/mc.log" "The randomizer is on" 30 || finish 1
-mc "unlock_world_effect minecraft:foxes"
+mc "apdev unlock_effect foxes"
 wait_for "$W/ap.log" "Unlock Foxes" 30 || finish 1
-mc "unlock_world_effect minecraft:foxes"
+mc "apdev effect_unlocked foxes"
+wait_for "$W/mc.log" "apdev foxes unlocked=false" 30 || finish 1
+mc "apdev crafter_xp 300"
+wait_for "$W/ap.log" "Mine Crafter Level 2" 30 || finish 1
 [ "$STAGE" = checks ] && { echo "SMOKE OK"; finish 0; }
 
 ap "/send Miner Desert Biome"

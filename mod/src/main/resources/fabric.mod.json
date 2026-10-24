@@ -4,15 +4,22 @@
 	"version": "${version}",
 	"name": "Craftmine AP",
 	"description": "",
-	"authors": ["jesskortes"],
+	"authors": [
+		"jesskortes"
+	],
 	"license": "MIT",
 	"environment": "*",
 	"entrypoints": {
-		"main": ["craftmineap.CraftmineAP"]
+		"main": [
+			"craftmineap.CraftmineAP"
+		]
 	},
 	"depends": {
 		"fabricloader": ">=0.16.14",
 		"minecraft": "1.21.6-alpha.25.14.craftmine",
 		"fabric-api": "*"
-	}
+	},
+	"mixins": [
+		"craftmineap.mixins.json"
+	]
 }

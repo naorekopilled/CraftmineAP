@@ -22,6 +22,11 @@ public record SlotData(
 	public record ItemInfo(String kind, List<String> keys) {
 	}
 
+	/** True for ingredients that are items in this slot (their unlock is a check, the item is what unlocks them). */
+	public boolean isItemIngredient(String ingredientId) {
+		return items.values().stream().anyMatch(i -> i.kind().equals("ingredient") && i.keys().contains(ingredientId));
+	}
+
 	public static SlotData fromJson(JsonObject json) {
 		Map<Long, String> locations = new HashMap<>();
 		json.getAsJsonObject("locations").entrySet()

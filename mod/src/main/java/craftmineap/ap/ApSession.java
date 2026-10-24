@@ -3,6 +3,7 @@ package craftmineap.ap;
 import craftmineap.Text;
 import craftmineap.core.ApState;
 import craftmineap.core.SlotData;
+import net.minecraft.advancements.AdvancementHolder;
 import io.github.archipelagomw.ClientStatus;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
@@ -137,6 +138,21 @@ public final class ApSession {
 		}
 		if (state.goalReached()) {
 			sendGoal();
+		}
+	}
+
+	public void sendCrafterLevels(int level) {
+		if (!isActive()) {
+			return;
+		}
+		for (int n = 1; n <= Math.min(level, state.slotData.crafterLevelChecks()); n++) {
+			sendCheck("crafter:" + n);
+		}
+	}
+
+	public void sendAdvancement(AdvancementHolder holder) {
+		if (holder.id().getNamespace().equals("minecraft")) {
+			sendCheck("advancement:" + holder.id().getPath());
 		}
 	}
 

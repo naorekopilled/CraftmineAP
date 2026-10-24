@@ -29,6 +29,7 @@ loom {
 			name = "Smoke Server"
 			runDir = "run-smoke"
 			vmArg "-Dcraftmineap.autoconnect=${findProperty('apAuto') ?: 'localhost:38281,Miner'}"
+			vmArg "-Dcraftmineap.dev=true"
 			programArgs "--nogui"
 		}
 	}
