@@ -92,6 +92,13 @@ The game data the apworld uses (`apworld/craftmine/data/craftmine.json`) comes f
 `cd mod && ./gradlew runDump`. The mod carries its own copy of the logic for the Tracker tab; after changing the
 rules, run `tools/export_logic.sh` to update it (the apworld tests fail until you do).
 
+## Credits
+
+The mod jar bundles [Java-Client](https://github.com/ArchipelagoMW/Java-Client) (MIT),
+[Java-WebSocket](https://github.com/TooTallNate/Java-WebSocket) (MIT) and
+[Apache HttpComponents Core](https://hc.apache.org) (Apache License 2.0). Their license texts ship in the jar, see
+[THIRD_PARTY_LICENSES.txt](mod/src/main/resources/THIRD_PARTY_LICENSES.txt).
+
 ## License
 
 MIT, see [LICENSE](LICENSE).
