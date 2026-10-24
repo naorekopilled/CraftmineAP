@@ -1,13 +1,13 @@
 # Craftmine AP
 
 An [Archipelago](https://archipelago.gg) randomizer for Craftmine, the Minecraft April Fools 2025 snapshot
-(`25w14craftmine`). It has two parts: a Fabric mod for the game and the `craftmine` apworld for Archipelago.
+(`25w14craftmine`).
 
 Mine ingredients and skill-tree upgrades are shuffled into the multiworld. Unlocking an ingredient, buying a
 skill-tree node, earning an advancement, winning a special mine, leveling the Mine Crafter and opening a hub door
-send checks instead of giving you the reward. The reward comes from whoever finds your item.
+send checks.
 
-Singleplayer only: one player per slot.
+Singleplayer only for now, multiplayer planned for the future.
 
 ## What you need
 
@@ -20,13 +20,9 @@ Singleplayer only: one player per slot.
 
 1. In your launcher, make a new instance for Minecraft `25w14craftmine` (it is a snapshot) with the Fabric loader.
 2. Put Fabric API and `craftmineap-0.1.0.jar` in that instance's `mods` folder.
-3. Install `craftmine.apworld` by opening it with the Archipelago launcher, or by copying it into the launcher's
-   `custom_worlds` folder.
+3. Install `craftmine.apworld` like any other apworld.
 
-## Make a seed
-
-In the Archipelago launcher, click Generate Template Options to get `Craftmine.yaml`, edit it, put it in the
-`Players` folder, and generate as you would for any other game.
+## Options
 
 | Option | Default | What it does |
 | --- | --- | --- |
@@ -35,7 +31,7 @@ In the Archipelago launcher, click Generate Template Options to get `Craftmine.y
 | `advancement_checks` | on | Advancements are checks (36). |
 | `crafter_level_checks` | 10 | Mine Crafter levels 1 up to this number are checks (0 to 48). Later levels take a very long time. |
 | `hub_door_checks` | on | Opening a hub door is a check (10 doors), and Shimmering Keys only come from the multiworld. |
-| `death_link` | off | Dying in a mine kills the other Death Link players, and their deaths kill you while you are in a mine. |
+| `death_link` | off | Only deaths in a mine are sent, and a received death only kills you while you are in a mine. |
 
 With the defaults a seed has 293 checks: 81 ingredients, 147 skill-tree nodes, 36 advancements, 9 special mines,
 10 Mine Crafter levels and 10 hub doors.
@@ -47,11 +43,10 @@ With the defaults a seed has 293 checks: 81 ingredients, 147 skill-tree nodes, 3
    Put the slot name in quotes if it has spaces.
 3. Type `/start`. Items you receive are only applied once the randomizer is started in that world.
 
-`/connect` without arguments reconnects with the saved details, `/disconnect` disconnects, and `/sync` asks the
-server to send everything again. A world belongs to the first room and slot it connects to, so use a new world for
+`/connect` without arguments reconnects with the saved details. `/disconnect` and `/sync` are there too. A world belongs to the first room and slot it connects to, so use a new world for
 each seed.
 
-Messages from the Archipelago server show up in chat, colored like the Archipelago text client.
+Server messages show up in chat, colored like the text client.
 
 ### How the shuffle works in game
 
@@ -76,7 +71,7 @@ still needs. The tab updates each time you open the screen.
 
 ## Known limits
 
-- Singleplayer only. The mod relies on the game's server and client sharing one process.
+- Singleplayer only for now. The mod relies on the game's server and client sharing one process.
 - Not every check has been played through in game yet. If something does not send or does not unlock, please open
   an issue with your `latest.log`.
 
