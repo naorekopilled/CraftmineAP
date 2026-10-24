@@ -23,3 +23,11 @@ LOCATION_NAME_TO_ID.update({a["name"]: BASE_ID + 3000 + i for i, (k, a) in enume
 LOCATION_NAME_TO_ID.update({name: BASE_ID + 4000 + i for i, name in enumerate(MINE_LOCATION.values())})
 LOCATION_NAME_TO_ID.update({names.crafter_level_location(n): BASE_ID + 5000 + n for n in range(1, 49)})
 LOCATION_NAME_TO_ID.update({names.door_location(n): BASE_ID + 6000 + n for n in range(1, HUB_DOORS + 1)})
+
+# what the mod sees: location name -> "<kind>:<game key>"
+LOCATION_KEY = {name: f"ingredient:{k}" for k, name in INGREDIENT_LOCATION.items()}
+LOCATION_KEY.update({name: f"node:{k}" for k, name in NODE_LOCATION.items()})
+LOCATION_KEY.update({name: f"advancement:{k}" for k, name in ADVANCEMENT_LOCATION.items()})
+LOCATION_KEY.update({name: f"mine:{k}" for k, name in MINE_LOCATION.items()})
+LOCATION_KEY.update({names.crafter_level_location(n): f"crafter:{n}" for n in range(1, 49)})
+LOCATION_KEY.update({names.door_location(n): f"door:{n}" for n in range(1, HUB_DOORS + 1)})

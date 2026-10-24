@@ -18,7 +18,20 @@ class TestDefault(CraftmineTestBase):
     def test_slot_data_keys(self):
         self.assertEqual(set(self.world.fill_slot_data()), {
             "goal", "special_mines_needed", "advancement_checks", "crafter_level_checks", "hub_door_checks",
-            "death_link", "world_version"})
+            "death_link", "world_version", "locations", "items"})
+
+    def test_slot_data_maps(self):
+        slot = self.world.fill_slot_data()
+        ids = self.world.item_name_to_id
+        self.assertEqual(slot["items"][str(ids["Progressive Sword"])]["keys"],
+                         ["starter_sword", "starter_sword_iron", "better_starter_sword", "best_starter_sword"])
+        self.assertEqual(slot["items"][str(ids["Foxes"])], {"kind": "ingredient", "keys": ["foxes"]})
+        self.assertEqual(slot["items"][str(ids["Shimmering Key"])], {"kind": "key", "keys": []})
+        self.assertEqual(slot["items"][str(ids["XP Bundle"])], {"kind": "xp", "keys": []})
+        own = {str(loc.address) for loc in self.multiworld.get_locations(self.player)}
+        self.assertEqual(set(slot["locations"]), own)
+        self.assertEqual(slot["locations"][str(self.world.location_name_to_id["Unlock Foxes"])], "ingredient:foxes")
+        self.assertEqual(slot["locations"][str(self.world.location_name_to_id["Open Hub Door 3"])], "door:3")
 
     def test_keys_in_pool(self):
         keys = [i for i in self.multiworld.itempool if i.name == "Shimmering Key"]

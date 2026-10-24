@@ -5,8 +5,8 @@ from worlds.AutoWorld import WebWorld, World
 
 from . import names
 from .data import ITEM_INGREDIENTS, TREE_UNLOCKS, unlock_item_name
-from .items import INGREDIENT_ITEM, ITEM_NAME_TO_ID, CraftmineItem
-from .locations import (ADVANCEMENT_LOCATION, INGREDIENT_LOCATION, LOCATION_NAME_TO_ID, MINE_LOCATION,
+from .items import INGREDIENT_ITEM, ITEM_INFO, ITEM_NAME_TO_ID, CraftmineItem
+from .locations import (ADVANCEMENT_LOCATION, INGREDIENT_LOCATION, LOCATION_KEY, LOCATION_NAME_TO_ID, MINE_LOCATION,
                         NODE_LOCATION, CraftmineLocation)
 from .options import CraftmineOptions
 from .rules import progression_item_names, set_all_rules
@@ -82,4 +82,7 @@ class CraftmineWorld(World):
             "hub_door_checks": bool(self.options.hub_door_checks),
             "death_link": bool(self.options.death_link),
             "world_version": "0.1.0",
+            "locations": {str(loc.address): LOCATION_KEY[loc.name]
+                          for loc in self.multiworld.get_locations(self.player)},
+            "items": {str(ITEM_NAME_TO_ID[name]): info for name, info in ITEM_INFO.items()},
         }
