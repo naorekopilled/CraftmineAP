@@ -6,3 +6,4 @@ mod/.gradle/
 __pycache__/
 mod/run-smoke/
 mod/run-audit/
+mod/logs/

@@ -3,9 +3,9 @@
 	"id": "craftmineap",
 	"version": "${version}",
 	"name": "Craftmine AP",
-	"description": "",
+	"description": "Plays Craftmine as part of an Archipelago multiworld. Mine ingredients and skill-tree upgrades come from other players.",
 	"authors": [
-		"jesskortes"
+		"naorekopilled"
 	],
 	"license": "MIT",
 	"environment": "*",
