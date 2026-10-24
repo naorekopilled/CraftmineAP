@@ -18,6 +18,10 @@
 		"defaultRequire": 1
 	},
 	"client": [
-		"client.ClientPlayerUnlocksMixin"
+		"client.AdvancementTabMixin",
+		"client.AdvancementWidgetMixin",
+		"client.AdvancementsScreenMixin",
+		"client.ClientPlayerUnlocksMixin",
+		"client.PlayerUnlockWidgetMixin"
 	]
 }

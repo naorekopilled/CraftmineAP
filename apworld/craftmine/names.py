@@ -1,4 +1,3 @@
-# placeholder: every location name pattern here is to be rewritten by the user
 from .data import UNLOCKS
 
 _DUPLICATE_UNLOCK_NAMES = {n for n in (u["name"] for u in UNLOCKS.values())
@@ -6,7 +5,7 @@ _DUPLICATE_UNLOCK_NAMES = {n for n in (u["name"] for u in UNLOCKS.values())
 
 
 def ingredient_location(ingredient_name: str) -> str:
-    return f"Unlock {ingredient_name}"  # placeholder
+    return f"Ingredient: {ingredient_name}"
 
 
 def node_location(unlock_id: str) -> str:
@@ -14,20 +13,20 @@ def node_location(unlock_id: str) -> str:
     suffix = unlock_id.rsplit("_", 1)[-1]
     if name in _DUPLICATE_UNLOCK_NAMES and suffix.isdigit():
         name = f"{name} {suffix}"
-    return f"Buy {name}"  # placeholder
+    return f"Upgrade: {name}"
 
 
 def special_mine_location(mine_name: str) -> str:
-    return f"Win {mine_name}"  # placeholder
+    return f"Special Mine: {mine_name}"
 
 
 def crafter_level_location(level: int) -> str:
-    return f"Mine Crafter Level {level}"  # placeholder
+    return f"Mine Crafter Level {level}"
 
 
 def door_location(number: int) -> str:
-    return f"Open Hub Door {number}"  # placeholder
+    return f"Hub Door {number}"
 
 
 SHIMMERING_KEY = "Shimmering Key"
-XP_BUNDLE = "XP Bundle"  # placeholder
+XP_BUNDLE = "Bag of XP"

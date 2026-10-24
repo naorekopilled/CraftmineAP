@@ -11,9 +11,9 @@ class TestDefault(CraftmineTestBase):
         world = self.world
         self.assertEqual(world.item_name_to_id["Amplified World"], BASE + 1000)
         self.assertEqual(world.item_name_to_id["Shimmering Key"], BASE + 3000)
-        self.assertEqual(world.item_name_to_id["XP Bundle"], BASE + 3001)
+        self.assertEqual(world.item_name_to_id["Bag of XP"], BASE + 3001)
         self.assertEqual(world.location_name_to_id["Mine Crafter Level 1"], BASE + 5001)
-        self.assertEqual(world.location_name_to_id["Open Hub Door 1"], BASE + 6001)
+        self.assertEqual(world.location_name_to_id["Hub Door 1"], BASE + 6001)
 
     def test_slot_data_keys(self):
         self.assertEqual(set(self.world.fill_slot_data()), {
@@ -27,11 +27,11 @@ class TestDefault(CraftmineTestBase):
                          ["starter_sword", "starter_sword_iron", "better_starter_sword", "best_starter_sword"])
         self.assertEqual(slot["items"][str(ids["Foxes"])], {"kind": "ingredient", "keys": ["foxes"]})
         self.assertEqual(slot["items"][str(ids["Shimmering Key"])], {"kind": "key", "keys": []})
-        self.assertEqual(slot["items"][str(ids["XP Bundle"])], {"kind": "xp", "keys": []})
+        self.assertEqual(slot["items"][str(ids["Bag of XP"])], {"kind": "xp", "keys": []})
         own = {str(loc.address) for loc in self.multiworld.get_locations(self.player)}
         self.assertEqual(set(slot["locations"]), own)
-        self.assertEqual(slot["locations"][str(self.world.location_name_to_id["Unlock Foxes"])], "ingredient:foxes")
-        self.assertEqual(slot["locations"][str(self.world.location_name_to_id["Open Hub Door 3"])], "door:3")
+        self.assertEqual(slot["locations"][str(self.world.location_name_to_id["Ingredient: Foxes"])], "ingredient:foxes")
+        self.assertEqual(slot["locations"][str(self.world.location_name_to_id["Hub Door 3"])], "door:3")
 
     def test_keys_in_pool(self):
         keys = [i for i in self.multiworld.itempool if i.name == "Shimmering Key"]
@@ -46,8 +46,8 @@ class TestDefault(CraftmineTestBase):
 
     def test_ids_index_the_full_game_lists(self):
         from ..data import INGREDIENTS, UNLOCKS
-        self.assertEqual(self.world.location_name_to_id["Unlock Foxes"], BASE + 1000 + list(INGREDIENTS).index("foxes"))
-        self.assertEqual(self.world.location_name_to_id["Buy Combat"], BASE + 2000 + list(UNLOCKS).index("combatant"))
+        self.assertEqual(self.world.location_name_to_id["Ingredient: Foxes"], BASE + 1000 + list(INGREDIENTS).index("foxes"))
+        self.assertEqual(self.world.location_name_to_id["Upgrade: Combat"], BASE + 2000 + list(UNLOCKS).index("combatant"))
         self.assertEqual(self.world.item_name_to_id["Progressive Sword"],
                          BASE + 2000 + list(UNLOCKS).index("starter_sword"))
         self.assertEqual(self.world.item_name_to_id["Combat"], BASE + 2000 + list(UNLOCKS).index("combatant"))
@@ -62,7 +62,7 @@ class TestAllTogglesOff(CraftmineTestBase):
     def test_no_keys_or_door_checks(self):
         self.assertFalse([i for i in self.multiworld.itempool if i.name == "Shimmering Key"])
         names = {loc.name for loc in self.multiworld.get_locations(self.player)}
-        self.assertFalse({n for n in names if n.startswith("Open Hub Door") or n.startswith("Mine Crafter Level")})
+        self.assertFalse({n for n in names if n.startswith("Hub Door") or n.startswith("Mine Crafter Level")})
 
     def test_item_and_location_counts_match(self):
         self.assertEqual(len(self.multiworld.itempool), len(self.multiworld.get_unfilled_locations(self.player)))

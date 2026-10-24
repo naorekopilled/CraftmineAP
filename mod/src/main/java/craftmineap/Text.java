@@ -1,5 +1,6 @@
 package craftmineap;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 
 /** Every chat line the mod prints. */
@@ -7,68 +8,102 @@ public final class Text {
 	private Text() {
 	}
 
-	// placeholder
 	public static Component connecting(String address) {
 		return Component.literal("Connecting to " + address + "...");
 	}
 
-	// placeholder
 	public static Component connected(String slot) {
 		return Component.literal("Connected to Archipelago as " + slot + ".");
 	}
 
-	// placeholder
 	public static Component typeStart() {
-		return Component.literal("Type /start to begin the randomizer in this world.");
+		return Component.literal("Type /start to turn the randomizer on for this world.");
 	}
 
-	// placeholder
 	public static Component started() {
-		return Component.literal("The randomizer is on in this world.");
+		return Component.literal("Randomizer started. Good luck!");
 	}
 
-	// placeholder
 	public static Component notConnectedYet() {
-		return Component.literal("Connect first: /connect <address> <slot> [password]");
+		return Component.literal("You are not connected. Use /connect <address> <slot> [password]");
 	}
 
-	// placeholder
 	public static Component noSavedConnection() {
-		return Component.literal("No saved connection for this world: /connect <address> <slot> [password]");
+		return Component.literal("This world has no saved connection. Use /connect <address> <slot> [password]");
 	}
 
-	// placeholder
 	public static Component connectUsage() {
-		return Component.literal("/connect <address> <slot> [password]");
+		return Component.literal("Usage: /connect <address> <slot> [password]");
 	}
 
-	// placeholder
 	public static Component refused(String reason) {
-		return Component.literal("Archipelago refused the connection: " + reason);
+		return Component.literal("Connection refused: " + reason);
 	}
 
-	// placeholder
 	public static Component disconnected(String reason) {
 		return Component.literal("Disconnected from Archipelago: " + reason);
 	}
 
-	// placeholder
 	public static Component error(String message) {
 		return Component.literal("Archipelago error: " + message);
 	}
 
-	// placeholder
 	public static Component wrongRoom() {
-		return Component.literal("This world belongs to another Archipelago room or slot. Make a new world for this one.");
+		return Component.literal("This world is tied to a different room or slot. Make a new world for this seed.");
 	}
 
-	// placeholder
 	public static Component synced() {
-		return Component.literal("Asked Archipelago to resend everything.");
+		return Component.literal("Asked the server to send all your items again.");
 	}
 
-	// placeholder
 	public static Component deathLink(String source, String cause) {
 		return Component.literal(cause == null || cause.isEmpty() ? source + " died." : cause);
+	}
+
+	// the tracker tab in the advancements screen (L)
+	public static Component trackerTitle() {
+		return Component.literal("Tracker");
+	}
+
+	public static Component trackerProgress(int done, int total) {
+		return Component.literal(done + "/" + total + " checks");
+	}
+
+	// the tracker's group names (skill-tree and advancement groups use the game's tab names);
+	// key is one of ingredient, mine, crafter, door
+	public static Component trackerBranch(String key) {
+		return Component.literal(switch (key) {
+			case "ingredient" -> "Mine Ingredients";
+			case "mine" -> "Special Mines";
+			case "crafter" -> "Mine Crafter Levels";
+			default -> "Hub Doors";
+		});
+	}
+
+	public static Component trackerDone() {
+		return Component.literal("Done").withStyle(ChatFormatting.GOLD);
+	}
+
+	public static Component trackerInLogic() {
+		return Component.literal("In logic").withStyle(ChatFormatting.GREEN);
+	}
+
+	public static Component trackerOutOfLogic() {
+		return Component.literal("Out of logic").withStyle(ChatFormatting.RED);
+	}
+
+	// needs is the list of what the check still needs, already joined
+	public static Component trackerNeeds(String needs) {
+		return Component.literal("Needs: " + needs);
+	}
+
+	// one thing a check needs
+	public static String trackerNeed(String kind, String what, int amount) {
+		return switch (kind) {
+			case "craft" -> "Crafting";
+			case "special" -> "any special mine";
+			case "tab" -> "every " + what + " upgrade";
+			default -> amount > 1 ? what + " x" + amount : what;
+		};
 	}
 }

@@ -4,7 +4,8 @@ from Options import Choice, DeathLink, DefaultOnToggle, PerGameCommonOptions, Ra
 
 
 class Goal(Choice):
-    """placeholder: What wins the game. special_mines: win a number of special event mines.
+    """What you need to do to win.
+    special_mines: win a number of different special mines, set by special_mines_needed.
     ender_dragon: win the Ender Dragon mine."""
     display_name = "Goal"
     option_special_mines = 0
@@ -13,7 +14,7 @@ class Goal(Choice):
 
 
 class SpecialMinesNeeded(Range):
-    """placeholder: How many different special event mines to win, with the special_mines goal."""
+    """How many different special mines you need to win for the special_mines goal."""
     display_name = "Special Mines Needed"
     range_start = 1
     range_end = 9
@@ -21,12 +22,13 @@ class SpecialMinesNeeded(Range):
 
 
 class AdvancementChecks(DefaultOnToggle):
-    """placeholder: Advancements are checks."""
+    """Earning an advancement sends a check."""
     display_name = "Advancement Checks"
 
 
 class CrafterLevelChecks(Range):
-    """placeholder: Mine Crafter levels up to this one are checks. 0 = none. Levels get slow fast."""
+    """Every Mine Crafter level from 1 up to this one sends a check. 0 turns them off.
+    Later levels take a long time to reach."""
     display_name = "Mine Crafter Level Checks"
     range_start = 0
     range_end = 48
@@ -34,7 +36,7 @@ class CrafterLevelChecks(Range):
 
 
 class HubDoorChecks(DefaultOnToggle):
-    """placeholder: Opening hub doors is a check, and shimmering keys only come from the multiworld."""
+    """Opening a hub door sends a check. With this on, Shimmering Keys only come from the multiworld."""
     display_name = "Hub Door Checks"
 
 

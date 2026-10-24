@@ -20,8 +20,8 @@ class CraftmineWeb(WebWorld):
 
 
 class CraftmineWorld(World):
-    """placeholder: Craftmine, Minecraft's April Fools 2025 snapshot. Mine ingredients and skill-tree unlocks are
-    spread across the multiworld."""
+    """Craftmine is Minecraft's April Fools snapshot from 2025, where you build mines out of ingredients and then
+    clear them. Mine ingredients and skill-tree upgrades are shuffled into the multiworld."""
 
     game = "Craftmine"
     web = CraftmineWeb()

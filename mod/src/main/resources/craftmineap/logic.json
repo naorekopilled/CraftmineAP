@@ -1,0 +1,4201 @@
+{
+ "items": {
+  "1129120744": "Amplified World",
+  "1129120746": "Armadillos",
+  "1129120747": "Axolotls",
+  "1129120748": "Badlands Biomes",
+  "1129120749": "Base rock type: Andesite",
+  "1129120750": "Base rock type: Blackstone",
+  "1129120751": "Base rock type: Deepslate",
+  "1129120752": "Base rock type: Diorite",
+  "1129120753": "Base rock type: End Stone",
+  "1129120754": "Base rock type: Granite",
+  "1129120756": "Base rock type: Tuff",
+  "1129120757": "Bees",
+  "1129120758": "Blazes",
+  "1129120759": "Bouncy Blocks",
+  "1129120760": "Breezes",
+  "1129120761": "Cave Exits",
+  "1129120762": "Cave Spiders",
+  "1129120763": "Cave World",
+  "1129120766": "Creepers",
+  "1129120767": "Dark Cave World",
+  "1129120768": "Dark Forest Biomes",
+  "1129120769": "Deep Dark Biome",
+  "1129120770": "Desert Biome",
+  "1129120771": "Dry Land",
+  "1129120772": "End Biomes",
+  "1129120774": "Endermen",
+  "1129120775": "Endermites",
+  "1129120776": "Eternal Lightning",
+  "1129120777": "Eternal Night",
+  "1129120778": "Eternal Rain",
+  "1129120780": "Evokers",
+  "1129120781": "Explosive Traps",
+  "1129120782": "Fish Out of Water",
+  "1129120783": "Floating Islands",
+  "1129120784": "Forest Biomes",
+  "1129120785": "Foxes",
+  "1129120787": "Ghasts",
+  "1129120788": "Goats",
+  "1129120789": "Grid World",
+  "1129120790": "Guardians",
+  "1129120791": "Hoglins",
+  "1129120792": "Ice Spikes Biome",
+  "1129120793": "Icy Surfaces",
+  "1129120794": "Illusioners",
+  "1129120795": "Insomniacs",
+  "1129120796": "Jungle Biomes",
+  "1129120798": "Magma Cubes",
+  "1129120799": "Mooshrooms",
+  "1129120800": "Mushroom Fields Biome",
+  "1129120801": "Barren Nether Biomes",
+  "1129120802": "Nether Forest Biomes",
+  "1129120804": "Ocelots",
+  "1129120805": "One HP",
+  "1129120806": "Pandas",
+  "1129120807": "Parrots",
+  "1129120808": "Piglins",
+  "1129120810": "Pillagers",
+  "1129120812": "Rabbits",
+  "1129120814": "Rare Surface Exits",
+  "1129120815": "Ravagers",
+  "1129120817": "Shattered Blocks World",
+  "1129120819": "Shulkers",
+  "1129120820": "Skeletons",
+  "1129120821": "Slimes",
+  "1129120823": "Sniffers",
+  "1129120824": "Snowy Biomes",
+  "1129120826": "Spiders",
+  "1129120828": "Striders",
+  "1129120831": "Swamp Biomes",
+  "1129120832": "Taiga Biomes",
+  "1129120834": "Ultrawarm",
+  "1129120835": "(Near) Universal Anger",
+  "1129120836": "Vindicators",
+  "1129120837": "Warden Boss Fight",
+  "1129120838": "Water World",
+  "1129120839": "Wednesday Frogs",
+  "1129120840": "Witches",
+  "1129120842": "Wither Skeletons",
+  "1129120843": "Zoglins",
+  "1129120844": "Zombies",
+  "1129120845": "Zombified Piglins",
+  "1129121744": "Alchemy",
+  "1129121745": "Allez Cuisine!",
+  "1129121746": "Amphibian",
+  "1129121747": "Progressive Shovel",
+  "1129121748": "Archer",
+  "1129121749": "Armaments",
+  "1129121750": "Arrowverse",
+  "1129121754": "Bundle of Fortune",
+  "1129121755": "Starter Campfire",
+  "1129121756": "Progressive Axe",
+  "1129121757": "Combat",
+  "1129121758": "Crafting",
+  "1129121759": "Artisan Crafting",
+  "1129121760": "The Natural Evolution of a Shield",
+  "1129121761": "Progressive Armor",
+  "1129121765": "Progressive Dirt",
+  "1129121768": "Dragon Fire",
+  "1129121769": "Efficient Enchanting",
+  "1129121770": "Elytron",
+  "1129121771": "Enchanting",
+  "1129121772": "Progressive Pearls",
+  "1129121774": "Exploration",
+  "1129121776": "Fire Shield",
+  "1129121777": "Leaf",
+  "1129121778": "The Mining of the Sea",
+  "1129121779": "Angler",
+  "1129121782": "Gatherer",
+  "1129121784": "Hunter",
+  "1129121785": "Inventory Crafting",
+  "1129121786": "3x3 Inventory Crafting",
+  "1129121787": "Progressive Pockets",
+  "1129121791": "Progressive Jump",
+  "1129121801": "Progressive Learning",
+  "1129121821": "Lodestone Exits",
+  "1129121822": "Lucky pick",
+  "1129121824": "Progressive Magic Kit",
+  "1129121825": "Haute cuisine",
+  "1129121827": "MEGA JUMP",
+  "1129121828": "Mining",
+  "1129121829": "Progressive Mining Efficiency",
+  "1129121832": "Mise en place",
+  "1129121836": "Speedrun",
+  "1129121837": "Ore Seeker",
+  "1129121838": "Ore Seeker: 2",
+  "1129121839": "Pathfinder",
+  "1129121840": "Pet Armadillo",
+  "1129121841": "Pet Axolotl",
+  "1129121842": "Pet Bee",
+  "1129121843": "Pet Cat",
+  "1129121844": "Pet Chicken",
+  "1129121845": "Pet Cow",
+  "1129121846": "Pet Creeper",
+  "1129121847": "Pet Fox",
+  "1129121848": "Pet Frog",
+  "1129121849": "Pet Mooshroom",
+  "1129121850": "Pet Polar Bear",
+  "1129121851": "Pet Slime",
+  "1129121852": "Pet your pets",
+  "1129121853": "Pet Turtle",
+  "1129121854": "Pet Wolf",
+  "1129121855": "Armor up",
+  "1129121856": "Direwolf",
+  "1129121857": "Descendant of Sif",
+  "1129121858": "Pets",
+  "1129121859": "Collector",
+  "1129121860": "Poseidon",
+  "1129121862": "Progressive Arrows",
+  "1129121863": "Rare Earth Specialist",
+  "1129121865": "Booster",
+  "1129121867": "Safe Falling",
+  "1129121870": "Shazboots!",
+  "1129121871": "Shield Bash",
+  "1129121872": "Silky pick",
+  "1129121873": "Heart of gold",
+  "1129121874": "Heart of Netherite?",
+  "1129121875": "Progressive Smelter",
+  "1129121877": "Progressive Sneak",
+  "1129121879": "Spellbook",
+  "1129121880": "Progressive Speed",
+  "1129121883": "Progressive Apples",
+  "1129121884": "Starter Compass",
+  "1129121885": "Crafting table",
+  "1129121886": "Starting pickaxe",
+  "1129121887": "Warded",
+  "1129121888": "Progressive Sword",
+  "1129121890": "Underwater miner",
+  "1129121891": "Enigma",
+  "1129121893": "Tracker",
+  "1129121894": "Spearfishing",
+  "1129121897": "Heart of the Oak",
+  "1129121898": "Wing Guardian Leaf In Ocean",
+  "1129121899": "You Are the Campfire",
+  "1129122744": "Shimmering Key",
+  "1129122745": "Bag of XP"
+ },
+ "locations": {
+  "advancement:feats/crystal": {
+   "name": "Crystaline",
+   "parent": "feats/root",
+   "rule": [
+    [
+     "@craft"
+    ],
+    [
+     "Starting pickaxe"
+    ]
+   ]
+  },
+  "advancement:feats/dragon_breath": {
+   "name": "You Need a Mint",
+   "parent": "feats/end_world",
+   "rule": [
+    [
+     "@mine:ender_dragon_boss",
+     "@craft"
+    ]
+   ]
+  },
+  "advancement:feats/end_world": {
+   "name": "The Beginning of the End",
+   "parent": "feats/root",
+   "rule": [
+    [
+     "End Biomes"
+    ]
+   ]
+  },
+  "advancement:feats/kill_pillager": {
+   "name": "Raid the Raiders",
+   "parent": "feats/root",
+   "rule": [
+    [
+     "Pillagers"
+    ]
+   ]
+  },
+  "advancement:feats/kill_skeleton": {
+   "name": "Feel it in my Bones",
+   "parent": "feats/root",
+   "rule": [
+    []
+   ]
+  },
+  "advancement:feats/return_to_sender": {
+   "name": "Return to Sender",
+   "parent": "feats/root",
+   "rule": [
+    [
+     "Ghasts"
+    ]
+   ]
+  },
+  "advancement:feats/wither_skeleton_skull": {
+   "name": "Withering",
+   "parent": "feats/root",
+   "rule": [
+    [
+     "Wither Skeletons"
+    ]
+   ]
+  },
+  "advancement:mines/all_special_mines_completed": {
+   "name": "Yes, Boss",
+   "parent": "mines/special_mine_completed",
+   "rule": [
+    [
+     "@mine:enderman_boss",
+     "@mine:kuiper_belt",
+     "@mine:small_but_deadly_boss",
+     "@mine:spooky_scary_skeletons_boss",
+     "@mine:angry_ghast_boss",
+     "@mine:raid",
+     "@mine:wither_boss",
+     "@mine:ender_dragon_boss",
+     "@mine:warden_boss"
+    ]
+   ]
+  },
+  "advancement:mines/complete_deluge_level": {
+   "name": "Shall we wait for the drizzle to subside?",
+   "parent": "mines/complete_water_world_level",
+   "rule": [
+    [
+     "Eternal Rain",
+     "Water World"
+    ]
+   ]
+  },
+  "advancement:mines/complete_water_cave_level": {
+   "name": "The Depths",
+   "parent": "mines/complete_water_world_level",
+   "rule": [
+    [
+     "Water World",
+     "Cave World"
+    ]
+   ]
+  },
+  "advancement:mines/complete_water_world_level": {
+   "name": "Quit Smoking",
+   "parent": "mines/level_completed",
+   "rule": [
+    [
+     "Water World"
+    ]
+   ]
+  },
+  "advancement:mines/eat_your_veggies": {
+   "name": "Certified Spud Chomper",
+   "parent": "feats/root",
+   "rule": [
+    []
+   ]
+  },
+  "advancement:mines/enter_a_mine": {
+   "name": "Down the Hatch",
+   "parent": null,
+   "rule": [
+    []
+   ]
+  },
+  "advancement:mines/level_completed": {
+   "name": "It Begins",
+   "parent": "mines/enter_a_mine",
+   "rule": [
+    []
+   ]
+  },
+  "advancement:mines/mine_crafter_upgraded": {
+   "name": "Further beyond",
+   "parent": "mines/level_completed",
+   "rule": [
+    []
+   ]
+  },
+  "advancement:mines/mine_revisitor_activated": {
+   "name": "Nostalgic",
+   "parent": "mines/level_completed",
+   "rule": [
+    []
+   ]
+  },
+  "advancement:mines/player_failed_level": {
+   "name": "Oops",
+   "parent": "mines/enter_a_mine",
+   "rule": [
+    []
+   ]
+  },
+  "advancement:mines/shimmering_key": {
+   "name": "Master Key",
+   "parent": "feats/root",
+   "rule": [
+    [
+     "Shimmering Key"
+    ]
+   ]
+  },
+  "advancement:mines/special_mine_completed": {
+   "name": "A Challenger Approaches",
+   "parent": "feats/root",
+   "rule": [
+    [
+     "@special"
+    ]
+   ]
+  },
+  "advancement:story/deflect_arrow": {
+   "name": "Not Today, Thank You",
+   "parent": "story/obtain_armor",
+   "rule": [
+    [
+     "Warded"
+    ],
+    [
+     "@craft"
+    ]
+   ]
+  },
+  "advancement:story/follow_exit_eye": {
+   "name": "Spy Eye",
+   "parent": "story/smelt_iron",
+   "rule": [
+    [
+     "@craft"
+    ]
+   ]
+  },
+  "advancement:story/iron_tools": {
+   "name": "Isn't It Iron Pick",
+   "parent": "story/smelt_iron",
+   "rule": [
+    [
+     "@craft"
+    ],
+    [
+     "Starting pickaxe"
+    ]
+   ]
+  },
+  "advancement:story/mine_diamond": {
+   "name": "Diamonds!",
+   "parent": "story/iron_tools",
+   "rule": [
+    [
+     "@craft"
+    ],
+    [
+     "Starting pickaxe"
+    ]
+   ]
+  },
+  "advancement:story/mine_stone": {
+   "name": "Stone Age",
+   "parent": "story/root",
+   "rule": [
+    [
+     "@craft"
+    ],
+    [
+     "Starting pickaxe"
+    ]
+   ]
+  },
+  "advancement:story/obtain_armor": {
+   "name": "Suit Up",
+   "parent": "story/smelt_iron",
+   "rule": [
+    [
+     "@craft"
+    ],
+    [
+     "Progressive Armor:2"
+    ]
+   ]
+  },
+  "advancement:story/shiny_gear": {
+   "name": "Cover Me with Diamonds",
+   "parent": "story/mine_diamond",
+   "rule": [
+    [
+     "@craft"
+    ]
+   ]
+  },
+  "advancement:story/smelt_iron": {
+   "name": "Acquire Hardware",
+   "parent": "story/upgrade_tools",
+   "rule": [
+    [
+     "@craft"
+    ],
+    [
+     "Progressive Smelter"
+    ]
+   ]
+  },
+  "advancement:story/upgrade_tools": {
+   "name": "Getting an Upgrade",
+   "parent": "story/mine_stone",
+   "rule": [
+    [
+     "@craft"
+    ]
+   ]
+  },
+  "advancement:unlocks/all_combatant": {
+   "name": "The Combat Upd... Unlocks",
+   "parent": "unlocks/kaizen",
+   "rule": [
+    [
+     "@tab:combatant",
+     "@special"
+    ]
+   ]
+  },
+  "advancement:unlocks/all_gatherer": {
+   "name": "The Miner",
+   "parent": "unlocks/kaizen",
+   "rule": [
+    [
+     "@tab:gatherer",
+     "@special"
+    ]
+   ]
+  },
+  "advancement:unlocks/all_school_of_hard_knocks": {
+   "name": "An Exercise in Futility",
+   "parent": "unlocks/kaizen",
+   "rule": [
+    [
+     "@special"
+    ]
+   ]
+  },
+  "advancement:unlocks/free_sticks": {
+   "name": "Free Sticks",
+   "parent": "unlocks/kaizen",
+   "rule": [
+    [
+     "@node:fire_wand",
+     "@node:wind_wand",
+     "@node:teleportation_wand"
+    ]
+   ]
+  },
+  "advancement:unlocks/how_do_i_unlock_that": {
+   "name": "How do I unlock that?",
+   "parent": "unlocks/kaizen",
+   "rule": [
+    [
+     "@craft"
+    ],
+    [
+     "Inventory Crafting"
+    ]
+   ]
+  },
+  "advancement:unlocks/jump_king": {
+   "name": "Jump King",
+   "parent": "unlocks/kaizen",
+   "rule": [
+    [
+     "@node:jump_king_10"
+    ]
+   ]
+  },
+  "advancement:unlocks/kaizen": {
+   "name": "Kaizen",
+   "parent": "unlocks/root",
+   "rule": [
+    []
+   ]
+  },
+  "advancement:unlocks/sigma_grindset": {
+   "name": "Sigma Grindset",
+   "parent": "unlocks/kaizen",
+   "rule": [
+    [
+     "@node:learning_20"
+    ]
+   ]
+  },
+  "crafter:1": {
+   "name": "Mine Crafter Level 1",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:10": {
+   "name": "Mine Crafter Level 10",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:11": {
+   "name": "Mine Crafter Level 11",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:12": {
+   "name": "Mine Crafter Level 12",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:13": {
+   "name": "Mine Crafter Level 13",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:14": {
+   "name": "Mine Crafter Level 14",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:15": {
+   "name": "Mine Crafter Level 15",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:16": {
+   "name": "Mine Crafter Level 16",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:17": {
+   "name": "Mine Crafter Level 17",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:18": {
+   "name": "Mine Crafter Level 18",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:19": {
+   "name": "Mine Crafter Level 19",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:2": {
+   "name": "Mine Crafter Level 2",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:20": {
+   "name": "Mine Crafter Level 20",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:21": {
+   "name": "Mine Crafter Level 21",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:22": {
+   "name": "Mine Crafter Level 22",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:23": {
+   "name": "Mine Crafter Level 23",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:24": {
+   "name": "Mine Crafter Level 24",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:25": {
+   "name": "Mine Crafter Level 25",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:26": {
+   "name": "Mine Crafter Level 26",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:27": {
+   "name": "Mine Crafter Level 27",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:28": {
+   "name": "Mine Crafter Level 28",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:29": {
+   "name": "Mine Crafter Level 29",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:3": {
+   "name": "Mine Crafter Level 3",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:30": {
+   "name": "Mine Crafter Level 30",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:31": {
+   "name": "Mine Crafter Level 31",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:32": {
+   "name": "Mine Crafter Level 32",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:33": {
+   "name": "Mine Crafter Level 33",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:34": {
+   "name": "Mine Crafter Level 34",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:35": {
+   "name": "Mine Crafter Level 35",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:36": {
+   "name": "Mine Crafter Level 36",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:37": {
+   "name": "Mine Crafter Level 37",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:38": {
+   "name": "Mine Crafter Level 38",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:39": {
+   "name": "Mine Crafter Level 39",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:4": {
+   "name": "Mine Crafter Level 4",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:40": {
+   "name": "Mine Crafter Level 40",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:41": {
+   "name": "Mine Crafter Level 41",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:42": {
+   "name": "Mine Crafter Level 42",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:43": {
+   "name": "Mine Crafter Level 43",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:44": {
+   "name": "Mine Crafter Level 44",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:45": {
+   "name": "Mine Crafter Level 45",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:46": {
+   "name": "Mine Crafter Level 46",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:47": {
+   "name": "Mine Crafter Level 47",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:48": {
+   "name": "Mine Crafter Level 48",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:5": {
+   "name": "Mine Crafter Level 5",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:6": {
+   "name": "Mine Crafter Level 6",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:7": {
+   "name": "Mine Crafter Level 7",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:8": {
+   "name": "Mine Crafter Level 8",
+   "rule": [
+    []
+   ]
+  },
+  "crafter:9": {
+   "name": "Mine Crafter Level 9",
+   "rule": [
+    []
+   ]
+  },
+  "door:1": {
+   "name": "Hub Door 1",
+   "rule": [
+    [
+     "Shimmering Key:1"
+    ]
+   ]
+  },
+  "door:10": {
+   "name": "Hub Door 10",
+   "rule": [
+    [
+     "Shimmering Key:10"
+    ]
+   ]
+  },
+  "door:2": {
+   "name": "Hub Door 2",
+   "rule": [
+    [
+     "Shimmering Key:2"
+    ]
+   ]
+  },
+  "door:3": {
+   "name": "Hub Door 3",
+   "rule": [
+    [
+     "Shimmering Key:3"
+    ]
+   ]
+  },
+  "door:4": {
+   "name": "Hub Door 4",
+   "rule": [
+    [
+     "Shimmering Key:4"
+    ]
+   ]
+  },
+  "door:5": {
+   "name": "Hub Door 5",
+   "rule": [
+    [
+     "Shimmering Key:5"
+    ]
+   ]
+  },
+  "door:6": {
+   "name": "Hub Door 6",
+   "rule": [
+    [
+     "Shimmering Key:6"
+    ]
+   ]
+  },
+  "door:7": {
+   "name": "Hub Door 7",
+   "rule": [
+    [
+     "Shimmering Key:7"
+    ]
+   ]
+  },
+  "door:8": {
+   "name": "Hub Door 8",
+   "rule": [
+    [
+     "Shimmering Key:8"
+    ]
+   ]
+  },
+  "door:9": {
+   "name": "Hub Door 9",
+   "rule": [
+    [
+     "Shimmering Key:9"
+    ]
+   ]
+  },
+  "ingredient:amplified": {
+   "after": [
+    "floating_islands_world"
+   ],
+   "name": "Ingredient: Amplified World",
+   "rule": [
+    [
+     "Floating Islands"
+    ]
+   ]
+  },
+  "ingredient:armadillos": {
+   "after": [],
+   "name": "Ingredient: Armadillos",
+   "rule": [
+    [
+     "@craft"
+    ]
+   ]
+  },
+  "ingredient:axolotls": {
+   "after": [],
+   "name": "Ingredient: Axolotls",
+   "rule": [
+    [
+     "Swamp Biomes",
+     "@craft"
+    ]
+   ]
+  },
+  "ingredient:badlands": {
+   "after": [],
+   "name": "Ingredient: Badlands Biomes",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:base_andesite": {
+   "after": [],
+   "name": "Ingredient: Base rock type: Andesite",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:base_blackstone": {
+   "after": [],
+   "name": "Ingredient: Base rock type: Blackstone",
+   "rule": [
+    [
+     "Barren Nether Biomes"
+    ]
+   ]
+  },
+  "ingredient:base_deepslate": {
+   "after": [],
+   "name": "Ingredient: Base rock type: Deepslate",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:base_diorite": {
+   "after": [],
+   "name": "Ingredient: Base rock type: Diorite",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:base_end_stone": {
+   "after": [],
+   "name": "Ingredient: Base rock type: End Stone",
+   "rule": [
+    [
+     "End Biomes",
+     "@craft"
+    ],
+    [
+     "End Biomes",
+     "Starting pickaxe"
+    ]
+   ]
+  },
+  "ingredient:base_granite": {
+   "after": [],
+   "name": "Ingredient: Base rock type: Granite",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:base_tuff": {
+   "after": [],
+   "name": "Ingredient: Base rock type: Tuff",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:bees": {
+   "after": [],
+   "name": "Ingredient: Bees",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:blazes": {
+   "after": [],
+   "name": "Ingredient: Blazes",
+   "rule": [
+    [
+     "Barren Nether Biomes"
+    ],
+    [
+     "Nether Forest Biomes"
+    ]
+   ]
+  },
+  "ingredient:bouncy": {
+   "after": [],
+   "name": "Ingredient: Bouncy Blocks",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:breezes": {
+   "after": [],
+   "name": "Ingredient: Breezes",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:cave_exits": {
+   "after": [],
+   "name": "Ingredient: Cave Exits",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:cave_spiders": {
+   "after": [],
+   "name": "Ingredient: Cave Spiders",
+   "rule": [
+    [
+     "Spiders"
+    ]
+   ]
+  },
+  "ingredient:cave_world": {
+   "after": [
+    "floating_islands_world"
+   ],
+   "name": "Ingredient: Cave World",
+   "rule": [
+    [
+     "Floating Islands"
+    ]
+   ]
+  },
+  "ingredient:creepers": {
+   "after": [],
+   "name": "Ingredient: Creepers",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:dark_cave_world": {
+   "after": [
+    "grid_world"
+   ],
+   "name": "Ingredient: Dark Cave World",
+   "rule": [
+    [
+     "Grid World",
+     "@special"
+    ]
+   ]
+  },
+  "ingredient:dark_forests": {
+   "after": [
+    "forests",
+    "jungles",
+    "taigas"
+   ],
+   "name": "Ingredient: Dark Forest Biomes",
+   "rule": [
+    [
+     "Forest Biomes",
+     "Jungle Biomes",
+     "Taiga Biomes"
+    ]
+   ]
+  },
+  "ingredient:deep_dark": {
+   "after": [],
+   "name": "Ingredient: Deep Dark Biome",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:desert": {
+   "after": [],
+   "name": "Ingredient: Desert Biome",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:dry_land": {
+   "after": [],
+   "name": "Ingredient: Dry Land",
+   "rule": [
+    [
+     "Badlands Biomes",
+     "@craft"
+    ]
+   ]
+  },
+  "ingredient:end": {
+   "after": [],
+   "name": "Ingredient: End Biomes",
+   "rule": [
+    [
+     "Blazes"
+    ]
+   ]
+  },
+  "ingredient:endermen": {
+   "after": [
+    "creepers",
+    "skeletons",
+    "spiders",
+    "zombies"
+   ],
+   "name": "Ingredient: Endermen",
+   "rule": [
+    [
+     "Zombies",
+     "Skeletons",
+     "Creepers",
+     "Spiders"
+    ]
+   ]
+  },
+  "ingredient:endermites": {
+   "after": [],
+   "name": "Ingredient: Endermites",
+   "rule": [
+    [
+     "End Biomes"
+    ],
+    [
+     "Base rock type: End Stone"
+    ]
+   ]
+  },
+  "ingredient:eternal_lightning": {
+   "after": [],
+   "name": "Ingredient: Eternal Lightning",
+   "rule": [
+    [
+     "Eternal Rain"
+    ]
+   ]
+  },
+  "ingredient:eternal_night": {
+   "after": [],
+   "name": "Ingredient: Eternal Night",
+   "rule": [
+    [
+     "@mine:enderman_boss"
+    ]
+   ]
+  },
+  "ingredient:eternal_rain": {
+   "after": [],
+   "name": "Ingredient: Eternal Rain",
+   "rule": [
+    [
+     "Eternal Night"
+    ]
+   ]
+  },
+  "ingredient:evokers": {
+   "after": [],
+   "name": "Ingredient: Evokers",
+   "rule": [
+    [
+     "@craft"
+    ]
+   ]
+  },
+  "ingredient:explosive_traps": {
+   "after": [],
+   "name": "Ingredient: Explosive Traps",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:fish_out_of_water": {
+   "after": [],
+   "name": "Ingredient: Fish Out of Water",
+   "rule": [
+    [
+     "@craft"
+    ],
+    [
+     "Angler"
+    ]
+   ]
+  },
+  "ingredient:floating_islands_world": {
+   "after": [],
+   "name": "Ingredient: Floating Islands",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:forests": {
+   "after": [],
+   "name": "Ingredient: Forest Biomes",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:foxes": {
+   "after": [],
+   "name": "Ingredient: Foxes",
+   "rule": [
+    [
+     "Taiga Biomes"
+    ]
+   ]
+  },
+  "ingredient:ghasts": {
+   "after": [],
+   "name": "Ingredient: Ghasts",
+   "rule": [
+    [
+     "Desert Biome"
+    ],
+    [
+     "Swamp Biomes"
+    ]
+   ]
+  },
+  "ingredient:goats": {
+   "after": [],
+   "name": "Ingredient: Goats",
+   "rule": [
+    [
+     "Amplified World"
+    ],
+    [
+     "Floating Islands"
+    ]
+   ]
+  },
+  "ingredient:grid_world": {
+   "after": [
+    "shattered_blocks_world"
+   ],
+   "name": "Ingredient: Grid World",
+   "rule": [
+    [
+     "Shattered Blocks World",
+     "@special"
+    ]
+   ]
+  },
+  "ingredient:guardians": {
+   "after": [],
+   "name": "Ingredient: Guardians",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:hoglins": {
+   "after": [],
+   "name": "Ingredient: Hoglins",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:ice_spikes": {
+   "after": [],
+   "name": "Ingredient: Ice Spikes Biome",
+   "rule": [
+    [
+     "Snowy Biomes"
+    ]
+   ]
+  },
+  "ingredient:icy": {
+   "after": [],
+   "name": "Ingredient: Icy Surfaces",
+   "rule": [
+    [
+     "@craft"
+    ],
+    [
+     "Progressive Axe:2"
+    ]
+   ]
+  },
+  "ingredient:illusioners": {
+   "after": [],
+   "name": "Ingredient: Illusioners",
+   "rule": [
+    [
+     "@craft"
+    ]
+   ]
+  },
+  "ingredient:insomniacs": {
+   "after": [],
+   "name": "Ingredient: Insomniacs",
+   "rule": [
+    [
+     "Eternal Night"
+    ]
+   ]
+  },
+  "ingredient:jungles": {
+   "after": [],
+   "name": "Ingredient: Jungle Biomes",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:magma_cubes": {
+   "after": [],
+   "name": "Ingredient: Magma Cubes",
+   "rule": [
+    [
+     "Barren Nether Biomes"
+    ]
+   ]
+  },
+  "ingredient:mooshrooms": {
+   "after": [],
+   "name": "Ingredient: Mooshrooms",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:mushroom_fields": {
+   "after": [],
+   "name": "Ingredient: Mushroom Fields Biome",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:nether_barrens": {
+   "after": [],
+   "name": "Ingredient: Barren Nether Biomes",
+   "rule": [
+    [
+     "@craft"
+    ]
+   ]
+  },
+  "ingredient:nether_forests": {
+   "after": [],
+   "name": "Ingredient: Nether Forest Biomes",
+   "rule": [
+    [
+     "Endermen"
+    ],
+    [
+     "@mine:enderman_boss"
+    ]
+   ]
+  },
+  "ingredient:ocelots": {
+   "after": [],
+   "name": "Ingredient: Ocelots",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:one_hp": {
+   "after": [],
+   "name": "Ingredient: One HP",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:pandas": {
+   "after": [],
+   "name": "Ingredient: Pandas",
+   "rule": [
+    [
+     "Jungle Biomes"
+    ]
+   ]
+  },
+  "ingredient:parrots": {
+   "after": [],
+   "name": "Ingredient: Parrots",
+   "rule": [
+    [
+     "Jungle Biomes",
+     "@craft"
+    ]
+   ]
+  },
+  "ingredient:piglins": {
+   "after": [],
+   "name": "Ingredient: Piglins",
+   "rule": [
+    [
+     "@craft"
+    ]
+   ]
+  },
+  "ingredient:pillagers": {
+   "after": [],
+   "name": "Ingredient: Pillagers",
+   "rule": [
+    [
+     "@craft"
+    ]
+   ]
+  },
+  "ingredient:rabbits": {
+   "after": [],
+   "name": "Ingredient: Rabbits",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:rare_surface_exits": {
+   "after": [],
+   "name": "Ingredient: Rare Surface Exits",
+   "rule": [
+    [
+     "@craft"
+    ]
+   ]
+  },
+  "ingredient:ravagers": {
+   "after": [],
+   "name": "Ingredient: Ravagers",
+   "rule": [
+    [
+     "@craft"
+    ]
+   ]
+  },
+  "ingredient:shattered_blocks_world": {
+   "after": [
+    "amplified",
+    "cave_world"
+   ],
+   "name": "Ingredient: Shattered Blocks World",
+   "rule": [
+    [
+     "Amplified World",
+     "Cave World",
+     "@special"
+    ]
+   ]
+  },
+  "ingredient:shulkers": {
+   "after": [],
+   "name": "Ingredient: Shulkers",
+   "rule": [
+    [
+     "Endermites"
+    ]
+   ]
+  },
+  "ingredient:skeletons": {
+   "after": [],
+   "name": "Ingredient: Skeletons",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:slimes": {
+   "after": [],
+   "name": "Ingredient: Slimes",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:sniffers": {
+   "after": [],
+   "name": "Ingredient: Sniffers",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:snowy": {
+   "after": [],
+   "name": "Ingredient: Snowy Biomes",
+   "rule": [
+    [
+     "Taiga Biomes",
+     "Amplified World"
+    ]
+   ]
+  },
+  "ingredient:spiders": {
+   "after": [],
+   "name": "Ingredient: Spiders",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:striders": {
+   "after": [],
+   "name": "Ingredient: Striders",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:swamps": {
+   "after": [],
+   "name": "Ingredient: Swamp Biomes",
+   "rule": [
+    [
+     "Badlands Biomes"
+    ]
+   ]
+  },
+  "ingredient:taigas": {
+   "after": [],
+   "name": "Ingredient: Taiga Biomes",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:ultrawarm": {
+   "after": [],
+   "name": "Ingredient: Ultrawarm",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:universal_anger": {
+   "after": [],
+   "name": "Ingredient: (Near) Universal Anger",
+   "rule": [
+    [
+     "Bees"
+    ]
+   ]
+  },
+  "ingredient:vindicators": {
+   "after": [],
+   "name": "Ingredient: Vindicators",
+   "rule": [
+    [
+     "@craft"
+    ]
+   ]
+  },
+  "ingredient:warden_boss_fight": {
+   "after": [],
+   "name": "Ingredient: Warden Boss Fight",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:water_world": {
+   "after": [],
+   "name": "Ingredient: Water World",
+   "rule": [
+    [
+     "Dry Land"
+    ]
+   ]
+  },
+  "ingredient:wednesday_frogs": {
+   "after": [],
+   "name": "Ingredient: Wednesday Frogs",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:witches": {
+   "after": [
+    "creepers",
+    "skeletons",
+    "spiders",
+    "zombies"
+   ],
+   "name": "Ingredient: Witches",
+   "rule": [
+    [
+     "Zombies",
+     "Skeletons",
+     "Creepers",
+     "Spiders"
+    ]
+   ]
+  },
+  "ingredient:wither_skeletons": {
+   "after": [],
+   "name": "Ingredient: Wither Skeletons",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:zoglins": {
+   "after": [],
+   "name": "Ingredient: Zoglins",
+   "rule": [
+    [
+     "Zombies",
+     "Nether Forest Biomes"
+    ]
+   ]
+  },
+  "ingredient:zombies": {
+   "after": [],
+   "name": "Ingredient: Zombies",
+   "rule": [
+    []
+   ]
+  },
+  "ingredient:zombified_piglins": {
+   "after": [],
+   "name": "Ingredient: Zombified Piglins",
+   "rule": [
+    []
+   ]
+  },
+  "mine:angry_ghast_boss": {
+   "icon": "angry_ghast_boss_fight",
+   "name": "Special Mine: Angry Ghast",
+   "rule": [
+    [
+     "@mine:angry_ghast_boss"
+    ]
+   ]
+  },
+  "mine:ender_dragon_boss": {
+   "icon": "ender_dragon_boss_fight",
+   "name": "Special Mine: Ender Dragon",
+   "rule": [
+    [
+     "@mine:ender_dragon_boss"
+    ]
+   ]
+  },
+  "mine:enderman_boss": {
+   "icon": "eternal_night",
+   "name": "Special Mine: The Enderman",
+   "rule": [
+    [
+     "@mine:enderman_boss"
+    ]
+   ]
+  },
+  "mine:kuiper_belt": {
+   "icon": "kuiper_world",
+   "name": "Special Mine: Kuiper World",
+   "rule": [
+    [
+     "@mine:kuiper_belt"
+    ]
+   ]
+  },
+  "mine:raid": {
+   "icon": "raid",
+   "name": "Special Mine: Raid",
+   "rule": [
+    [
+     "@mine:raid"
+    ]
+   ]
+  },
+  "mine:small_but_deadly_boss": {
+   "icon": "small_but_deadly_boss_fight",
+   "name": "Special Mine: Small but Deadly",
+   "rule": [
+    [
+     "@mine:small_but_deadly_boss"
+    ]
+   ]
+  },
+  "mine:spooky_scary_skeletons_boss": {
+   "icon": "spooky_scary_skeletons_boss_fight",
+   "name": "Special Mine: Spooky Scary Skeletons",
+   "rule": [
+    [
+     "@mine:spooky_scary_skeletons_boss"
+    ]
+   ]
+  },
+  "mine:warden_boss": {
+   "icon": "warden_boss_fight",
+   "name": "Special Mine: Warden",
+   "rule": [
+    [
+     "@mine:warden_boss"
+    ]
+   ]
+  },
+  "mine:wither_boss": {
+   "icon": "wither_boss_fight",
+   "name": "Special Mine: Wither",
+   "rule": [
+    [
+     "@mine:wither_boss"
+    ]
+   ]
+  },
+  "node:alchemy": {
+   "name": "Upgrade: Alchemy",
+   "rule": [
+    [
+     "@node:alchemy"
+    ]
+   ]
+  },
+  "node:allez_cuisine": {
+   "name": "Upgrade: Allez Cuisine!",
+   "rule": [
+    [
+     "@node:allez_cuisine"
+    ]
+   ]
+  },
+  "node:amphibian": {
+   "name": "Upgrade: Amphibian",
+   "rule": [
+    [
+     "@node:amphibian"
+    ]
+   ]
+  },
+  "node:apprentice_shoveler": {
+   "name": "Upgrade: Apprentice Shoveler",
+   "rule": [
+    [
+     "@node:apprentice_shoveler"
+    ]
+   ]
+  },
+  "node:archer": {
+   "name": "Upgrade: Archer",
+   "rule": [
+    [
+     "@node:archer"
+    ]
+   ]
+  },
+  "node:armaments": {
+   "name": "Upgrade: Armaments",
+   "rule": [
+    [
+     "@node:armaments"
+    ]
+   ]
+  },
+  "node:arrowverse": {
+   "name": "Upgrade: Arrowverse",
+   "rule": [
+    [
+     "@node:arrowverse"
+    ]
+   ]
+  },
+  "node:berserker": {
+   "name": "Upgrade: Berserker",
+   "rule": [
+    [
+     "@node:berserker"
+    ]
+   ]
+  },
+  "node:best_starter_sword": {
+   "name": "Upgrade: No Nether Needed",
+   "rule": [
+    [
+     "@node:best_starter_sword"
+    ]
+   ]
+  },
+  "node:better_starter_sword": {
+   "name": "Upgrade: Shiny Sword",
+   "rule": [
+    [
+     "@node:better_starter_sword"
+    ]
+   ]
+  },
+  "node:bundle_of_fortune": {
+   "name": "Upgrade: Bundle of Fortune",
+   "rule": [
+    [
+     "@node:bundle_of_fortune"
+    ]
+   ]
+  },
+  "node:campfire": {
+   "name": "Upgrade: Starter Campfire",
+   "rule": [
+    [
+     "@node:campfire"
+    ]
+   ]
+  },
+  "node:chopper": {
+   "name": "Upgrade: Chopper",
+   "rule": [
+    [
+     "@node:chopper"
+    ]
+   ]
+  },
+  "node:combatant": {
+   "name": "Upgrade: Combat",
+   "rule": [
+    [
+     "@node:combatant"
+    ]
+   ]
+  },
+  "node:crafting": {
+   "name": "Upgrade: Crafting",
+   "rule": [
+    [
+     "@node:crafting"
+    ]
+   ]
+  },
+  "node:crafting_efficiency": {
+   "name": "Upgrade: Artisan Crafting",
+   "rule": [
+    [
+     "@node:crafting_efficiency"
+    ]
+   ]
+  },
+  "node:crusher": {
+   "name": "Upgrade: The Natural Evolution of a Shield",
+   "rule": [
+    [
+     "@node:crusher"
+    ]
+   ]
+  },
+  "node:decked_out": {
+   "name": "Upgrade: Decked out",
+   "rule": [
+    [
+     "@node:decked_out"
+    ]
+   ]
+  },
+  "node:dirt_connoisseur": {
+   "name": "Upgrade: Dirt Connoisseur",
+   "rule": [
+    [
+     "@node:dirt_connoisseur"
+    ]
+   ]
+  },
+  "node:dirt_destroyer_1": {
+   "name": "Upgrade: Dirt is Butter",
+   "rule": [
+    [
+     "@node:dirt_destroyer_1"
+    ]
+   ]
+  },
+  "node:dirt_destroyer_2": {
+   "name": "Upgrade: Mmmmm Dirt Butter",
+   "rule": [
+    [
+     "@node:dirt_destroyer_2"
+    ]
+   ]
+  },
+  "node:dirt_enjoyer_1": {
+   "name": "Upgrade: Dirt Enjoyer",
+   "rule": [
+    [
+     "@node:dirt_enjoyer_1"
+    ]
+   ]
+  },
+  "node:dirt_enjoyer_2": {
+   "name": "Upgrade: Dirt Fanatic",
+   "rule": [
+    [
+     "@node:dirt_enjoyer_2"
+    ]
+   ]
+  },
+  "node:dirt_enjoyer_3": {
+   "name": "Upgrade: Dirt Lover",
+   "rule": [
+    [
+     "@node:dirt_enjoyer_3"
+    ]
+   ]
+  },
+  "node:efficient_enchanting": {
+   "name": "Upgrade: Efficient Enchanting",
+   "rule": [
+    [
+     "@node:efficient_enchanting"
+    ]
+   ]
+  },
+  "node:elytra": {
+   "name": "Upgrade: Elytron",
+   "rule": [
+    [
+     "@node:elytra"
+    ]
+   ]
+  },
+  "node:enchanting": {
+   "name": "Upgrade: Enchanting",
+   "rule": [
+    [
+     "@node:enchanting"
+    ]
+   ]
+  },
+  "node:ender_pearl_starter": {
+   "name": "Upgrade: Let's get Pearling",
+   "rule": [
+    [
+     "@node:ender_pearl_starter"
+    ]
+   ]
+  },
+  "node:expert_shoveler": {
+   "name": "Upgrade: Expert Shoveler",
+   "rule": [
+    [
+     "@node:expert_shoveler"
+    ]
+   ]
+  },
+  "node:exploration": {
+   "name": "Upgrade: Exploration",
+   "rule": [
+    [
+     "@node:exploration"
+    ]
+   ]
+  },
+  "node:fire_shield": {
+   "name": "Upgrade: Fire Shield",
+   "rule": [
+    [
+     "@node:fire_shield"
+    ]
+   ]
+  },
+  "node:fire_wand": {
+   "name": "Upgrade: Leaf",
+   "rule": [
+    [
+     "@node:fire_wand"
+    ]
+   ]
+  },
+  "node:fishing": {
+   "name": "Upgrade: The Mining of the Sea",
+   "rule": [
+    [
+     "@node:fishing"
+    ]
+   ]
+  },
+  "node:fishing_rod": {
+   "name": "Upgrade: Angler",
+   "rule": [
+    [
+     "@node:fishing_rod"
+    ]
+   ]
+  },
+  "node:fletcher": {
+   "name": "Upgrade: Fletcher",
+   "rule": [
+    [
+     "@node:fletcher"
+    ]
+   ]
+  },
+  "node:full_metal": {
+   "name": "Upgrade: Full Metal",
+   "rule": [
+    [
+     "@node:full_metal"
+    ]
+   ]
+  },
+  "node:gatherer": {
+   "name": "Upgrade: Gatherer",
+   "rule": [
+    [
+     "@node:gatherer"
+    ]
+   ]
+  },
+  "node:golden_starter_apples": {
+   "name": "Upgrade: Golden Apples",
+   "rule": [
+    [
+     "@node:golden_starter_apples"
+    ]
+   ]
+  },
+  "node:hunter": {
+   "name": "Upgrade: Hunter",
+   "rule": [
+    [
+     "@node:hunter"
+    ]
+   ]
+  },
+  "node:inventory_crafting": {
+   "name": "Upgrade: Inventory Crafting",
+   "rule": [
+    [
+     "@node:inventory_crafting"
+    ]
+   ]
+  },
+  "node:inventory_crafting_3x3": {
+   "name": "Upgrade: 3x3 Inventory Crafting",
+   "rule": [
+    [
+     "@node:inventory_crafting_3x3"
+    ]
+   ]
+  },
+  "node:inventory_slots_1": {
+   "name": "Upgrade: Pockets",
+   "rule": [
+    [
+     "@node:inventory_slots_1"
+    ]
+   ]
+  },
+  "node:inventory_slots_2": {
+   "name": "Upgrade: Deeper Pockets",
+   "rule": [
+    [
+     "@node:inventory_slots_2"
+    ]
+   ]
+  },
+  "node:inventory_slots_3": {
+   "name": "Upgrade: Deepest Pockets",
+   "rule": [
+    [
+     "@node:inventory_slots_3"
+    ]
+   ]
+  },
+  "node:journeyman_shoveler": {
+   "name": "Upgrade: Journeyman Shoveler",
+   "rule": [
+    [
+     "@node:journeyman_shoveler"
+    ]
+   ]
+  },
+  "node:jump_king": {
+   "name": "Upgrade: +1 jump",
+   "rule": [
+    [
+     "@node:jump_king"
+    ]
+   ]
+  },
+  "node:jump_king_10": {
+   "name": "Upgrade: +1 jump 10",
+   "rule": [
+    [
+     "@node:jump_king_10"
+    ]
+   ]
+  },
+  "node:jump_king_2": {
+   "name": "Upgrade: +1 jump 2",
+   "rule": [
+    [
+     "@node:jump_king_2"
+    ]
+   ]
+  },
+  "node:jump_king_3": {
+   "name": "Upgrade: +1 jump 3",
+   "rule": [
+    [
+     "@node:jump_king_3"
+    ]
+   ]
+  },
+  "node:jump_king_4": {
+   "name": "Upgrade: +1 jump 4",
+   "rule": [
+    [
+     "@node:jump_king_4"
+    ]
+   ]
+  },
+  "node:jump_king_5": {
+   "name": "Upgrade: +1 jump 5",
+   "rule": [
+    [
+     "@node:jump_king_5"
+    ]
+   ]
+  },
+  "node:jump_king_6": {
+   "name": "Upgrade: +1 jump 6",
+   "rule": [
+    [
+     "@node:jump_king_6"
+    ]
+   ]
+  },
+  "node:jump_king_7": {
+   "name": "Upgrade: +1 jump 7",
+   "rule": [
+    [
+     "@node:jump_king_7"
+    ]
+   ]
+  },
+  "node:jump_king_8": {
+   "name": "Upgrade: +1 jump 8",
+   "rule": [
+    [
+     "@node:jump_king_8"
+    ]
+   ]
+  },
+  "node:jump_king_9": {
+   "name": "Upgrade: +1 jump 9",
+   "rule": [
+    [
+     "@node:jump_king_9"
+    ]
+   ]
+  },
+  "node:learning_1": {
+   "name": "Upgrade: Learning",
+   "rule": [
+    [
+     "@node:learning_1"
+    ]
+   ]
+  },
+  "node:learning_10": {
+   "name": "Upgrade: Learning 10",
+   "rule": [
+    [
+     "@node:learning_10"
+    ]
+   ]
+  },
+  "node:learning_11": {
+   "name": "Upgrade: Learning 11",
+   "rule": [
+    [
+     "@node:learning_11"
+    ]
+   ]
+  },
+  "node:learning_12": {
+   "name": "Upgrade: Learning 12",
+   "rule": [
+    [
+     "@node:learning_12"
+    ]
+   ]
+  },
+  "node:learning_13": {
+   "name": "Upgrade: Learning 13",
+   "rule": [
+    [
+     "@node:learning_13"
+    ]
+   ]
+  },
+  "node:learning_14": {
+   "name": "Upgrade: Learning 14",
+   "rule": [
+    [
+     "@node:learning_14"
+    ]
+   ]
+  },
+  "node:learning_15": {
+   "name": "Upgrade: Learning 15",
+   "rule": [
+    [
+     "@node:learning_15"
+    ]
+   ]
+  },
+  "node:learning_16": {
+   "name": "Upgrade: Learning 16",
+   "rule": [
+    [
+     "@node:learning_16"
+    ]
+   ]
+  },
+  "node:learning_17": {
+   "name": "Upgrade: Learning 17",
+   "rule": [
+    [
+     "@node:learning_17"
+    ]
+   ]
+  },
+  "node:learning_18": {
+   "name": "Upgrade: Learning 18",
+   "rule": [
+    [
+     "@node:learning_18"
+    ]
+   ]
+  },
+  "node:learning_19": {
+   "name": "Upgrade: Learning 19",
+   "rule": [
+    [
+     "@node:learning_19"
+    ]
+   ]
+  },
+  "node:learning_2": {
+   "name": "Upgrade: Learning 2",
+   "rule": [
+    [
+     "@node:learning_2"
+    ]
+   ]
+  },
+  "node:learning_20": {
+   "name": "Upgrade: Learning 20",
+   "rule": [
+    [
+     "@node:learning_20"
+    ]
+   ]
+  },
+  "node:learning_3": {
+   "name": "Upgrade: Learning 3",
+   "rule": [
+    [
+     "@node:learning_3"
+    ]
+   ]
+  },
+  "node:learning_4": {
+   "name": "Upgrade: Learning 4",
+   "rule": [
+    [
+     "@node:learning_4"
+    ]
+   ]
+  },
+  "node:learning_5": {
+   "name": "Upgrade: Learning 5",
+   "rule": [
+    [
+     "@node:learning_5"
+    ]
+   ]
+  },
+  "node:learning_6": {
+   "name": "Upgrade: Learning 6",
+   "rule": [
+    [
+     "@node:learning_6"
+    ]
+   ]
+  },
+  "node:learning_7": {
+   "name": "Upgrade: Learning 7",
+   "rule": [
+    [
+     "@node:learning_7"
+    ]
+   ]
+  },
+  "node:learning_8": {
+   "name": "Upgrade: Learning 8",
+   "rule": [
+    [
+     "@node:learning_8"
+    ]
+   ]
+  },
+  "node:learning_9": {
+   "name": "Upgrade: Learning 9",
+   "rule": [
+    [
+     "@node:learning_9"
+    ]
+   ]
+  },
+  "node:lodestone_exits": {
+   "name": "Upgrade: Lodestone Exits",
+   "rule": [
+    [
+     "@node:lodestone_exits"
+    ]
+   ]
+  },
+  "node:lucky_pick": {
+   "name": "Upgrade: Lucky pick",
+   "rule": [
+    [
+     "@node:lucky_pick"
+    ]
+   ]
+  },
+  "node:magic_master_kit": {
+   "name": "Upgrade: Master Magic Kit",
+   "rule": [
+    [
+     "@node:magic_master_kit"
+    ]
+   ]
+  },
+  "node:magic_starter_kit": {
+   "name": "Upgrade: Magic Kit",
+   "rule": [
+    [
+     "@node:magic_starter_kit"
+    ]
+   ]
+  },
+  "node:mass_production": {
+   "name": "Upgrade: Haute cuisine",
+   "rule": [
+    [
+     "@node:mass_production"
+    ]
+   ]
+  },
+  "node:master_shoveler": {
+   "name": "Upgrade: Master Shoveler",
+   "rule": [
+    [
+     "@node:master_shoveler"
+    ]
+   ]
+  },
+  "node:mining": {
+   "name": "Upgrade: Mining",
+   "rule": [
+    [
+     "@node:mining"
+    ]
+   ]
+  },
+  "node:mining_efficiency": {
+   "name": "Upgrade: Mining effeicency",
+   "rule": [
+    [
+     "@node:mining_efficiency"
+    ]
+   ]
+  },
+  "node:mining_efficiency_2": {
+   "name": "Upgrade: Mining effeicenter",
+   "rule": [
+    [
+     "@node:mining_efficiency_2"
+    ]
+   ]
+  },
+  "node:mining_efficiency_3": {
+   "name": "Upgrade: Mining effeicentest",
+   "rule": [
+    [
+     "@node:mining_efficiency_3"
+    ]
+   ]
+  },
+  "node:mise_en_place": {
+   "name": "Upgrade: Mise en place",
+   "rule": [
+    [
+     "@node:mise_en_place"
+    ]
+   ]
+  },
+  "node:more_more_pearls": {
+   "name": "Upgrade: When yhou just can't get enough!",
+   "rule": [
+    [
+     "@node:more_more_pearls"
+    ]
+   ]
+  },
+  "node:more_pearls": {
+   "name": "Upgrade: Pearltastic",
+   "rule": [
+    [
+     "@node:more_pearls"
+    ]
+   ]
+  },
+  "node:more_starter_apples": {
+   "name": "Upgrade: More Apples",
+   "rule": [
+    [
+     "@node:more_starter_apples"
+    ]
+   ]
+  },
+  "node:movement_boost": {
+   "name": "Upgrade: Speedrun",
+   "rule": [
+    [
+     "@node:movement_boost"
+    ]
+   ]
+  },
+  "node:ore_seeker_1": {
+   "name": "Upgrade: Ore Seeker",
+   "rule": [
+    [
+     "@node:ore_seeker_1"
+    ]
+   ]
+  },
+  "node:ore_seeker_2": {
+   "name": "Upgrade: Ore Seeker: 2",
+   "rule": [
+    [
+     "@node:ore_seeker_2"
+    ]
+   ]
+  },
+  "node:pathfinder": {
+   "name": "Upgrade: Pathfinder",
+   "rule": [
+    [
+     "@node:pathfinder"
+    ]
+   ]
+  },
+  "node:pet_armadillo": {
+   "name": "Upgrade: Pet Armadillo",
+   "rule": [
+    [
+     "@node:pet_armadillo"
+    ]
+   ]
+  },
+  "node:pet_axolotl": {
+   "name": "Upgrade: Pet Axolotl",
+   "rule": [
+    [
+     "@node:pet_axolotl"
+    ]
+   ]
+  },
+  "node:pet_bee": {
+   "name": "Upgrade: Pet Bee",
+   "rule": [
+    [
+     "@node:pet_bee"
+    ]
+   ]
+  },
+  "node:pet_cat": {
+   "name": "Upgrade: Pet Cat",
+   "rule": [
+    [
+     "@node:pet_cat"
+    ]
+   ]
+  },
+  "node:pet_chicken": {
+   "name": "Upgrade: Pet Chicken",
+   "rule": [
+    [
+     "@node:pet_chicken"
+    ]
+   ]
+  },
+  "node:pet_cow": {
+   "name": "Upgrade: Pet Cow",
+   "rule": [
+    [
+     "@node:pet_cow"
+    ]
+   ]
+  },
+  "node:pet_creeper": {
+   "name": "Upgrade: Pet Creeper",
+   "rule": [
+    [
+     "@node:pet_creeper"
+    ]
+   ]
+  },
+  "node:pet_fox": {
+   "name": "Upgrade: Pet Fox",
+   "rule": [
+    [
+     "@node:pet_fox"
+    ]
+   ]
+  },
+  "node:pet_frog": {
+   "name": "Upgrade: Pet Frog",
+   "rule": [
+    [
+     "@node:pet_frog"
+    ]
+   ]
+  },
+  "node:pet_mooshroom": {
+   "name": "Upgrade: Pet Mooshroom",
+   "rule": [
+    [
+     "@node:pet_mooshroom"
+    ]
+   ]
+  },
+  "node:pet_polar_bear": {
+   "name": "Upgrade: Pet Polar Bear",
+   "rule": [
+    [
+     "@node:pet_polar_bear"
+    ]
+   ]
+  },
+  "node:pet_slime": {
+   "name": "Upgrade: Pet Slime",
+   "rule": [
+    [
+     "@node:pet_slime"
+    ]
+   ]
+  },
+  "node:pet_the_animal": {
+   "name": "Upgrade: Pet your pets",
+   "rule": [
+    [
+     "@node:pet_the_animal"
+    ]
+   ]
+  },
+  "node:pet_turtle": {
+   "name": "Upgrade: Pet Turtle",
+   "rule": [
+    [
+     "@node:pet_turtle"
+    ]
+   ]
+  },
+  "node:pet_wolf": {
+   "name": "Upgrade: Pet Wolf",
+   "rule": [
+    [
+     "@node:pet_wolf"
+    ]
+   ]
+  },
+  "node:pet_wolf_armored": {
+   "name": "Upgrade: Armor up",
+   "rule": [
+    [
+     "@node:pet_wolf_armored"
+    ]
+   ]
+  },
+  "node:pet_wolf_big": {
+   "name": "Upgrade: Direwolf",
+   "rule": [
+    [
+     "@node:pet_wolf_big"
+    ]
+   ]
+  },
+  "node:pet_wolf_sword": {
+   "name": "Upgrade: Descendant of Sif",
+   "rule": [
+    [
+     "@node:pet_wolf_sword"
+    ]
+   ]
+  },
+  "node:pets": {
+   "name": "Upgrade: Pets",
+   "rule": [
+    [
+     "@node:pets"
+    ]
+   ]
+  },
+  "node:pickup_area_size": {
+   "name": "Upgrade: Collector",
+   "rule": [
+    [
+     "@node:pickup_area_size"
+    ]
+   ]
+  },
+  "node:poseidon": {
+   "name": "Upgrade: Poseidon",
+   "rule": [
+    [
+     "@node:poseidon"
+    ]
+   ]
+  },
+  "node:quiver": {
+   "name": "Upgrade: Quiver",
+   "rule": [
+    [
+     "@node:quiver"
+    ]
+   ]
+  },
+  "node:rare_earth_specialist": {
+   "name": "Upgrade: Rare Earth Specialist",
+   "rule": [
+    [
+     "@node:rare_earth_specialist"
+    ]
+   ]
+  },
+  "node:rockets": {
+   "name": "Upgrade: Booster",
+   "rule": [
+    [
+     "@node:rockets"
+    ]
+   ]
+  },
+  "node:runemaster": {
+   "name": "Upgrade: Runemaster",
+   "rule": [
+    [
+     "@node:runemaster"
+    ]
+   ]
+  },
+  "node:shazboots": {
+   "name": "Upgrade: Shazboots!",
+   "rule": [
+    [
+     "@node:shazboots"
+    ]
+   ]
+  },
+  "node:shield_bash": {
+   "name": "Upgrade: Shield Bash",
+   "rule": [
+    [
+     "@node:shield_bash"
+    ]
+   ]
+  },
+  "node:silky_pick": {
+   "name": "Upgrade: Silky pick",
+   "rule": [
+    [
+     "@node:silky_pick"
+    ]
+   ]
+  },
+  "node:smelt_value_1": {
+   "name": "Upgrade: Heart of gold",
+   "rule": [
+    [
+     "@node:smelt_value_1"
+    ]
+   ]
+  },
+  "node:smelt_value_2": {
+   "name": "Upgrade: Heart of Netherite?",
+   "rule": [
+    [
+     "@node:smelt_value_2"
+    ]
+   ]
+  },
+  "node:smelter_1": {
+   "name": "Upgrade: Apprentice Smelter",
+   "rule": [
+    [
+     "@node:smelter_1"
+    ]
+   ]
+  },
+  "node:smelter_2": {
+   "name": "Upgrade: Master Smelter",
+   "rule": [
+    [
+     "@node:smelter_2"
+    ]
+   ]
+  },
+  "node:sneak_1": {
+   "name": "Upgrade: Swift sneaking",
+   "rule": [
+    [
+     "@node:sneak_1"
+    ]
+   ]
+  },
+  "node:sneak_2": {
+   "name": "Upgrade: Swiftest sneak",
+   "rule": [
+    [
+     "@node:sneak_2"
+    ]
+   ]
+  },
+  "node:sorcerer_supreme": {
+   "name": "Upgrade: Spellbook",
+   "rule": [
+    [
+     "@node:sorcerer_supreme"
+    ]
+   ]
+  },
+  "node:speed_1": {
+   "name": "Upgrade: Need for speed",
+   "rule": [
+    [
+     "@node:speed_1"
+    ]
+   ]
+  },
+  "node:speed_2": {
+   "name": "Upgrade: Need for speed: II",
+   "rule": [
+    [
+     "@node:speed_2"
+    ]
+   ]
+  },
+  "node:speed_3": {
+   "name": "Upgrade: Hot Pursuit",
+   "rule": [
+    [
+     "@node:speed_3"
+    ]
+   ]
+  },
+  "node:starter_apples": {
+   "name": "Upgrade: Doctors order",
+   "rule": [
+    [
+     "@node:starter_apples"
+    ]
+   ]
+  },
+  "node:starter_compass": {
+   "name": "Upgrade: Starter Compass",
+   "rule": [
+    [
+     "@node:starter_compass"
+    ]
+   ]
+  },
+  "node:starter_crafting": {
+   "name": "Upgrade: Crafting table",
+   "rule": [
+    [
+     "@node:starter_crafting"
+    ]
+   ]
+  },
+  "node:starter_pick": {
+   "name": "Upgrade: Starting pickaxe",
+   "rule": [
+    [
+     "@node:starter_pick"
+    ]
+   ]
+  },
+  "node:starter_shield": {
+   "name": "Upgrade: Warded",
+   "rule": [
+    [
+     "@node:starter_shield"
+    ]
+   ]
+  },
+  "node:starter_sword": {
+   "name": "Upgrade: Training Sword",
+   "rule": [
+    [
+     "@node:starter_sword"
+    ]
+   ]
+  },
+  "node:starter_sword_iron": {
+   "name": "Upgrade: You call that a knoife?",
+   "rule": [
+    [
+     "@node:starter_sword_iron"
+    ]
+   ]
+  },
+  "node:sub_mining_efficiency": {
+   "name": "Upgrade: Underwater miner",
+   "rule": [
+    [
+     "@node:sub_mining_efficiency"
+    ]
+   ]
+  },
+  "node:teleportation_wand": {
+   "name": "Upgrade: Enigma",
+   "rule": [
+    [
+     "@node:teleportation_wand"
+    ]
+   ]
+  },
+  "node:tracker": {
+   "name": "Upgrade: Tracker",
+   "rule": [
+    [
+     "@node:tracker"
+    ]
+   ]
+  },
+  "node:trident": {
+   "name": "Upgrade: Spearfishing",
+   "rule": [
+    [
+     "@node:trident"
+    ]
+   ]
+  },
+  "node:varangian": {
+   "name": "Upgrade: Varangian",
+   "rule": [
+    [
+     "@node:varangian"
+    ]
+   ]
+  },
+  "node:viking": {
+   "name": "Upgrade: Viking",
+   "rule": [
+    [
+     "@node:viking"
+    ]
+   ]
+  },
+  "node:wind_wand": {
+   "name": "Upgrade: Heart of the Oak",
+   "rule": [
+    [
+     "@node:wind_wand"
+    ]
+   ]
+  },
+  "node:wing_guardian_lift_off_to_the_sky": {
+   "name": "Upgrade: Wing Guardian Leaf In Ocean",
+   "rule": [
+    [
+     "@node:wing_guardian_lift_off_to_the_sky"
+    ]
+   ]
+  },
+  "node:you_are_the_campfire": {
+   "name": "Upgrade: You Are the Campfire",
+   "rule": [
+    [
+     "@node:you_are_the_campfire"
+    ]
+   ]
+  }
+ },
+ "mines": {
+  "angry_ghast_boss": [
+   [
+    "Ghasts",
+    "Combat",
+    "Armaments",
+    "Progressive Armor:1",
+    "Progressive Sword:2"
+   ]
+  ],
+  "ender_dragon_boss": [
+   [
+    "End Biomes",
+    "Archer",
+    "Combat",
+    "Armaments",
+    "Progressive Armor:2",
+    "Progressive Sword:3",
+    "Progressive Apples:2"
+   ]
+  ],
+  "enderman_boss": [
+   [
+    "Combat",
+    "Armaments",
+    "Progressive Armor:1",
+    "Progressive Sword:2"
+   ]
+  ],
+  "kuiper_belt": [
+   [
+    "Combat",
+    "Armaments",
+    "Progressive Armor:1",
+    "Progressive Sword:2"
+   ]
+  ],
+  "raid": [
+   [
+    "Pillagers",
+    "Combat",
+    "Armaments",
+    "Progressive Armor:2",
+    "Progressive Sword:3",
+    "Progressive Apples:2"
+   ]
+  ],
+  "small_but_deadly_boss": [
+   [
+    "Combat",
+    "Armaments",
+    "Progressive Armor:1",
+    "Progressive Sword:2"
+   ]
+  ],
+  "spooky_scary_skeletons_boss": [
+   [
+    "Combat",
+    "Armaments",
+    "Progressive Armor:1",
+    "Progressive Sword:2"
+   ]
+  ],
+  "warden_boss": [
+   [
+    "Combat",
+    "Armaments",
+    "Progressive Armor:2",
+    "Progressive Sword:3",
+    "Progressive Apples:2"
+   ]
+  ],
+  "wither_boss": [
+   [
+    "Wither Skeletons",
+    "Combat",
+    "Armaments",
+    "Progressive Armor:2",
+    "Progressive Sword:3",
+    "Progressive Apples:2"
+   ]
+  ]
+ },
+ "nodes": {
+  "alchemy": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "inventory_slots_1",
+   "tab": "crafting"
+  },
+  "allez_cuisine": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "mise_en_place",
+   "tab": "crafting"
+  },
+  "amphibian": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "speed_1",
+   "tab": "exploration"
+  },
+  "apprentice_shoveler": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "dirt_enjoyer_1",
+   "tab": "gatherer"
+  },
+  "archer": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "combatant",
+   "tab": "combatant"
+  },
+  "armaments": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "combatant",
+   "tab": "combatant"
+  },
+  "arrowverse": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "fletcher",
+   "tab": "combatant"
+  },
+  "berserker": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "viking",
+   "tab": "combatant"
+  },
+  "best_starter_sword": {
+   "hidden": [
+    []
+   ],
+   "learning": 5,
+   "parent": "better_starter_sword",
+   "tab": "combatant"
+  },
+  "better_starter_sword": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "starter_sword_iron",
+   "tab": "combatant"
+  },
+  "bundle_of_fortune": {
+   "hidden": [
+    []
+   ],
+   "learning": 5,
+   "parent": "inventory_slots_3",
+   "tab": "crafting"
+  },
+  "campfire": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "hunter",
+   "tab": "gatherer"
+  },
+  "chopper": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "combatant",
+   "tab": "combatant"
+  },
+  "combatant": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": null,
+   "tab": "combatant"
+  },
+  "crafting": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": null,
+   "tab": "crafting"
+  },
+  "crafting_efficiency": {
+   "hidden": [
+    [
+     "Inventory Crafting"
+    ]
+   ],
+   "learning": 5,
+   "parent": "inventory_crafting_3x3",
+   "tab": "crafting"
+  },
+  "crusher": {
+   "hidden": [
+    []
+   ],
+   "learning": 5,
+   "parent": "shield_bash",
+   "tab": "combatant"
+  },
+  "decked_out": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "armaments",
+   "tab": "combatant"
+  },
+  "dirt_connoisseur": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "dirt_destroyer_2",
+   "tab": "gatherer"
+  },
+  "dirt_destroyer_1": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "dirt_enjoyer_3",
+   "tab": "gatherer"
+  },
+  "dirt_destroyer_2": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "dirt_destroyer_1",
+   "tab": "gatherer"
+  },
+  "dirt_enjoyer_1": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "gatherer",
+   "tab": "gatherer"
+  },
+  "dirt_enjoyer_2": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "dirt_enjoyer_1",
+   "tab": "gatherer"
+  },
+  "dirt_enjoyer_3": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "dirt_enjoyer_2",
+   "tab": "gatherer"
+  },
+  "dragon_fire": {
+   "hidden": [
+    [
+     "@node:sorcerer_supreme",
+     "@mine:ender_dragon_boss"
+    ]
+   ],
+   "learning": 0,
+   "parent": "fire_wand",
+   "tab": "crafting"
+  },
+  "efficient_enchanting": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "magic_master_kit",
+   "tab": "crafting"
+  },
+  "elytra": {
+   "hidden": [
+    []
+   ],
+   "learning": 5,
+   "parent": "jump_king_10",
+   "tab": "exploration"
+  },
+  "enchanting": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "inventory_slots_1",
+   "tab": "crafting"
+  },
+  "ender_pearl_starter": {
+   "hidden": [
+    [
+     "Endermen"
+    ],
+    [
+     "@mine:enderman_boss"
+    ]
+   ],
+   "learning": 0,
+   "parent": "exploration",
+   "tab": "exploration"
+  },
+  "expert_shoveler": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "journeyman_shoveler",
+   "tab": "gatherer"
+  },
+  "exploration": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": null,
+   "tab": "exploration"
+  },
+  "fire_shield": {
+   "hidden": [
+    [
+     "@node:sorcerer_supreme"
+    ]
+   ],
+   "learning": 0,
+   "parent": "shield_bash",
+   "tab": "combatant"
+  },
+  "fire_wand": {
+   "hidden": [
+    [
+     "Blazes"
+    ]
+   ],
+   "learning": 5,
+   "parent": "runemaster",
+   "tab": "crafting"
+  },
+  "fishing": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "gatherer",
+   "tab": "gatherer"
+  },
+  "fishing_rod": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "fishing",
+   "tab": "gatherer"
+  },
+  "fletcher": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "quiver",
+   "tab": "combatant"
+  },
+  "full_metal": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "decked_out",
+   "tab": "combatant"
+  },
+  "gatherer": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": null,
+   "tab": "gatherer"
+  },
+  "golden_starter_apples": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "more_starter_apples",
+   "tab": "combatant"
+  },
+  "hunter": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "gatherer",
+   "tab": "gatherer"
+  },
+  "inventory_crafting": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "crafting",
+   "tab": "crafting"
+  },
+  "inventory_crafting_3x3": {
+   "hidden": [
+    [
+     "@craft"
+    ],
+    [
+     "Inventory Crafting"
+    ]
+   ],
+   "learning": 2,
+   "parent": "inventory_crafting",
+   "tab": "crafting"
+  },
+  "inventory_slots_1": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "crafting",
+   "tab": "crafting"
+  },
+  "inventory_slots_2": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "inventory_slots_1",
+   "tab": "crafting"
+  },
+  "inventory_slots_3": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "inventory_slots_2",
+   "tab": "crafting"
+  },
+  "journeyman_shoveler": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "apprentice_shoveler",
+   "tab": "gatherer"
+  },
+  "jump_king": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "exploration",
+   "tab": "exploration"
+  },
+  "jump_king_10": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "jump_king_9",
+   "tab": "exploration"
+  },
+  "jump_king_2": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "jump_king",
+   "tab": "exploration"
+  },
+  "jump_king_3": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "jump_king_2",
+   "tab": "exploration"
+  },
+  "jump_king_4": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "jump_king_3",
+   "tab": "exploration"
+  },
+  "jump_king_5": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "jump_king_4",
+   "tab": "exploration"
+  },
+  "jump_king_6": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "jump_king_5",
+   "tab": "exploration"
+  },
+  "jump_king_7": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "jump_king_6",
+   "tab": "exploration"
+  },
+  "jump_king_8": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "jump_king_7",
+   "tab": "exploration"
+  },
+  "jump_king_9": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "jump_king_8",
+   "tab": "exploration"
+  },
+  "learning_1": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "exploration",
+   "tab": "exploration"
+  },
+  "learning_10": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "learning_9",
+   "tab": "exploration"
+  },
+  "learning_11": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "learning_10",
+   "tab": "exploration"
+  },
+  "learning_12": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "learning_11",
+   "tab": "exploration"
+  },
+  "learning_13": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "learning_12",
+   "tab": "exploration"
+  },
+  "learning_14": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "learning_13",
+   "tab": "exploration"
+  },
+  "learning_15": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "learning_14",
+   "tab": "exploration"
+  },
+  "learning_16": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "learning_15",
+   "tab": "exploration"
+  },
+  "learning_17": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "learning_16",
+   "tab": "exploration"
+  },
+  "learning_18": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "learning_17",
+   "tab": "exploration"
+  },
+  "learning_19": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "learning_18",
+   "tab": "exploration"
+  },
+  "learning_2": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "learning_1",
+   "tab": "exploration"
+  },
+  "learning_20": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "learning_19",
+   "tab": "exploration"
+  },
+  "learning_3": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "learning_2",
+   "tab": "exploration"
+  },
+  "learning_4": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "learning_3",
+   "tab": "exploration"
+  },
+  "learning_5": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "learning_4",
+   "tab": "exploration"
+  },
+  "learning_6": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "learning_5",
+   "tab": "exploration"
+  },
+  "learning_7": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "learning_6",
+   "tab": "exploration"
+  },
+  "learning_8": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "learning_7",
+   "tab": "exploration"
+  },
+  "learning_9": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "learning_8",
+   "tab": "exploration"
+  },
+  "lodestone_exits": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pathfinder",
+   "tab": "exploration"
+  },
+  "lucky_pick": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "starter_pick",
+   "tab": "gatherer"
+  },
+  "magic_master_kit": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "magic_starter_kit",
+   "tab": "crafting"
+  },
+  "magic_starter_kit": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "enchanting",
+   "tab": "crafting"
+  },
+  "mass_production": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "mise_en_place",
+   "tab": "crafting"
+  },
+  "master_shoveler": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "expert_shoveler",
+   "tab": "gatherer"
+  },
+  "mega_jump": {
+   "hidden": [
+    [
+     "Desert Biome"
+    ],
+    [
+     "Taiga Biomes"
+    ],
+    [
+     "Snowy Biomes"
+    ]
+   ],
+   "learning": 0,
+   "parent": "jump_king",
+   "tab": "exploration"
+  },
+  "mining": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "gatherer",
+   "tab": "gatherer"
+  },
+  "mining_efficiency": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "mining",
+   "tab": "gatherer"
+  },
+  "mining_efficiency_2": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "mining_efficiency",
+   "tab": "gatherer"
+  },
+  "mining_efficiency_3": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "mining_efficiency_2",
+   "tab": "gatherer"
+  },
+  "mise_en_place": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "alchemy",
+   "tab": "crafting"
+  },
+  "more_more_pearls": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "more_pearls",
+   "tab": "exploration"
+  },
+  "more_pearls": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "ender_pearl_starter",
+   "tab": "exploration"
+  },
+  "more_starter_apples": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "starter_apples",
+   "tab": "combatant"
+  },
+  "movement_boost": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "speed_1",
+   "tab": "exploration"
+  },
+  "ore_seeker_1": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "silky_pick",
+   "tab": "gatherer"
+  },
+  "ore_seeker_2": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "ore_seeker_1",
+   "tab": "gatherer"
+  },
+  "pathfinder": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "exploration",
+   "tab": "exploration"
+  },
+  "pet_armadillo": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "pet_chicken",
+   "tab": "pets"
+  },
+  "pet_axolotl": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pet_frog",
+   "tab": "pets"
+  },
+  "pet_bee": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pet_chicken",
+   "tab": "pets"
+  },
+  "pet_cat": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pet_chicken",
+   "tab": "pets"
+  },
+  "pet_chicken": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pets",
+   "tab": "pets"
+  },
+  "pet_cow": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pet_chicken",
+   "tab": "pets"
+  },
+  "pet_creeper": {
+   "hidden": [
+    []
+   ],
+   "learning": 5,
+   "parent": "pet_slime",
+   "tab": "pets"
+  },
+  "pet_fox": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pet_cat",
+   "tab": "pets"
+  },
+  "pet_frog": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pet_chicken",
+   "tab": "pets"
+  },
+  "pet_mooshroom": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pet_cow",
+   "tab": "pets"
+  },
+  "pet_polar_bear": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "pet_fox",
+   "tab": "pets"
+  },
+  "pet_slime": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "pet_chicken",
+   "tab": "pets"
+  },
+  "pet_the_animal": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pet_chicken",
+   "tab": "pets"
+  },
+  "pet_turtle": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pet_axolotl",
+   "tab": "pets"
+  },
+  "pet_wolf": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pet_cat",
+   "tab": "pets"
+  },
+  "pet_wolf_armored": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pet_wolf",
+   "tab": "pets"
+  },
+  "pet_wolf_big": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "pet_wolf",
+   "tab": "pets"
+  },
+  "pet_wolf_sword": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "pet_wolf",
+   "tab": "pets"
+  },
+  "pets": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": null,
+   "tab": "pets"
+  },
+  "pickup_area_size": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "gatherer",
+   "tab": "gatherer"
+  },
+  "poseidon": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "trident",
+   "tab": "gatherer"
+  },
+  "quiver": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "archer",
+   "tab": "combatant"
+  },
+  "rare_earth_specialist": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "lucky_pick",
+   "tab": "gatherer"
+  },
+  "rockets": {
+   "hidden": [
+    []
+   ],
+   "learning": 5,
+   "parent": "elytra",
+   "tab": "exploration"
+  },
+  "runemaster": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "magic_master_kit",
+   "tab": "crafting"
+  },
+  "safe_falling": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "mega_jump",
+   "tab": "exploration"
+  },
+  "shazboots": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "speed_3",
+   "tab": "exploration"
+  },
+  "shield_bash": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "starter_shield",
+   "tab": "combatant"
+  },
+  "silky_pick": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "starter_pick",
+   "tab": "gatherer"
+  },
+  "smelt_value_1": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "smelter_2",
+   "tab": "crafting"
+  },
+  "smelt_value_2": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "smelt_value_1",
+   "tab": "crafting"
+  },
+  "smelter_1": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "crafting",
+   "tab": "crafting"
+  },
+  "smelter_2": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "smelter_1",
+   "tab": "crafting"
+  },
+  "sneak_1": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "speed_1",
+   "tab": "exploration"
+  },
+  "sneak_2": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "sneak_1",
+   "tab": "exploration"
+  },
+  "sorcerer_supreme": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "combatant",
+   "tab": "combatant"
+  },
+  "speed_1": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "exploration",
+   "tab": "exploration"
+  },
+  "speed_2": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "speed_1",
+   "tab": "exploration"
+  },
+  "speed_3": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "speed_2",
+   "tab": "exploration"
+  },
+  "starter_apples": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "armaments",
+   "tab": "combatant"
+  },
+  "starter_compass": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "lodestone_exits",
+   "tab": "exploration"
+  },
+  "starter_crafting": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "inventory_crafting",
+   "tab": "crafting"
+  },
+  "starter_pick": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "mining_efficiency_3",
+   "tab": "gatherer"
+  },
+  "starter_shield": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "combatant",
+   "tab": "combatant"
+  },
+  "starter_sword": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "combatant",
+   "tab": "combatant"
+  },
+  "starter_sword_iron": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "starter_sword",
+   "tab": "combatant"
+  },
+  "sub_mining_efficiency": {
+   "hidden": [
+    [
+     "Water World"
+    ]
+   ],
+   "learning": 0,
+   "parent": "mining",
+   "tab": "gatherer"
+  },
+  "teleportation_wand": {
+   "hidden": [
+    [
+     "Endermen"
+    ],
+    [
+     "@mine:enderman_boss"
+    ]
+   ],
+   "learning": 5,
+   "parent": "runemaster",
+   "tab": "crafting"
+  },
+  "tracker": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "quiver",
+   "tab": "combatant"
+  },
+  "trident": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "fishing_rod",
+   "tab": "gatherer"
+  },
+  "varangian": {
+   "hidden": [
+    []
+   ],
+   "learning": 5,
+   "parent": "berserker",
+   "tab": "combatant"
+  },
+  "viking": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "chopper",
+   "tab": "combatant"
+  },
+  "wind_wand": {
+   "hidden": [
+    [
+     "Breezes"
+    ]
+   ],
+   "learning": 5,
+   "parent": "runemaster",
+   "tab": "crafting"
+  },
+  "wing_guardian_lift_off_to_the_sky": {
+   "hidden": [
+    [
+     "@node:sorcerer_supreme"
+    ]
+   ],
+   "learning": 0,
+   "parent": "exploration",
+   "tab": "exploration"
+  },
+  "you_are_the_campfire": {
+   "hidden": [
+    []
+   ],
+   "learning": 5,
+   "parent": "campfire",
+   "tab": "gatherer"
+  }
+ }
+}
