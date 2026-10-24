@@ -6,11 +6,14 @@ import static net.minecraft.commands.Commands.literal;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
+import net.fabricmc.fabric.api.entity.FakePlayer;
 import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.players.PlayerUnlock;
 import net.minecraft.world.level.mines.WorldEffect;
 
 /** Test-only commands for tools/smoke.sh (the game's own unlock commands only exist in Mojang's IDE builds). */
@@ -30,6 +33,21 @@ public final class DevCommands {
 				ctx.getSource().sendSuccess(() -> Component.literal("apdev " + id + " unlocked=" + unlocked), false);
 				return 1;
 			})))
+			.then(literal("buy").then(argument("id", StringArgumentType.word()).executes(ctx -> {
+				String id = ctx.getArgument("id", String.class);
+				FakePlayer player = FakePlayer.get(hub(ctx.getSource()));
+				Holder<PlayerUnlock> unlock = unlock(id);
+				player.setExperienceLevels(unlock.value().unlockPrice());
+				boolean bought = player.buyUnlock(unlock);
+				ctx.getSource().sendSuccess(() -> Component.literal("apdev " + id + " bought=" + bought), false);
+				return 1;
+			})))
+			.then(literal("active").then(argument("id", StringArgumentType.word()).executes(ctx -> {
+				String id = ctx.getArgument("id", String.class);
+				boolean active = FakePlayer.get(hub(ctx.getSource())).isActive(unlock(id));
+				ctx.getSource().sendSuccess(() -> Component.literal("apdev " + id + " active=" + active), false);
+				return 1;
+			})))
 			.then(literal("crafter_xp").then(argument("amount", IntegerArgumentType.integer(1)).executes(ctx -> {
 				ServerLevel hub = hub(ctx.getSource());
 				hub.addExperienceToMineCrafter(ctx.getArgument("amount", Integer.class));
@@ -40,6 +58,10 @@ public final class DevCommands {
 
 	private static ServerLevel hub(CommandSourceStack source) {
 		return source.theGame().overworld();
+	}
+
+	private static Holder<PlayerUnlock> unlock(String id) {
+		return BuiltInRegistries.PLAYER_UNLOCK.get(ResourceLocation.withDefaultNamespace(id)).orElseThrow();
 	}
 
 	private static WorldEffect effect(String id) {

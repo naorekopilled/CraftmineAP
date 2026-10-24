@@ -58,5 +58,21 @@ wait_for "$W/ap.log" "Mine Crafter Level 2" 30 || finish 1
 
 ap "/send Miner Desert Biome"
 wait_for "$W/mc.log" "Unlocked new Mine Ingredient: Desert Biome" 30 || finish 1
+
+# a bought node is a check, and its effect waits for its item
+mc "apdev active combatant"
+wait_for "$W/mc.log" "apdev combatant active=false" 30 || finish 1
+mc "apdev buy combatant"
+wait_for "$W/mc.log" "apdev combatant bought=true" 30 || finish 1
+wait_for "$W/ap.log" "(Buy Combat)" 30 || finish 1
+sleep 2
+mc "apdev active combatant"
+for _ in $(seq 1 30); do [ "$(grep -c 'apdev combatant active=false' "$W/mc.log")" -ge 2 ] && break; sleep 1; done
+grep -q 'apdev combatant active=true' "$W/mc.log" && { echo "bought node became active without its item"; finish 1; }
+ap "/send Miner Combat"
+wait_for "$W/ap.log" 'sending "Combat"' 30 || finish 1
+sleep 2
+mc "apdev active combatant"
+wait_for "$W/mc.log" "apdev combatant active=true" 30 || finish 1
 echo "SMOKE OK"
 finish 0
