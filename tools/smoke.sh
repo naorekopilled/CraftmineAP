@@ -13,6 +13,7 @@ echo eula=true > "$D/mod/run-smoke/eula.txt"
 
 "$D/tools/gen_test.sh" 7 > /dev/null || { echo "seed generation failed"; exit 1; }
 zip=$(ls -t "$D"/tools-ext/gen-out/*.zip | head -1)
+rm -f "${zip%.zip}.apsave"  # MultiServer resumes from it, and checks from an earlier run would not show again
 
 (cd "$D/tools-ext/ap" && tail -f "$W/ap.in" | SKIP_REQUIREMENTS_UPDATE=1 ../apvenv/bin/python MultiServer.py \
   --port 38281 --host localhost "$zip" > "$W/ap.log" 2>&1) &
