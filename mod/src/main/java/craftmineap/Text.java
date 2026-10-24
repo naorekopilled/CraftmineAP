@@ -38,6 +38,11 @@ public final class Text {
 	}
 
 	// placeholder
+	public static Component connectUsage() {
+		return Component.literal("/connect <address> <slot> [password]");
+	}
+
+	// placeholder
 	public static Component refused(String reason) {
 		return Component.literal("Archipelago refused the connection: " + reason);
 	}

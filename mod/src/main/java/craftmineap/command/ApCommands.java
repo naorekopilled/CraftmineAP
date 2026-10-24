@@ -7,6 +7,7 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import craftmineap.Text;
 import craftmineap.ap.ApSession;
+import craftmineap.core.ConnectArgs;
 import net.minecraft.commands.CommandSourceStack;
 
 /** /connect, /disconnect, /sync and /start, named like the Minecraft AP mod's. */
@@ -25,12 +26,15 @@ public final class ApCommands {
 				session.connect(session.state.address, session.state.slot, session.state.password);
 				return 1;
 			})
-			.then(argument("address", StringArgumentType.string())
-				.then(argument("slot", StringArgumentType.string())
-					.executes(ctx -> connect(ctx.getArgument("address", String.class), ctx.getArgument("slot", String.class), null))
-					.then(argument("password", StringArgumentType.greedyString())
-						.executes(ctx -> connect(ctx.getArgument("address", String.class), ctx.getArgument("slot", String.class),
-							ctx.getArgument("password", String.class)))))));
+			.then(argument("address slot [password]", StringArgumentType.greedyString()).executes(ctx -> {
+				ConnectArgs args = ConnectArgs.parse(ctx.getArgument("address slot [password]", String.class));
+				if (args == null) {
+					ctx.getSource().sendFailure(Text.connectUsage());
+					return 0;
+				}
+				ApSession.current().connect(args.address(), args.slot(), args.password());
+				return 1;
+			})));
 		dispatcher.register(literal("disconnect").executes(ctx -> {
 			ApSession.current().disconnect();
 			return 1;
@@ -49,10 +53,5 @@ public final class ApCommands {
 			session.start();
 			return 1;
 		}));
-	}
-
-	private static int connect(String address, String slot, String password) {
-		ApSession.current().connect(address, slot, password);
-		return 1;
 	}
 }

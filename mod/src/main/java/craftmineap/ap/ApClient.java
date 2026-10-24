@@ -48,7 +48,7 @@ public class ApClient extends Client {
 
 	@ArchipelagoEventListener
 	public void onPrint(PrintJSONEvent event) {
-		session.onPrint(event.apPrint.getPlainText());
+		session.onPrint(event.apPrint.parts);
 	}
 
 	@ArchipelagoEventListener

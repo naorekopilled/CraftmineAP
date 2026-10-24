@@ -2,16 +2,19 @@ package craftmineap.ap;
 
 import craftmineap.Text;
 import craftmineap.core.ApState;
+import craftmineap.core.ChatColors;
 import craftmineap.core.DeathLinkGate;
 import craftmineap.core.SlotData;
 import net.minecraft.advancements.AdvancementHolder;
 import io.github.archipelagomw.ClientStatus;
+import io.github.archipelagomw.Print.APPrintPart;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.storage.LevelResource;
 import org.slf4j.Logger;
@@ -47,6 +50,8 @@ public final class ApSession {
 	}
 
 	public static void open(MinecraftServer server) {
+		// entering a mine restarts the game inside the server without a stop event: hand over from the old session
+		close();
 		current = new ApSession(server);
 		ItemApplier.refreshGate(current);
 		String auto = System.getProperty("craftmineap.autoconnect");
@@ -234,8 +239,15 @@ public final class ApSession {
 		});
 	}
 
-	void onPrint(String text) {
-		onServer(() -> server.theGame().playerList().broadcastSystemMessage(Component.literal(text), false));
+	void onPrint(APPrintPart[] parts) {
+		onServer(() -> {
+			MutableComponent message = Component.empty();
+			for (ChatColors.Segment segment : ChatColors.segments(parts, state.slot)) {
+				MutableComponent piece = Component.literal(segment.text());
+				message.append(segment.rgb() == null ? piece : piece.withColor(segment.rgb()));
+			}
+			server.theGame().playerList().broadcastSystemMessage(message, false);
+		});
 	}
 
 	void onDeathLink(String source, String cause) {
