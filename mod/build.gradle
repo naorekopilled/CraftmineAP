@@ -9,6 +9,20 @@ base {
 	archivesName = project.archives_base_name
 }
 
+def dumpFile = file("../apworld/craftmine/data/craftmine.json")
+
+loom {
+	runs {
+		dump {
+			server()
+			name = "Data Dump"
+			runDir = "run"
+			vmArg "-Dcraftmineap.dump=${dumpFile}"
+			programArgs "--nogui"
+		}
+	}
+}
+
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.officialMojangMappings()

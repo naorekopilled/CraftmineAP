@@ -1,0 +1,3433 @@
+{
+  "ingredients": [
+    {
+      "id": "amplified",
+      "name": "Amplified World",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [
+        "floating_islands_world"
+      ],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "angry_ghast_boss_fight",
+      "name": "Angry Ghast Boss",
+      "unlock_mode": "NEVER_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "NEVER",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "armadillos",
+      "name": "Armadillos",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "axolotls",
+      "name": "Axolotls",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKABLE",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "badlands",
+      "name": "Badlands Biomes",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "base_andesite",
+      "name": "Base rock type: Andesite",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKABLE",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "base_blackstone",
+      "name": "Base rock type: Blackstone",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKABLE",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "base_deepslate",
+      "name": "Base rock type: Deepslate",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKABLE",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "base_diorite",
+      "name": "Base rock type: Diorite",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKABLE",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "base_end_stone",
+      "name": "Base rock type: End Stone",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "base_granite",
+      "name": "Base rock type: Granite",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKABLE",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "base_stone",
+      "name": "Base rock type: Stone",
+      "unlock_mode": "ALWAYS_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "base_tuff",
+      "name": "Base rock type: Tuff",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKABLE",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "bees",
+      "name": "Bees",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "blazes",
+      "name": "Blazes",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "bouncy",
+      "name": "Bouncy Blocks",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 2.0
+    },
+    {
+      "id": "breezes",
+      "name": "Breezes",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "cave_exits",
+      "name": "Cave Exits",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 2,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "cave_spiders",
+      "name": "Cave Spiders",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "cave_world",
+      "name": "Cave World",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [
+        "floating_islands_world"
+      ],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "chickens",
+      "name": "Chickens",
+      "unlock_mode": "ALWAYS_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "cows",
+      "name": "Cows",
+      "unlock_mode": "ALWAYS_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "creepers",
+      "name": "Creepers",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKABLE",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "dark_cave_world",
+      "name": "Dark Cave World",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [
+        "grid_world"
+      ],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "dark_forests",
+      "name": "Dark Forest Biomes",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [
+        "forests",
+        "jungles",
+        "taigas"
+      ],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "deep_dark",
+      "name": "Deep Dark Biome",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "desert",
+      "name": "Desert Biome",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "dry_land",
+      "name": "Dry Land",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "end",
+      "name": "End Biomes",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "ender_dragon_boss_fight",
+      "name": "Ender Dragon Boss",
+      "unlock_mode": "NEVER_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "NEVER",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "endermen",
+      "name": "Endermen",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [
+        "creepers",
+        "skeletons",
+        "spiders",
+        "zombies"
+      ],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "endermites",
+      "name": "Endermites",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "eternal_lightning",
+      "name": "Eternal Lightning",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 5.0
+    },
+    {
+      "id": "eternal_night",
+      "name": "Eternal Night",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 20,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 5.0
+    },
+    {
+      "id": "eternal_rain",
+      "name": "Eternal Rain",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 2.0
+    },
+    {
+      "id": "event_exit",
+      "name": "Event Mine",
+      "unlock_mode": "NEVER_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "NEVER",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "evokers",
+      "name": "Evokers",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "explosive_traps",
+      "name": "Explosive Traps",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.5
+    },
+    {
+      "id": "fish_out_of_water",
+      "name": "Fish Out of Water",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "NEVER",
+      "multiplayer_only": false,
+      "xp_multiplier": 5.0
+    },
+    {
+      "id": "floating_islands_world",
+      "name": "Floating Islands",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "forests",
+      "name": "Forest Biomes",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "foxes",
+      "name": "Foxes",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "frogs",
+      "name": "Frogs",
+      "unlock_mode": "ALWAYS_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "ghasts",
+      "name": "Ghasts",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "goats",
+      "name": "Goats",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "grid_world",
+      "name": "Grid World",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [
+        "shattered_blocks_world"
+      ],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "guardians",
+      "name": "Guardians",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "hoglins",
+      "name": "Hoglins",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "ice_spikes",
+      "name": "Ice Spikes Biome",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "icy",
+      "name": "Icy Surfaces",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 2.0
+    },
+    {
+      "id": "illusioners",
+      "name": "Illusioners",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "insomniacs",
+      "name": "Insomniacs",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 2.0
+    },
+    {
+      "id": "jungles",
+      "name": "Jungle Biomes",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "kuiper_world",
+      "name": "Kuiper World",
+      "unlock_mode": "NEVER_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "NEVER",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "magma_cubes",
+      "name": "Magma Cubes",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "mooshrooms",
+      "name": "Mooshrooms",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "mushroom_fields",
+      "name": "Mushroom Fields Biome",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "nether_barrens",
+      "name": "Barren Nether Biomes",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "nether_forests",
+      "name": "Nether Forest Biomes",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "no_drops",
+      "name": "No drops?",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 20,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 5.0
+    },
+    {
+      "id": "ocelots",
+      "name": "Ocelots",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKABLE",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "one_hp",
+      "name": "One HP",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 4.0
+    },
+    {
+      "id": "pandas",
+      "name": "Pandas",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "parrots",
+      "name": "Parrots",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "piglins",
+      "name": "Piglins",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "pigs",
+      "name": "Pigs",
+      "unlock_mode": "ALWAYS_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "pillagers",
+      "name": "Pillagers",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "plains",
+      "name": "Plains Biomes",
+      "unlock_mode": "ALWAYS_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "rabbits",
+      "name": "Rabbits",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "raid",
+      "name": "Raid!",
+      "unlock_mode": "NEVER_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "NEVER",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "rare_surface_exits",
+      "name": "Rare Surface Exits",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "ravagers",
+      "name": "Ravagers",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "savannas",
+      "name": "Savanna Biomes",
+      "unlock_mode": "ALWAYS_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "shattered_blocks_world",
+      "name": "Shattered Blocks World",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [
+        "amplified",
+        "cave_world"
+      ],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "sheep",
+      "name": "Sheep",
+      "unlock_mode": "ALWAYS_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "shulkers",
+      "name": "Shulkers",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "skeletons",
+      "name": "Skeletons",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKABLE",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "slimes",
+      "name": "Slimes",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKABLE",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "small_but_deadly_boss_fight",
+      "name": "Small But Deadly Boss Fight",
+      "unlock_mode": "NEVER_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "NEVER",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "sniffers",
+      "name": "Sniffers",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "snowy",
+      "name": "Snowy Biomes",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "soul_link",
+      "name": "Soul Link",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": true,
+      "xp_multiplier": 2.0
+    },
+    {
+      "id": "spiders",
+      "name": "Spiders",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKABLE",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "spooky_scary_skeletons_boss_fight",
+      "name": "world.effect.spooky_scary_skeletons_boss_fight.name",
+      "unlock_mode": "NEVER_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "NEVER",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "striders",
+      "name": "Striders",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "surface_exits",
+      "name": "Surface Exits",
+      "unlock_mode": "ALWAYS_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "surface_world",
+      "name": "Surface World",
+      "unlock_mode": "ALWAYS_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "swamps",
+      "name": "Swamp Biomes",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "taigas",
+      "name": "Taiga Biomes",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "the_enderman_boss_fight",
+      "name": "The Enderman Boss Fight",
+      "unlock_mode": "NEVER_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "NEVER",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "ultrawarm",
+      "name": "Ultrawarm",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 20,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "universal_anger",
+      "name": "(Near) Universal Anger",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 2.0
+    },
+    {
+      "id": "vindicators",
+      "name": "Vindicators",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "warden_boss_fight",
+      "name": "Warden Boss Fight",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "NEVER",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "water_world",
+      "name": "Water World",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "wednesday_frogs",
+      "name": "Wednesday Frogs",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.2
+    },
+    {
+      "id": "witches",
+      "name": "Witches",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [
+        "creepers",
+        "skeletons",
+        "spiders",
+        "zombies"
+      ],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "wither_boss_fight",
+      "name": "Wither Boss Fight",
+      "unlock_mode": "NEVER_UNLOCKED",
+      "conditions": 0,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "NEVER",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "wither_skeletons",
+      "name": "Wither Skeletons",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "zoglins",
+      "name": "Zoglins",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "zombies",
+      "name": "Zombies",
+      "unlock_mode": "UNLOCKED_ON_WIN",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKABLE",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    },
+    {
+      "id": "zombified_piglins",
+      "name": "Zombified Piglins",
+      "unlock_mode": "UNLOCKED_BY_CONDITION",
+      "conditions": 1,
+      "unlocked_after": [],
+      "required_unlock_count": 0,
+      "randomization": "WHEN_UNLOCKED",
+      "multiplayer_only": false,
+      "xp_multiplier": 1.0
+    }
+  ],
+  "unlocks": [
+    {
+      "id": "alchemy",
+      "name": "Alchemy",
+      "tab": "crafting",
+      "parent": "inventory_slots_1",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "allez_cuisine",
+      "name": "Allez Cuisine!",
+      "tab": "crafting",
+      "parent": "mise_en_place",
+      "disables": [],
+      "cost": 35,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "amphibian",
+      "name": "Amphibian",
+      "tab": "exploration",
+      "parent": "speed_1",
+      "disables": [],
+      "cost": 5,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "apprentice_shoveler",
+      "name": "Apprentice Shoveler",
+      "tab": "gatherer",
+      "parent": "dirt_enjoyer_1",
+      "disables": [],
+      "cost": 5,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "archer",
+      "name": "Archer",
+      "tab": "combatant",
+      "parent": "combatant",
+      "disables": [],
+      "cost": 10,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "armaments",
+      "name": "Armaments",
+      "tab": "combatant",
+      "parent": "combatant",
+      "disables": [],
+      "cost": 10,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "arrowverse",
+      "name": "Arrowverse",
+      "tab": "combatant",
+      "parent": "fletcher",
+      "disables": [],
+      "cost": 30,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "berserker",
+      "name": "Berserker",
+      "tab": "combatant",
+      "parent": "viking",
+      "disables": [
+        "chopper",
+        "viking"
+      ],
+      "cost": 35,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "best_starter_sword",
+      "name": "No Nether Needed",
+      "tab": "combatant",
+      "parent": "better_starter_sword",
+      "disables": [
+        "better_starter_sword",
+        "starter_sword",
+        "starter_sword_iron"
+      ],
+      "cost": 50,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "better_starter_sword",
+      "name": "Shiny Sword",
+      "tab": "combatant",
+      "parent": "starter_sword_iron",
+      "disables": [
+        "starter_sword",
+        "starter_sword_iron"
+      ],
+      "cost": 30,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "bundle_of_fortune",
+      "name": "Bundle of Fortune",
+      "tab": "crafting",
+      "parent": "inventory_slots_3",
+      "disables": [],
+      "cost": 50,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "campfire",
+      "name": "Starter Campfire",
+      "tab": "gatherer",
+      "parent": "hunter",
+      "disables": [],
+      "cost": 5,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "chopper",
+      "name": "Chopper",
+      "tab": "combatant",
+      "parent": "combatant",
+      "disables": [],
+      "cost": 5,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "combatant",
+      "name": "Combat",
+      "tab": "combatant",
+      "parent": null,
+      "disables": [],
+      "cost": 1,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "crafting",
+      "name": "Crafting",
+      "tab": "crafting",
+      "parent": null,
+      "disables": [],
+      "cost": 1,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "crafting_efficiency",
+      "name": "Artisan Crafting",
+      "tab": "crafting",
+      "parent": "inventory_crafting_3x3",
+      "disables": [],
+      "cost": 50,
+      "visibility": "MYSTERY",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "crusher",
+      "name": "The Natural Evolution of a Shield",
+      "tab": "combatant",
+      "parent": "shield_bash",
+      "disables": [],
+      "cost": 50,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "decked_out",
+      "name": "Decked out",
+      "tab": "combatant",
+      "parent": "armaments",
+      "disables": [],
+      "cost": 20,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "dirt_connoisseur",
+      "name": "Dirt Connoisseur",
+      "tab": "gatherer",
+      "parent": "dirt_destroyer_2",
+      "disables": [],
+      "cost": 10,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "dirt_destroyer_1",
+      "name": "Dirt is Butter",
+      "tab": "gatherer",
+      "parent": "dirt_enjoyer_3",
+      "disables": [],
+      "cost": 10,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "dirt_destroyer_2",
+      "name": "Mmmmm Dirt Butter",
+      "tab": "gatherer",
+      "parent": "dirt_destroyer_1",
+      "disables": [],
+      "cost": 20,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "dirt_enjoyer_1",
+      "name": "Dirt Enjoyer",
+      "tab": "gatherer",
+      "parent": "gatherer",
+      "disables": [],
+      "cost": 2,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "dirt_enjoyer_2",
+      "name": "Dirt Fanatic",
+      "tab": "gatherer",
+      "parent": "dirt_enjoyer_1",
+      "disables": [
+        "dirt_enjoyer_1"
+      ],
+      "cost": 5,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "dirt_enjoyer_3",
+      "name": "Dirt Lover",
+      "tab": "gatherer",
+      "parent": "dirt_enjoyer_2",
+      "disables": [
+        "dirt_enjoyer_2"
+      ],
+      "cost": 10,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "dragon_fire",
+      "name": "Dragon Fire",
+      "tab": "crafting",
+      "parent": "fire_wand",
+      "disables": [],
+      "cost": 10,
+      "visibility": "MYSTERY",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "efficient_enchanting",
+      "name": "Efficient Enchanting",
+      "tab": "crafting",
+      "parent": "magic_master_kit",
+      "disables": [],
+      "cost": 35,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "elytra",
+      "name": "Elytron",
+      "tab": "exploration",
+      "parent": "jump_king_10",
+      "disables": [],
+      "cost": 50,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "enchanting",
+      "name": "Enchanting",
+      "tab": "crafting",
+      "parent": "inventory_slots_1",
+      "disables": [],
+      "cost": 5,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "ender_pearl_starter",
+      "name": "Let's get Pearling",
+      "tab": "exploration",
+      "parent": "exploration",
+      "disables": [],
+      "cost": 5,
+      "visibility": "MYSTERY",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "expert_shoveler",
+      "name": "Expert Shoveler",
+      "tab": "gatherer",
+      "parent": "journeyman_shoveler",
+      "disables": [
+        "apprentice_shoveler",
+        "journeyman_shoveler"
+      ],
+      "cost": 25,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "exploration",
+      "name": "Exploration",
+      "tab": "exploration",
+      "parent": null,
+      "disables": [],
+      "cost": 1,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "extra_firepower",
+      "name": "Extra Firepower",
+      "tab": "school_of_hard_knocks",
+      "parent": "rewrite_in_rust",
+      "disables": [],
+      "cost": 25,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "fire_shield",
+      "name": "Fire Shield",
+      "tab": "combatant",
+      "parent": "shield_bash",
+      "disables": [],
+      "cost": 15,
+      "visibility": "MYSTERY",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "fire_wand",
+      "name": "Leaf",
+      "tab": "crafting",
+      "parent": "runemaster",
+      "disables": [],
+      "cost": 50,
+      "visibility": "MYSTERY",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "fishing",
+      "name": "The Mining of the Sea",
+      "tab": "gatherer",
+      "parent": "gatherer",
+      "disables": [],
+      "cost": 2,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "fishing_rod",
+      "name": "Angler",
+      "tab": "gatherer",
+      "parent": "fishing",
+      "disables": [],
+      "cost": 5,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "fletcher",
+      "name": "Fletcher",
+      "tab": "combatant",
+      "parent": "quiver",
+      "disables": [
+        "quiver"
+      ],
+      "cost": 20,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "full_metal",
+      "name": "Full Metal",
+      "tab": "combatant",
+      "parent": "decked_out",
+      "disables": [
+        "decked_out"
+      ],
+      "cost": 40,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "gatherer",
+      "name": "Gatherer",
+      "tab": "gatherer",
+      "parent": null,
+      "disables": [],
+      "cost": 1,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "golden_starter_apples",
+      "name": "Golden Apples",
+      "tab": "combatant",
+      "parent": "more_starter_apples",
+      "disables": [
+        "more_starter_apples"
+      ],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "hunter",
+      "name": "Hunter",
+      "tab": "gatherer",
+      "parent": "gatherer",
+      "disables": [],
+      "cost": 1,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "inventory_crafting",
+      "name": "Inventory Crafting",
+      "tab": "crafting",
+      "parent": "crafting",
+      "disables": [],
+      "cost": 2,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "inventory_crafting_3x3",
+      "name": "3x3 Inventory Crafting",
+      "tab": "crafting",
+      "parent": "inventory_crafting",
+      "disables": [],
+      "cost": 33,
+      "visibility": "MYSTERY",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "inventory_slots_1",
+      "name": "Pockets",
+      "tab": "crafting",
+      "parent": "crafting",
+      "disables": [],
+      "cost": 2,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "inventory_slots_2",
+      "name": "Deeper Pockets",
+      "tab": "crafting",
+      "parent": "inventory_slots_1",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "inventory_slots_3",
+      "name": "Deepest Pockets",
+      "tab": "crafting",
+      "parent": "inventory_slots_2",
+      "disables": [],
+      "cost": 30,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "journeyman_shoveler",
+      "name": "Journeyman Shoveler",
+      "tab": "gatherer",
+      "parent": "apprentice_shoveler",
+      "disables": [
+        "apprentice_shoveler"
+      ],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "jump_king",
+      "name": "+1 jump",
+      "tab": "exploration",
+      "parent": "exploration",
+      "disables": [],
+      "cost": 20,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "jump_king_10",
+      "name": "+1 jump",
+      "tab": "exploration",
+      "parent": "jump_king_9",
+      "disables": [],
+      "cost": 40,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "jump_king_2",
+      "name": "+1 jump",
+      "tab": "exploration",
+      "parent": "jump_king",
+      "disables": [],
+      "cost": 24,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "jump_king_3",
+      "name": "+1 jump",
+      "tab": "exploration",
+      "parent": "jump_king_2",
+      "disables": [],
+      "cost": 26,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "jump_king_4",
+      "name": "+1 jump",
+      "tab": "exploration",
+      "parent": "jump_king_3",
+      "disables": [],
+      "cost": 28,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "jump_king_5",
+      "name": "+1 jump",
+      "tab": "exploration",
+      "parent": "jump_king_4",
+      "disables": [],
+      "cost": 30,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "jump_king_6",
+      "name": "+1 jump",
+      "tab": "exploration",
+      "parent": "jump_king_5",
+      "disables": [],
+      "cost": 32,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "jump_king_7",
+      "name": "+1 jump",
+      "tab": "exploration",
+      "parent": "jump_king_6",
+      "disables": [],
+      "cost": 34,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "jump_king_8",
+      "name": "+1 jump",
+      "tab": "exploration",
+      "parent": "jump_king_7",
+      "disables": [],
+      "cost": 36,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "jump_king_9",
+      "name": "+1 jump",
+      "tab": "exploration",
+      "parent": "jump_king_8",
+      "disables": [],
+      "cost": 38,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_1",
+      "name": "Learning",
+      "tab": "exploration",
+      "parent": "exploration",
+      "disables": [],
+      "cost": 2,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_10",
+      "name": "Learning 10",
+      "tab": "exploration",
+      "parent": "learning_9",
+      "disables": [],
+      "cost": 20,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_11",
+      "name": "Learning 11",
+      "tab": "exploration",
+      "parent": "learning_10",
+      "disables": [],
+      "cost": 22,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_12",
+      "name": "Learning 12",
+      "tab": "exploration",
+      "parent": "learning_11",
+      "disables": [],
+      "cost": 24,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_13",
+      "name": "Learning 13",
+      "tab": "exploration",
+      "parent": "learning_12",
+      "disables": [],
+      "cost": 26,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_14",
+      "name": "Learning 14",
+      "tab": "exploration",
+      "parent": "learning_13",
+      "disables": [],
+      "cost": 28,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_15",
+      "name": "Learning 15",
+      "tab": "exploration",
+      "parent": "learning_14",
+      "disables": [],
+      "cost": 30,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_16",
+      "name": "Learning 16",
+      "tab": "exploration",
+      "parent": "learning_15",
+      "disables": [],
+      "cost": 32,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_17",
+      "name": "Learning 17",
+      "tab": "exploration",
+      "parent": "learning_16",
+      "disables": [],
+      "cost": 34,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_18",
+      "name": "Learning 18",
+      "tab": "exploration",
+      "parent": "learning_17",
+      "disables": [],
+      "cost": 36,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_19",
+      "name": "Learning 19",
+      "tab": "exploration",
+      "parent": "learning_18",
+      "disables": [],
+      "cost": 38,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_2",
+      "name": "Learning 2",
+      "tab": "exploration",
+      "parent": "learning_1",
+      "disables": [],
+      "cost": 4,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_20",
+      "name": "Learning 20",
+      "tab": "exploration",
+      "parent": "learning_19",
+      "disables": [],
+      "cost": 40,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_3",
+      "name": "Learning 3",
+      "tab": "exploration",
+      "parent": "learning_2",
+      "disables": [],
+      "cost": 6,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_4",
+      "name": "Learning 4",
+      "tab": "exploration",
+      "parent": "learning_3",
+      "disables": [],
+      "cost": 8,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_5",
+      "name": "Learning 5",
+      "tab": "exploration",
+      "parent": "learning_4",
+      "disables": [],
+      "cost": 10,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_6",
+      "name": "Learning 6",
+      "tab": "exploration",
+      "parent": "learning_5",
+      "disables": [],
+      "cost": 12,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_7",
+      "name": "Learning 7",
+      "tab": "exploration",
+      "parent": "learning_6",
+      "disables": [],
+      "cost": 14,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_8",
+      "name": "Learning 8",
+      "tab": "exploration",
+      "parent": "learning_7",
+      "disables": [],
+      "cost": 16,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "learning_9",
+      "name": "Learning 9",
+      "tab": "exploration",
+      "parent": "learning_8",
+      "disables": [],
+      "cost": 18,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "lodestone_exits",
+      "name": "Lodestone Exits",
+      "tab": "exploration",
+      "parent": "pathfinder",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "lucky_pick",
+      "name": "Lucky pick",
+      "tab": "gatherer",
+      "parent": "starter_pick",
+      "disables": [
+        "starter_pick"
+      ],
+      "cost": 20,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "magic_master_kit",
+      "name": "Master Magic Kit",
+      "tab": "crafting",
+      "parent": "magic_starter_kit",
+      "disables": [
+        "magic_starter_kit"
+      ],
+      "cost": 25,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "magic_starter_kit",
+      "name": "Magic Kit",
+      "tab": "crafting",
+      "parent": "enchanting",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "mass_production",
+      "name": "Haute cuisine",
+      "tab": "crafting",
+      "parent": "mise_en_place",
+      "disables": [],
+      "cost": 35,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "master_shoveler",
+      "name": "Master Shoveler",
+      "tab": "gatherer",
+      "parent": "expert_shoveler",
+      "disables": [
+        "apprentice_shoveler",
+        "expert_shoveler",
+        "journeyman_shoveler"
+      ],
+      "cost": 35,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "mega_jump",
+      "name": "MEGA JUMP",
+      "tab": "exploration",
+      "parent": "jump_king",
+      "disables": [],
+      "cost": 5,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "mining",
+      "name": "Mining",
+      "tab": "gatherer",
+      "parent": "gatherer",
+      "disables": [],
+      "cost": 2,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "mining_efficiency",
+      "name": "Mining effeicency",
+      "tab": "gatherer",
+      "parent": "mining",
+      "disables": [],
+      "cost": 5,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "mining_efficiency_2",
+      "name": "Mining effeicenter",
+      "tab": "gatherer",
+      "parent": "mining_efficiency",
+      "disables": [],
+      "cost": 10,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "mining_efficiency_3",
+      "name": "Mining effeicentest",
+      "tab": "gatherer",
+      "parent": "mining_efficiency_2",
+      "disables": [],
+      "cost": 10,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "mise_en_place",
+      "name": "Mise en place",
+      "tab": "crafting",
+      "parent": "alchemy",
+      "disables": [],
+      "cost": 30,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "more_more_pearls",
+      "name": "When yhou just can't get enough!",
+      "tab": "exploration",
+      "parent": "more_pearls",
+      "disables": [],
+      "cost": 25,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "more_pearls",
+      "name": "Pearltastic",
+      "tab": "exploration",
+      "parent": "ender_pearl_starter",
+      "disables": [],
+      "cost": 10,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "more_starter_apples",
+      "name": "More Apples",
+      "tab": "combatant",
+      "parent": "starter_apples",
+      "disables": [
+        "starter_apples"
+      ],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "movement_boost",
+      "name": "Speedrun",
+      "tab": "exploration",
+      "parent": "speed_1",
+      "disables": [],
+      "cost": 5,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "ore_seeker_1",
+      "name": "Ore Seeker",
+      "tab": "gatherer",
+      "parent": "silky_pick",
+      "disables": [],
+      "cost": 20,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "ore_seeker_2",
+      "name": "Ore Seeker: 2",
+      "tab": "gatherer",
+      "parent": "ore_seeker_1",
+      "disables": [],
+      "cost": 20,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "pathfinder",
+      "name": "Pathfinder",
+      "tab": "exploration",
+      "parent": "exploration",
+      "disables": [],
+      "cost": 10,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "pet_armadillo",
+      "name": "Pet Armadillo",
+      "tab": "pets",
+      "parent": "pet_chicken",
+      "disables": [],
+      "cost": 30,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": "exclusive_pet"
+    },
+    {
+      "id": "pet_axolotl",
+      "name": "Pet Axolotl",
+      "tab": "pets",
+      "parent": "pet_frog",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": "exclusive_pet"
+    },
+    {
+      "id": "pet_bee",
+      "name": "Pet Bee",
+      "tab": "pets",
+      "parent": "pet_chicken",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": "exclusive_pet"
+    },
+    {
+      "id": "pet_cat",
+      "name": "Pet Cat",
+      "tab": "pets",
+      "parent": "pet_chicken",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": "exclusive_pet"
+    },
+    {
+      "id": "pet_chicken",
+      "name": "Pet Chicken",
+      "tab": "pets",
+      "parent": "pets",
+      "disables": [],
+      "cost": 10,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": "exclusive_pet"
+    },
+    {
+      "id": "pet_cow",
+      "name": "Pet Cow",
+      "tab": "pets",
+      "parent": "pet_chicken",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": "exclusive_pet"
+    },
+    {
+      "id": "pet_creeper",
+      "name": "Pet Creeper",
+      "tab": "pets",
+      "parent": "pet_slime",
+      "disables": [],
+      "cost": 100,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": "exclusive_pet"
+    },
+    {
+      "id": "pet_fox",
+      "name": "Pet Fox",
+      "tab": "pets",
+      "parent": "pet_cat",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": "exclusive_pet"
+    },
+    {
+      "id": "pet_frog",
+      "name": "Pet Frog",
+      "tab": "pets",
+      "parent": "pet_chicken",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": "exclusive_pet"
+    },
+    {
+      "id": "pet_mooshroom",
+      "name": "Pet Mooshroom",
+      "tab": "pets",
+      "parent": "pet_cow",
+      "disables": [],
+      "cost": 20,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": "exclusive_pet"
+    },
+    {
+      "id": "pet_polar_bear",
+      "name": "Pet Polar Bear",
+      "tab": "pets",
+      "parent": "pet_fox",
+      "disables": [],
+      "cost": 30,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": "exclusive_pet"
+    },
+    {
+      "id": "pet_slime",
+      "name": "Pet Slime",
+      "tab": "pets",
+      "parent": "pet_chicken",
+      "disables": [],
+      "cost": 30,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": "exclusive_pet"
+    },
+    {
+      "id": "pet_the_animal",
+      "name": "Pet your pets",
+      "tab": "pets",
+      "parent": "pet_chicken",
+      "disables": [],
+      "cost": 10,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "pet_turtle",
+      "name": "Pet Turtle",
+      "tab": "pets",
+      "parent": "pet_axolotl",
+      "disables": [],
+      "cost": 20,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": "exclusive_pet"
+    },
+    {
+      "id": "pet_wolf",
+      "name": "Pet Wolf",
+      "tab": "pets",
+      "parent": "pet_cat",
+      "disables": [],
+      "cost": 10,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "pet_wolf_armored",
+      "name": "Armor up",
+      "tab": "pets",
+      "parent": "pet_wolf",
+      "disables": [],
+      "cost": 15,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "pet_wolf_big",
+      "name": "Direwolf",
+      "tab": "pets",
+      "parent": "pet_wolf",
+      "disables": [],
+      "cost": 25,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "pet_wolf_sword",
+      "name": "Descendant of Sif",
+      "tab": "pets",
+      "parent": "pet_wolf",
+      "disables": [],
+      "cost": 35,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "pets",
+      "name": "Pets",
+      "tab": "pets",
+      "parent": null,
+      "disables": [],
+      "cost": 0,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "pickup_area_size",
+      "name": "Collector",
+      "tab": "gatherer",
+      "parent": "gatherer",
+      "disables": [],
+      "cost": 25,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "poseidon",
+      "name": "Poseidon",
+      "tab": "gatherer",
+      "parent": "trident",
+      "disables": [
+        "trident"
+      ],
+      "cost": 45,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "proper_walking_pace",
+      "name": "Proper Walking Pace",
+      "tab": "school_of_hard_knocks",
+      "parent": "extra_firepower",
+      "disables": [],
+      "cost": 35,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "quiver",
+      "name": "Quiver",
+      "tab": "combatant",
+      "parent": "archer",
+      "disables": [],
+      "cost": 10,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "rare_earth_specialist",
+      "name": "Rare Earth Specialist",
+      "tab": "gatherer",
+      "parent": "lucky_pick",
+      "disables": [],
+      "cost": 20,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "rewrite_in_rust",
+      "name": "Rewrite in Rust",
+      "tab": "school_of_hard_knocks",
+      "parent": "school_of_actual_hard_knocks",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "rockets",
+      "name": "Booster",
+      "tab": "exploration",
+      "parent": "elytra",
+      "disables": [],
+      "cost": 50,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "runemaster",
+      "name": "Runemaster",
+      "tab": "crafting",
+      "parent": "magic_master_kit",
+      "disables": [
+        "magic_master_kit",
+        "magic_starter_kit"
+      ],
+      "cost": 35,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "safe_falling",
+      "name": "Safe Falling",
+      "tab": "exploration",
+      "parent": "mega_jump",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "school_of_actual_hard_knocks",
+      "name": "School of Actual Hard Knocks",
+      "tab": "school_of_hard_knocks",
+      "parent": "school_of_hard_knocks",
+      "disables": [],
+      "cost": 5,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "school_of_hard_knocks",
+      "name": "School of Hard Knocks",
+      "tab": "school_of_hard_knocks",
+      "parent": null,
+      "disables": [],
+      "cost": 1,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "shazboots",
+      "name": "Shazboots!",
+      "tab": "exploration",
+      "parent": "speed_3",
+      "disables": [],
+      "cost": 40,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "shield_bash",
+      "name": "Shield Bash",
+      "tab": "combatant",
+      "parent": "starter_shield",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "silky_pick",
+      "name": "Silky pick",
+      "tab": "gatherer",
+      "parent": "starter_pick",
+      "disables": [
+        "starter_pick"
+      ],
+      "cost": 15,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "smelt_value_1",
+      "name": "Heart of gold",
+      "tab": "crafting",
+      "parent": "smelter_2",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "smelt_value_2",
+      "name": "Heart of Netherite?",
+      "tab": "crafting",
+      "parent": "smelt_value_1",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "smelter_1",
+      "name": "Apprentice Smelter",
+      "tab": "crafting",
+      "parent": "crafting",
+      "disables": [],
+      "cost": 4,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "smelter_2",
+      "name": "Master Smelter",
+      "tab": "crafting",
+      "parent": "smelter_1",
+      "disables": [
+        "smelter_1"
+      ],
+      "cost": 8,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "sneak_1",
+      "name": "Swift sneaking",
+      "tab": "exploration",
+      "parent": "speed_1",
+      "disables": [],
+      "cost": 2,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "sneak_2",
+      "name": "Swiftest sneak",
+      "tab": "exploration",
+      "parent": "sneak_1",
+      "disables": [],
+      "cost": 4,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "sorcerer_supreme",
+      "name": "Spellbook",
+      "tab": "combatant",
+      "parent": "combatant",
+      "disables": [],
+      "cost": 10,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "speed_1",
+      "name": "Need for speed",
+      "tab": "exploration",
+      "parent": "exploration",
+      "disables": [],
+      "cost": 5,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "speed_2",
+      "name": "Need for speed: II",
+      "tab": "exploration",
+      "parent": "speed_1",
+      "disables": [],
+      "cost": 10,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "speed_3",
+      "name": "Hot Pursuit",
+      "tab": "exploration",
+      "parent": "speed_2",
+      "disables": [],
+      "cost": 20,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "starter_apples",
+      "name": "Doctors order",
+      "tab": "combatant",
+      "parent": "armaments",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "starter_compass",
+      "name": "Starter Compass",
+      "tab": "exploration",
+      "parent": "lodestone_exits",
+      "disables": [],
+      "cost": 20,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "starter_crafting",
+      "name": "Crafting table",
+      "tab": "crafting",
+      "parent": "inventory_crafting",
+      "disables": [],
+      "cost": 10,
+      "visibility": "INVISIBLE",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "starter_pick",
+      "name": "Starting pickaxe",
+      "tab": "gatherer",
+      "parent": "mining_efficiency_3",
+      "disables": [],
+      "cost": 10,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "starter_shield",
+      "name": "Warded",
+      "tab": "combatant",
+      "parent": "combatant",
+      "disables": [],
+      "cost": 15,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "starter_sword",
+      "name": "Training Sword",
+      "tab": "combatant",
+      "parent": "combatant",
+      "disables": [],
+      "cost": 5,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "starter_sword_iron",
+      "name": "You call that a knoife?",
+      "tab": "combatant",
+      "parent": "starter_sword",
+      "disables": [
+        "starter_sword"
+      ],
+      "cost": 25,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "sub_mining_efficiency",
+      "name": "Underwater miner",
+      "tab": "gatherer",
+      "parent": "mining",
+      "disables": [],
+      "cost": 4,
+      "visibility": "MYSTERY",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "teleportation_wand",
+      "name": "Enigma",
+      "tab": "crafting",
+      "parent": "runemaster",
+      "disables": [],
+      "cost": 50,
+      "visibility": "MYSTERY",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "thorns_plus_plus",
+      "name": "Thorns++",
+      "tab": "school_of_hard_knocks",
+      "parent": "proper_walking_pace",
+      "disables": [],
+      "cost": 45,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "tracker",
+      "name": "Tracker",
+      "tab": "combatant",
+      "parent": "quiver",
+      "disables": [],
+      "cost": 20,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "trident",
+      "name": "Spearfishing",
+      "tab": "gatherer",
+      "parent": "fishing_rod",
+      "disables": [],
+      "cost": 25,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "varangian",
+      "name": "Varangian",
+      "tab": "combatant",
+      "parent": "berserker",
+      "disables": [
+        "berserker",
+        "chopper",
+        "viking"
+      ],
+      "cost": 50,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "viking",
+      "name": "Viking",
+      "tab": "combatant",
+      "parent": "chopper",
+      "disables": [
+        "chopper"
+      ],
+      "cost": 25,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    },
+    {
+      "id": "wind_wand",
+      "name": "Heart of the Oak",
+      "tab": "crafting",
+      "parent": "runemaster",
+      "disables": [],
+      "cost": 50,
+      "visibility": "MYSTERY",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "wing_guardian_lift_off_to_the_sky",
+      "name": "Wing Guardian Leaf In Ocean",
+      "tab": "exploration",
+      "parent": "exploration",
+      "disables": [],
+      "cost": 10,
+      "visibility": "MYSTERY",
+      "visibility_conditions": 1,
+      "exclusive": ""
+    },
+    {
+      "id": "you_are_the_campfire",
+      "name": "You Are the Campfire",
+      "tab": "gatherer",
+      "parent": "campfire",
+      "disables": [
+        "campfire"
+      ],
+      "cost": 50,
+      "visibility": "VISIBLE",
+      "visibility_conditions": 0,
+      "exclusive": ""
+    }
+  ],
+  "special_mines": [
+    {
+      "id": "angry_ghast_boss",
+      "name": "Angry Ghast",
+      "required_effects": [
+        "angry_ghast_boss_fight",
+        "event_exit",
+        "floating_islands_world"
+      ],
+      "conditions": 1,
+      "unlocked_after": []
+    },
+    {
+      "id": "ender_dragon_boss",
+      "name": "Ender Dragon",
+      "required_effects": [
+        "ender_dragon_boss_fight",
+        "floating_islands_world"
+      ],
+      "conditions": 1,
+      "unlocked_after": []
+    },
+    {
+      "id": "enderman_boss",
+      "name": "The Enderman",
+      "required_effects": [
+        "desert",
+        "eternal_night",
+        "event_exit",
+        "surface_world",
+        "the_enderman_boss_fight"
+      ],
+      "conditions": 0,
+      "unlocked_after": []
+    },
+    {
+      "id": "kuiper_belt",
+      "name": "Kuiper World",
+      "required_effects": [
+        "kuiper_world"
+      ],
+      "conditions": 0,
+      "unlocked_after": []
+    },
+    {
+      "id": "raid",
+      "name": "Raid",
+      "required_effects": [
+        "event_exit",
+        "plains",
+        "raid",
+        "surface_world"
+      ],
+      "conditions": 1,
+      "unlocked_after": []
+    },
+    {
+      "id": "small_but_deadly_boss",
+      "name": "Small but Deadly",
+      "required_effects": [
+        "event_exit",
+        "small_but_deadly_boss_fight"
+      ],
+      "conditions": 0,
+      "unlocked_after": []
+    },
+    {
+      "id": "spooky_scary_skeletons_boss",
+      "name": "Spooky Scary Skeletons",
+      "required_effects": [
+        "cave_world",
+        "desert",
+        "event_exit",
+        "spooky_scary_skeletons_boss_fight"
+      ],
+      "conditions": 1,
+      "unlocked_after": []
+    },
+    {
+      "id": "warden_boss",
+      "name": "Warden",
+      "required_effects": [
+        "event_exit",
+        "warden_boss_fight"
+      ],
+      "conditions": 1,
+      "unlocked_after": []
+    },
+    {
+      "id": "wither_boss",
+      "name": "Wither",
+      "required_effects": [
+        "cave_world",
+        "event_exit",
+        "wither_boss_fight"
+      ],
+      "conditions": 1,
+      "unlocked_after": []
+    }
+  ],
+  "advancements": [
+    {
+      "id": "feats/angry_ghast",
+      "name": "The Baloonslayer",
+      "parent": "feats/return_to_sender",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "feats/crystal",
+      "name": "Crystaline",
+      "parent": "feats/root",
+      "triggers": [
+        "inventory_changed"
+      ]
+    },
+    {
+      "id": "feats/dragon_breath",
+      "name": "You Need a Mint",
+      "parent": "feats/end_world",
+      "triggers": [
+        "inventory_changed"
+      ]
+    },
+    {
+      "id": "feats/end_world",
+      "name": "The Beginning of the End",
+      "parent": "feats/root",
+      "triggers": [
+        "level_completed"
+      ]
+    },
+    {
+      "id": "feats/ender_dragon",
+      "name": "At the Rim of the Sky",
+      "parent": "feats/end_world",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "feats/enderman",
+      "name": "Endedman",
+      "parent": "feats/root",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "feats/kill_pillager",
+      "name": "Raid the Raiders",
+      "parent": "feats/root",
+      "triggers": [
+        "player_killed_entity"
+      ]
+    },
+    {
+      "id": "feats/kill_skeleton",
+      "name": "Feel it in my Bones",
+      "parent": "feats/root",
+      "triggers": [
+        "player_killed_entity"
+      ]
+    },
+    {
+      "id": "feats/kuiper_world",
+      "name": "Spaaaaace!",
+      "parent": "feats/root",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "feats/raid",
+      "name": "The Pillagers are Coming!",
+      "parent": "feats/kill_pillager",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "feats/return_to_sender",
+      "name": "Return to Sender",
+      "parent": "feats/root",
+      "triggers": [
+        "player_killed_entity"
+      ]
+    },
+    {
+      "id": "feats/small_but_deadly",
+      "name": "Small But Dead",
+      "parent": "feats/root",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "feats/spooky_scary_skeletons",
+      "name": "Clattered",
+      "parent": "feats/kill_skeleton",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "feats/warden",
+      "name": "Warded",
+      "parent": "feats/crystal",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "feats/wither",
+      "name": "Withered",
+      "parent": "feats/wither_skeleton_skull",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "feats/wither_skeleton_skull",
+      "name": "Withering",
+      "parent": "feats/root",
+      "triggers": [
+        "inventory_changed"
+      ]
+    },
+    {
+      "id": "mines/all_mine_ingredients",
+      "name": "The Ultimate Miner",
+      "parent": "mines/level_completed",
+      "triggers": [
+        "level_completed"
+      ]
+    },
+    {
+      "id": "mines/all_special_mines_completed",
+      "name": "Yes, Boss",
+      "parent": "mines/special_mine_completed",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "mines/cash_in_mine_ingredient",
+      "name": "Cash In!",
+      "parent": "mines/get_mine_ingredient",
+      "triggers": [
+        "inventory_cashed_in"
+      ]
+    },
+    {
+      "id": "mines/complete_deluge_level",
+      "name": "Shall we wait for the drizzle to subside?",
+      "parent": "mines/complete_water_world_level",
+      "triggers": [
+        "level_completed"
+      ]
+    },
+    {
+      "id": "mines/complete_water_cave_level",
+      "name": "The Depths",
+      "parent": "mines/complete_water_world_level",
+      "triggers": [
+        "level_completed"
+      ]
+    },
+    {
+      "id": "mines/complete_water_world_level",
+      "name": "Quit Smoking",
+      "parent": "mines/level_completed",
+      "triggers": [
+        "level_completed"
+      ]
+    },
+    {
+      "id": "mines/eat_your_veggies",
+      "name": "Certified Spud Chomper",
+      "parent": "feats/root",
+      "triggers": [
+        "consume_poisonous_potatoes"
+      ]
+    },
+    {
+      "id": "mines/enter_a_mine",
+      "name": "Down the Hatch",
+      "parent": null,
+      "triggers": [
+        "changed_dimension"
+      ]
+    },
+    {
+      "id": "mines/get_mine_ingredient",
+      "name": "New Frontiers",
+      "parent": "mines/enter_a_mine",
+      "triggers": [
+        "inventory_changed"
+      ]
+    },
+    {
+      "id": "mines/level_completed",
+      "name": "It Begins",
+      "parent": "mines/enter_a_mine",
+      "triggers": [
+        "level_completed"
+      ]
+    },
+    {
+      "id": "mines/mine_crafter_upgraded",
+      "name": "Further beyond",
+      "parent": "mines/level_completed",
+      "triggers": [
+        "mine_crafter_upgraded"
+      ]
+    },
+    {
+      "id": "mines/mine_revisitor_activated",
+      "name": "Nostalgic",
+      "parent": "mines/level_completed",
+      "triggers": [
+        "mine_revisitor_activated"
+      ]
+    },
+    {
+      "id": "mines/player_failed_level",
+      "name": "Oops",
+      "parent": "mines/enter_a_mine",
+      "triggers": [
+        "level_failed"
+      ]
+    },
+    {
+      "id": "mines/shimmering_key",
+      "name": "Master Key",
+      "parent": "feats/root",
+      "triggers": [
+        "inventory_changed"
+      ]
+    },
+    {
+      "id": "mines/special_mine_completed",
+      "name": "A Challenger Approaches",
+      "parent": "feats/root",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "story/deflect_arrow",
+      "name": "Not Today, Thank You",
+      "parent": "story/obtain_armor",
+      "triggers": [
+        "entity_hurt_player"
+      ]
+    },
+    {
+      "id": "story/follow_exit_eye",
+      "name": "Spy Eye",
+      "parent": "story/smelt_iron",
+      "triggers": [
+        "inventory_changed"
+      ]
+    },
+    {
+      "id": "story/iron_tools",
+      "name": "Isn't It Iron Pick",
+      "parent": "story/smelt_iron",
+      "triggers": [
+        "inventory_changed"
+      ]
+    },
+    {
+      "id": "story/mine_diamond",
+      "name": "Diamonds!",
+      "parent": "story/iron_tools",
+      "triggers": [
+        "inventory_changed"
+      ]
+    },
+    {
+      "id": "story/mine_stone",
+      "name": "Stone Age",
+      "parent": "story/root",
+      "triggers": [
+        "inventory_changed"
+      ]
+    },
+    {
+      "id": "story/obtain_armor",
+      "name": "Suit Up",
+      "parent": "story/smelt_iron",
+      "triggers": [
+        "inventory_changed"
+      ]
+    },
+    {
+      "id": "story/shiny_gear",
+      "name": "Cover Me with Diamonds",
+      "parent": "story/mine_diamond",
+      "triggers": [
+        "inventory_changed"
+      ]
+    },
+    {
+      "id": "story/smelt_iron",
+      "name": "Acquire Hardware",
+      "parent": "story/upgrade_tools",
+      "triggers": [
+        "inventory_changed"
+      ]
+    },
+    {
+      "id": "story/upgrade_tools",
+      "name": "Getting an Upgrade",
+      "parent": "story/mine_stone",
+      "triggers": [
+        "inventory_changed"
+      ]
+    },
+    {
+      "id": "unlocks/all_combatant",
+      "name": "The Combat Upd... Unlocks",
+      "parent": "unlocks/kaizen",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "unlocks/all_crafting",
+      "name": "The Crafter",
+      "parent": "unlocks/kaizen",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "unlocks/all_exploration",
+      "name": "Adventuring Time",
+      "parent": "unlocks/sigma_grindset",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "unlocks/all_gatherer",
+      "name": "The Miner",
+      "parent": "unlocks/kaizen",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "unlocks/all_school_of_hard_knocks",
+      "name": "An Exercise in Futility",
+      "parent": "unlocks/kaizen",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "unlocks/free_sticks",
+      "name": "Free Sticks",
+      "parent": "unlocks/kaizen",
+      "triggers": [
+        "level_completed"
+      ]
+    },
+    {
+      "id": "unlocks/how_do_i_unlock_that",
+      "name": "How do I unlock that?",
+      "parent": "unlocks/kaizen",
+      "triggers": [
+        "player_unlock_unlocked"
+      ]
+    },
+    {
+      "id": "unlocks/in_it_together",
+      "name": "In It Together",
+      "parent": "unlocks/kaizen",
+      "triggers": [
+        "special_mine_completed"
+      ]
+    },
+    {
+      "id": "unlocks/jump_king",
+      "name": "Jump King",
+      "parent": "unlocks/kaizen",
+      "triggers": [
+        "player_unlock_bought"
+      ]
+    },
+    {
+      "id": "unlocks/kaizen",
+      "name": "Kaizen",
+      "parent": "unlocks/root",
+      "triggers": [
+        "player_unlock_bought"
+      ]
+    },
+    {
+      "id": "unlocks/sigma_grindset",
+      "name": "Sigma Grindset",
+      "parent": "unlocks/kaizen",
+      "triggers": [
+        "player_unlock_bought"
+      ]
+    }
+  ]
+}

@@ -12,7 +12,7 @@
 	},
 	"depends": {
 		"fabricloader": ">=0.16.14",
-		"minecraft": "25w14craftmine",
+		"minecraft": "1.21.6-alpha.25.14.craftmine",
 		"fabric-api": "*"
 	}
 }
