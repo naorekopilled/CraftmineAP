@@ -2,6 +2,7 @@ package craftmineap;
 
 import craftmineap.ap.ApSession;
 import craftmineap.ap.CatchUp;
+import craftmineap.ap.ItemApplier;
 import craftmineap.command.ApCommands;
 import craftmineap.dev.DataDump;
 import craftmineap.dev.DevCommands;
@@ -32,10 +33,13 @@ public class CraftmineAP implements ModInitializer {
 			}
 		});
 		ApSession.ON_CONNECTED.add(CatchUp::all);
+		ApSession.ON_CONNECTED.add(ItemApplier::applyAll);
+		ApSession.ON_ITEMS.add(ItemApplier::applyAll);
 		ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
 			ApSession session = ApSession.current();
 			if (session != null) {
 				CatchUp.player(session, handler.getPlayer());
+				ItemApplier.applyAll(session);
 			}
 		});
 		ServerMessageEvents.CHAT_MESSAGE.register((message, sender, params) -> {

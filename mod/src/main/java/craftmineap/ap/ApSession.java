@@ -46,6 +46,7 @@ public final class ApSession {
 
 	public static void open(MinecraftServer server) {
 		current = new ApSession(server);
+		ItemApplier.refreshGate(current);
 		String auto = System.getProperty("craftmineap.autoconnect");
 		if (auto != null) {
 			String[] parts = auto.split(",", 3);
@@ -57,6 +58,7 @@ public final class ApSession {
 
 	public static void close() {
 		if (current != null) {
+			UnlockGate.set(false, java.util.Set.of());
 			current.closed = true;
 			current.disconnect();
 			current.save();

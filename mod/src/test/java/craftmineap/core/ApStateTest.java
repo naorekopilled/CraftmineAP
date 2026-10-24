@@ -36,6 +36,8 @@ class ApStateTest {
 		state.markChecked(100);
 		state.doorsOpened = 2;
 		state.specialMinesWon.add("raid");
+		state.keysGiven = 3;
+		state.xpGiven = 4;
 		Path file = dir.resolve("craftmineap.json");
 		state.save(file);
 		ApState loaded = ApState.load(file);
@@ -45,6 +47,8 @@ class ApStateTest {
 		assertEquals(Set.of(100L), loaded.checkedLocations);
 		assertEquals(2, loaded.doorsOpened);
 		assertEquals(Set.of("raid"), loaded.specialMinesWon);
+		assertEquals(3, loaded.keysGiven);
+		assertEquals(4, loaded.xpGiven);
 		assertEquals(2, loaded.slotData.specialMinesNeeded());
 		assertEquals("mine:raid", loaded.slotData.locations().get(101L));
 	}

@@ -30,6 +30,9 @@ public class ApState {
 	public int doorsOpened;
 	public final Set<String> specialMinesWon = new LinkedHashSet<>();
 	public boolean goalSent;
+	/** Keys and XP bundles already handed out, so a resend or a restart never gives them twice. */
+	public int keysGiven;
+	public int xpGiven;
 
 	public static ApState load(Path file) {
 		ApState state = new ApState();
@@ -50,6 +53,8 @@ public class ApState {
 			state.doorsOpened = json.get("doors_opened").getAsInt();
 			json.getAsJsonArray("special_mines_won").forEach(e -> state.specialMinesWon.add(e.getAsString()));
 			state.goalSent = json.get("goal_sent").getAsBoolean();
+			state.keysGiven = json.get("keys_given").getAsInt();
+			state.xpGiven = json.get("xp_given").getAsInt();
 		} catch (IOException e) {
 			throw new UncheckedIOException(e);
 		}
@@ -80,6 +85,8 @@ public class ApState {
 		specialMinesWon.forEach(mines::add);
 		json.add("special_mines_won", mines);
 		json.addProperty("goal_sent", goalSent);
+		json.addProperty("keys_given", keysGiven);
+		json.addProperty("xp_given", xpGiven);
 		try {
 			Path tmp = file.resolveSibling(file.getFileName() + ".tmp");
 			Files.writeString(tmp, GSON.toJson(json));
