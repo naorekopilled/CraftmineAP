@@ -2,6 +2,7 @@ package craftmineap.ap;
 
 import craftmineap.Text;
 import craftmineap.core.ApState;
+import craftmineap.core.DeathLinkGate;
 import craftmineap.core.SlotData;
 import net.minecraft.advancements.AdvancementHolder;
 import io.github.archipelagomw.ClientStatus;
@@ -30,6 +31,7 @@ public final class ApSession {
 
 	public final MinecraftServer server;
 	public final ApState state;
+	public final DeathLinkGate deathLinkGate = new DeathLinkGate();
 	private final Path file;
 	private ApClient client;
 	private boolean closed;

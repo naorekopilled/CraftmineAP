@@ -9,6 +9,7 @@
 		"PlayerAdvancementsMixin",
 		"ServerLevelMixin",
 		"ServerPlayerAccessor",
+		"ServerPlayerMixin",
 		"ServerPlayerUnlocksInvoker",
 		"ServerPlayerUnlocksMixin",
 		"UnlockConditionMixin"

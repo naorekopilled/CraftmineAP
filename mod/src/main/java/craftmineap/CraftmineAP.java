@@ -35,6 +35,11 @@ public class CraftmineAP implements ModInitializer {
 		ApSession.ON_CONNECTED.add(CatchUp::all);
 		ApSession.ON_CONNECTED.add(ItemApplier::applyAll);
 		ApSession.ON_ITEMS.add(ItemApplier::applyAll);
+		// a received death kills only in a mine, where dying fails the mine; the hub is safe
+		ApSession.ON_DEATH_LINK.add(session -> session.deathLinkGate.receiving(() ->
+			session.server.theGame().playerList().getPlayers().stream()
+				.filter(player -> player.serverLevel().isMine() && player.isAlive())
+				.forEach(player -> player.kill(player.serverLevel()))));
 		ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
 			ApSession session = ApSession.current();
 			if (session != null) {
