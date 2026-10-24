@@ -4,8 +4,6 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.IdentityHashMap;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.HashMap;
@@ -21,28 +19,29 @@ public record SlotData(
 	boolean hubDoorChecks,
 	boolean deathLink,
 	Map<Long, String> locations,
-	Map<Long, ItemInfo> items
+	Map<Long, ItemInfo> items,
+	// looked up on every block break, drop and kill, so built once with the slot data
+	Set<String> itemIngredients,
+	Map<String, Long> locationIds
 ) {
 	public record ItemInfo(String kind, List<String> keys) {
 	}
 
-	// looked up on every block break, drop and kill, so built once per slot data
-	private static final Map<SlotData, Set<String>> ITEM_INGREDIENTS = Collections.synchronizedMap(new IdentityHashMap<>());
-	private static final Map<SlotData, Map<String, Long>> LOCATION_IDS = Collections.synchronizedMap(new IdentityHashMap<>());
+	public SlotData(String goal, int specialMinesNeeded, boolean advancementChecks, int crafterLevelChecks,
+		boolean hubDoorChecks, boolean deathLink, Map<Long, String> locations, Map<Long, ItemInfo> items) {
+		this(goal, specialMinesNeeded, advancementChecks, crafterLevelChecks, hubDoorChecks, deathLink, locations, items,
+			items.values().stream().filter(i -> i.kind().equals("ingredient")).flatMap(i -> i.keys().stream())
+				.collect(Collectors.toUnmodifiableSet()),
+			locations.entrySet().stream().collect(Collectors.toUnmodifiableMap(Map.Entry::getValue, Map.Entry::getKey)));
+	}
 
 	/** True for ingredients that are items in this slot (their unlock is a check, the item is what unlocks them). */
 	public boolean isItemIngredient(String ingredientId) {
-		return ITEM_INGREDIENTS.computeIfAbsent(this, d -> d.items.values().stream()
-			.filter(i -> i.kind().equals("ingredient")).flatMap(i -> i.keys().stream())
-			.collect(Collectors.toUnmodifiableSet())).contains(ingredientId);
+		return itemIngredients.contains(ingredientId);
 	}
 
 	public Long locationId(String gameKey) {
-		return LOCATION_IDS.computeIfAbsent(this, d -> {
-			Map<String, Long> ids = new HashMap<>();
-			d.locations.forEach((id, key) -> ids.put(key, id));
-			return ids;
-		}).get(gameKey);
+		return locationIds.get(gameKey);
 	}
 
 	public static SlotData fromJson(JsonObject json) {

@@ -118,15 +118,19 @@ public class ApState {
 
 	/**
 	 * A world belongs to the first room and slot it connects to: its received items, checks and given keys only
-	 * make sense there. Returns false for any other room or slot.
+	 * make sense there. Returns false for any other room or slot; otherwise the connection details are saved.
 	 */
-	public boolean claimRoom(String seed, String slotName) {
+	public boolean claimRoom(String seed, String address, String slotName, String password) {
 		if (seedName == null) {
 			seedName = seed;
 			roomSlot = slotName;
-			return true;
+		} else if (!seedName.equals(seed) || !roomSlot.equals(slotName)) {
+			return false;
 		}
-		return seedName.equals(seed) && roomSlot.equals(slotName);
+		this.address = address;
+		this.slot = slotName;
+		this.password = password;
+		return true;
 	}
 
 	public boolean markChecked(long id) {

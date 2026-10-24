@@ -6,6 +6,7 @@ import static net.minecraft.commands.Commands.literal;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
+import craftmineap.ap.ApSession;
 import net.fabricmc.fabric.api.entity.FakePlayer;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.Holder;
@@ -55,6 +56,14 @@ public final class DevCommands {
 				player.onMineEntered();
 				int count = player.getInventory().countItem(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(item)));
 				ctx.getSource().sendSuccess(() -> Component.literal("apdev mine_gear " + item + "=" + count), false);
+				return 1;
+			})))
+			.then(literal("drop").executes(ctx -> {
+				ApSession.current().dropConnection();
+				return 1;
+			}))
+			.then(literal("win_mine").then(argument("id", StringArgumentType.word()).executes(ctx -> {
+				ApSession.current().mineWon(ctx.getArgument("id", String.class));
 				return 1;
 			})))
 			// what entering a mine does to the server: the game restarts inside it, without a server stop

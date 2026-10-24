@@ -3,6 +3,7 @@ package craftmineap.ap;
 import craftmineap.Text;
 import craftmineap.core.ApState;
 import craftmineap.core.ChatColors;
+import craftmineap.core.ConnectArgs;
 import craftmineap.core.DeathLinkGate;
 import craftmineap.core.SlotData;
 import net.minecraft.advancements.AdvancementHolder;
@@ -12,6 +13,8 @@ import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -23,9 +26,10 @@ import org.slf4j.LoggerFactory;
 /** The Archipelago side of one running world. */
 public final class ApSession {
 	private static final Logger LOGGER = LoggerFactory.getLogger("craftmineap");
+	private static final int RETRY_SECONDS = 30;
 	private static ApSession current;
 
-	/** Runs after a successful connect, on the server thread (catch-up checks, item application). */
+	/** Runs after a successful connect and after a game restart, on the server thread (catch-up checks, item application). */
 	public static final List<Consumer<ApSession>> ON_CONNECTED = new ArrayList<>();
 	/** Runs on the server thread after new items were accepted. */
 	public static final List<Consumer<ApSession>> ON_ITEMS = new ArrayList<>();
@@ -37,6 +41,11 @@ public final class ApSession {
 	public final DeathLinkGate deathLinkGate = new DeathLinkGate();
 	private final Path file;
 	private ApClient client;
+	/** What the current client connects with; saved only once the server accepts it for this world. */
+	private ConnectArgs connecting;
+	/** After a connection worked, a close the client library won't retry is retried here, quietly. */
+	private boolean retry;
+	private boolean retrying;
 	private boolean closed;
 
 	private ApSession(MinecraftServer server) {
@@ -50,7 +59,12 @@ public final class ApSession {
 	}
 
 	public static void open(MinecraftServer server) {
-		// entering a mine restarts the game inside the server without a stop event: hand over from the old session
+		// entering a mine restarts the game inside the same server without a stop event: keep the session and its
+		// connection (a reconnect shows as a leave and a join to the whole room), only redo what the new game needs
+		if (current != null && current.server == server) {
+			ON_CONNECTED.forEach(hook -> hook.accept(current));
+			return;
+		}
 		close();
 		current = new ApSession(server);
 		ItemApplier.refreshGate(current);
@@ -89,33 +103,59 @@ public final class ApSession {
 		state.save(file);
 	}
 
+	/** The game logs system messages itself; during a game restart there is no game, so only the log gets it. */
 	public void broadcast(Component message) {
-		server.theGame().playerList().broadcastSystemMessage(message, false);
-		LOGGER.info(message.getString());
+		if (gameRunning()) {
+			server.theGame().playerList().broadcastSystemMessage(message, false);
+		} else {
+			LOGGER.info(message.getString());
+		}
+	}
+
+	private boolean gameRunning() {
+		return server.theGame() != null;
 	}
 
 	public void connect(String address, String slot, String password) {
-		disconnect();
-		state.address = address;
-		state.slot = slot;
-		state.password = password;
-		save();
+		retry = false;
+		retrying = false;
+		openClient(new ConnectArgs(address, slot, password));
+	}
+
+	private void openClient(ConnectArgs args) {
+		closeClient();
+		connecting = args;
 		client = new ApClient(this);
-		client.setName(slot);
-		client.setPassword(password == null ? "" : password);
-		broadcast(Text.connecting(address));
+		client.setName(args.slot());
+		client.setPassword(args.password() == null ? "" : args.password());
+		if (!retrying) {
+			broadcast(Text.connecting(args.address()));
+		}
 		try {
-			client.connect(address);
+			client.connect(args.address());
 		} catch (URISyntaxException e) {
 			broadcast(Text.error(e.getMessage()));
 		}
 	}
 
 	public void disconnect() {
+		retry = false;
+		retrying = false;
+		closeClient();
+	}
+
+	private void closeClient() {
 		if (client != null) {
 			ApClient old = client;
 			client = null;
 			old.close();
+		}
+	}
+
+	/** For apdev drop: closes the connection like a server's clean close, which the client library doesn't retry. */
+	public void dropConnection() {
+		if (client != null) {
+			client.close();
 		}
 	}
 
@@ -159,6 +199,17 @@ public final class ApSession {
 		}
 	}
 
+	/** A special mine won: its check, and the goal once enough are won. */
+	public void mineWon(String mineId) {
+		if (!isActive()) {
+			return;
+		}
+		state.specialMinesWon.add(mineId);
+		save();
+		sendCheck("mine:" + mineId);
+		sendGoal();
+	}
+
 	public void sendAdvancement(AdvancementHolder holder) {
 		if (holder.id().getNamespace().equals("minecraft")) {
 			sendCheck("advancement:" + holder.id().getPath());
@@ -185,9 +236,10 @@ public final class ApSession {
 		}
 	}
 
+	/** Runs on the server thread unless the session closed; anything touching the game checks gameRunning() itself. */
 	private void onServer(Runnable task) {
 		server.execute(() -> {
-			if (!closed && server.theGame() != null) {
+			if (!closed) {
 				task.run();
 			}
 		});
@@ -198,11 +250,13 @@ public final class ApSession {
 			if (client == null) {
 				return;
 			}
-			if (!state.claimRoom(seedName, state.slot)) {
+			if (!state.claimRoom(seedName, connecting.address(), connecting.slot(), connecting.password())) {
 				broadcast(Text.wrongRoom());
 				disconnect();
 				return;
 			}
+			retry = true;
+			retrying = false;
 			state.slotData = slotData;
 			save();
 			client.setDeathLinkEnabled(slotData.deathLink());
@@ -212,13 +266,19 @@ public final class ApSession {
 				broadcast(Text.typeStart());
 				return;
 			}
-			ON_CONNECTED.forEach(hook -> hook.accept(this));
+			if (gameRunning()) {
+				ON_CONNECTED.forEach(hook -> hook.accept(this));
+			}
 			sendGoal();
 		});
 	}
 
 	void onRefused(String reason) {
-		onServer(() -> broadcast(Text.refused(reason)));
+		onServer(() -> {
+			retry = false;
+			retrying = false;
+			broadcast(Text.refused(reason));
+		});
 	}
 
 	void onError(String message) {
@@ -226,15 +286,38 @@ public final class ApSession {
 		LOGGER.warn("Archipelago error: {}", message);
 	}
 
-	void onClose(String reason) {
-		onServer(() -> broadcast(Text.disconnected(reason)));
+	/** libraryRetrySeconds > 0: the client library reconnects by itself (it does after a lost connection). */
+	void onClose(ApClient from, String reason, int libraryRetrySeconds) {
+		onServer(() -> {
+			if (from != client) {
+				return;  // replaced or closed on purpose
+			}
+			if (!retrying) {
+				broadcast(Text.disconnected(reason));
+			}
+			if (!retry) {
+				return;
+			}
+			retrying = true;
+			if (libraryRetrySeconds > 0) {
+				return;
+			}
+			CompletableFuture.delayedExecutor(RETRY_SECONDS, TimeUnit.SECONDS).execute(() -> onServer(() -> {
+				if (retry && client == from) {
+					openClient(new ConnectArgs(state.address, state.slot, state.password));
+				}
+			}));
+		});
 	}
 
 	void onItem(int index, long itemId) {
 		onServer(() -> {
+			// accepted even during a game restart, so the item list never gets a gap; the restart applies it
 			if (!state.acceptItem(index, itemId).isEmpty()) {
 				save();
-				ON_ITEMS.forEach(hook -> hook.accept(this));
+				if (gameRunning()) {
+					ON_ITEMS.forEach(hook -> hook.accept(this));
+				}
 			}
 		});
 	}
@@ -246,14 +329,16 @@ public final class ApSession {
 				MutableComponent piece = Component.literal(segment.text());
 				message.append(segment.rgb() == null ? piece : piece.withColor(segment.rgb()));
 			}
-			server.theGame().playerList().broadcastSystemMessage(message, false);
+			broadcast(message);
 		});
 	}
 
 	void onDeathLink(String source, String cause) {
 		onServer(() -> {
 			broadcast(Text.deathLink(source, cause));
-			ON_DEATH_LINK.forEach(hook -> hook.accept(this));
+			if (gameRunning()) {
+				ON_DEATH_LINK.forEach(hook -> hook.accept(this));
+			}
 		});
 	}
 }

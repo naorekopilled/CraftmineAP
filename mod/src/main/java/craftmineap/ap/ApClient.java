@@ -29,7 +29,7 @@ public class ApClient extends Client {
 
 	@Override
 	public void onClose(String reason, int attemptingReconnect) {
-		session.onClose(reason);
+		session.onClose(this, reason, attemptingReconnect);
 	}
 
 	@ArchipelagoEventListener

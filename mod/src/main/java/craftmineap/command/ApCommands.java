@@ -40,7 +40,12 @@ public final class ApCommands {
 			return 1;
 		}));
 		dispatcher.register(literal("sync").executes(ctx -> {
-			ApSession.current().sync();
+			ApSession session = ApSession.current();
+			if (!session.isConnected()) {
+				ctx.getSource().sendFailure(Text.notConnectedYet());
+				return 0;
+			}
+			session.sync();
 			ctx.getSource().sendSuccess(Text::synced, false);
 			return 1;
 		}));

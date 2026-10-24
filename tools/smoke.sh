@@ -12,12 +12,16 @@ mkdir -p "$W" "$D/mod/run-smoke"
 echo eula=true > "$D/mod/run-smoke/eula.txt"
 : > "$W/ap.in"; : > "$W/mc.in"
 
-"$D/tools/gen_test.sh" 7 > /dev/null || { echo "seed generation failed"; exit 1; }
+"$D/tools/gen_test.sh" 7 special_mines_needed=1 > /dev/null || { echo "seed generation failed"; exit 1; }
 zip=$(ls -t "$D"/tools-ext/gen-out/*.zip | head -1)
 rm -f "${zip%.zip}.apsave"  # MultiServer resumes from it, and checks from an earlier run would not show again
 
-(cd "$D/tools-ext/ap" && tail -f "$W/ap.in" | SKIP_REQUIREMENTS_UPDATE=1 ../apvenv/bin/python MultiServer.py \
-  --port 38281 --host localhost "$zip" > "$W/ap.log" 2>&1) &
+# usage: start_ap <log>; reads only the console lines written after it starts
+start_ap() {
+  (cd "$D/tools-ext/ap" && tail -n 0 -f "$W/ap.in" | SKIP_REQUIREMENTS_UPDATE=1 ../apvenv/bin/python MultiServer.py \
+    --port 38281 --host localhost "$zip" > "$1" 2>&1) &
+}
+start_ap "$W/ap.log"
 if [ -n "$PROD" ]; then
   P=$D/tools-ext/prod-server
   rm -rf "$P/world" && echo eula=true > "$P/eula.txt" && printf 'online-mode=false\n' > "$P/server.properties"
@@ -93,5 +97,23 @@ sleep 8
 mc "apdev mine_gear ender_pearl"
 for _ in $(seq 1 30); do [ "$(grep -c 'apdev mine_gear ender_pearl=' "$W/mc.log")" -ge 3 ] && break; sleep 1; done
 grep 'apdev mine_gear ender_pearl=' "$W/mc.log" | tail -1 | grep -q "=5" || { echo "gear lost after the in-server restart"; finish 1; }
+# the connection survives it: the other players would see a leave and a join for every mine
+[ "$(grep -c 'has joined' "$W/ap.log")" = 1 ] || { echo "reconnected to Archipelago on the in-server restart"; finish 1; }
+[ "$(grep -c 'Randomizer started' "$W/mc.log")" = 1 ] || { echo "a chat line went to the log twice"; finish 1; }
+
+# this seed needs one special mine
+mc "apdev win_mine enderman_boss"
+wait_for "$W/ap.log" "has completed their goal" 30 || finish 1
+
+# a server that goes away and comes back is reconnected without /connect
+ap "/exit"
+wait_for "$W/mc.log" "Disconnected from Archipelago" 60 || finish 1
+start_ap "$W/ap2.log"
+wait_for "$W/ap2.log" "has joined" 120 || finish 1
+# a clean close is retried by the mod, every 30 seconds
+mc "apdev drop"
+wait_for "$W/ap2.log" "has left" 30 || finish 1
+for _ in $(seq 1 60); do [ "$(grep -c 'has joined' "$W/ap2.log")" -ge 2 ] && break; sleep 1; done
+[ "$(grep -c 'has joined' "$W/ap2.log")" -ge 2 ] || { echo "no reconnect after a clean close"; finish 1; }
 echo "SMOKE OK"
 finish 0

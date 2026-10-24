@@ -38,7 +38,7 @@ class ApStateTest {
 		state.specialMinesWon.add("raid");
 		state.keysGiven = 3;
 		state.xpGiven = 4;
-		state.claimRoom("seed-1", "Miner");
+		state.claimRoom("seed-1", "localhost:38281", "Miner", null);
 		Path file = dir.resolve("craftmineap.json");
 		state.save(file);
 		ApState loaded = ApState.load(file);
@@ -50,7 +50,7 @@ class ApStateTest {
 		assertEquals(Set.of("raid"), loaded.specialMinesWon);
 		assertEquals(3, loaded.keysGiven);
 		assertEquals(4, loaded.xpGiven);
-		assertFalse(loaded.claimRoom("seed-2", "Miner"));
+		assertFalse(loaded.claimRoom("seed-2", "localhost:38281", "Miner", null));
 		assertEquals(2, loaded.slotData.specialMinesNeeded());
 		assertEquals("mine:raid", loaded.slotData.locations().get(101L));
 	}
@@ -75,10 +75,23 @@ class ApStateTest {
 	@Test
 	void aWorldStaysWithItsFirstRoom() {
 		ApState state = state();
-		assertTrue(state.claimRoom("seed-1", "Miner"));
-		assertTrue(state.claimRoom("seed-1", "Miner"));
-		assertFalse(state.claimRoom("seed-2", "Miner"));
-		assertFalse(state.claimRoom("seed-1", "Other"));
+		assertTrue(state.claimRoom("seed-1", "localhost:38281", "Miner", null));
+		assertTrue(state.claimRoom("seed-1", "localhost:38281", "Miner", null));
+		assertFalse(state.claimRoom("seed-2", "localhost:38281", "Miner", null));
+		assertFalse(state.claimRoom("seed-1", "localhost:38281", "Other", null));
+	}
+
+	/** Otherwise every later load and every bare /connect would go to the refused room. */
+	@Test
+	void anotherRoomKeepsTheSavedConnection() {
+		ApState state = state();
+		assertTrue(state.claimRoom("seed-1", "localhost:38281", "Miner", null));
+		assertEquals("localhost:38281", state.address);
+		assertEquals("Miner", state.slot);
+		assertFalse(state.claimRoom("seed-2", "archipelago.gg:40000", "Steve", "secret"));
+		assertEquals("localhost:38281", state.address);
+		assertEquals("Miner", state.slot);
+		assertNull(state.password);
 	}
 
 	@Test

@@ -38,16 +38,9 @@ public abstract class ServerLevelMixin {
 	@Inject(method = "markMineCompleted", at = @At("HEAD"))
 	private void craftmineap$specialMineWon(boolean won, CallbackInfo ci) {
 		ApSession session = ApSession.current();
-		if (session == null || !session.isActive() || !won) {
-			return;
+		if (session != null && won) {
+			specialMine().ifPresent(mine -> session.mineWon(BuiltInRegistries.SPECIAL_MINE.getKey(mine).getPath()));
 		}
-		specialMine().ifPresent(mine -> {
-			String id = BuiltInRegistries.SPECIAL_MINE.getKey(mine).getPath();
-			session.state.specialMinesWon.add(id);
-			session.save();
-			session.sendCheck("mine:" + id);
-			session.sendGoal();
-		});
 	}
 
 	@Inject(method = "addExperienceToMineCrafter", at = @At("RETURN"))
