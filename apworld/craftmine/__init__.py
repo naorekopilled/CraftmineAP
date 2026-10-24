@@ -34,15 +34,16 @@ class CraftmineWorld(World):
     door_count = 0
 
     def generate_early(self) -> None:
-        # nothing can be crafted in a crafting table without it
+        # without both nothing can be crafted: Crafting opens the 3x3 menu, Inventory Crafting makes the table
         self.multiworld.early_items[self.player]["Crafting"] = 1
+        self.multiworld.early_items[self.player]["Inventory Crafting"] = 1
         self.door_count = HUB_DOORS if self.options.hub_door_checks else 0
 
     def create_regions(self) -> None:
         menu = Region("Menu", self.player, self.multiworld)
         self.multiworld.regions.append(menu)
         location_names = [INGREDIENT_LOCATION[k] for k in ITEM_INGREDIENTS]
-        location_names += [NODE_LOCATION[k] for k in TREE_UNLOCKS]
+        location_names += list(NODE_LOCATION.values())
         location_names += list(MINE_LOCATION.values())
         if self.options.advancement_checks:
             location_names += list(ADVANCEMENT_LOCATION.values())

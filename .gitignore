@@ -4,3 +4,4 @@ mod/build/
 mod/run/
 mod/.gradle/
 __pycache__/
+mod/run-smoke/

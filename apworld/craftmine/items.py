@@ -1,7 +1,7 @@
 from BaseClasses import Item, ItemClassification
 
 from . import names
-from .data import INGREDIENTS, ITEM_INGREDIENTS, TREE_UNLOCKS, unlock_item_name
+from .data import CHAIN_OF, INGREDIENTS, ITEM_INGREDIENTS, TREE_UNLOCKS, UNLOCKS, unlock_item_name
 from .rules_data import PROGRESSIVE_CHAINS
 
 BASE_ID = 0x434D0000
@@ -12,10 +12,14 @@ class CraftmineItem(Item):
 
 
 INGREDIENT_ITEM = {k: INGREDIENTS[k]["name"] for k in ITEM_INGREDIENTS}
-UNLOCK_ITEMS = sorted({unlock_item_name(u) for u in TREE_UNLOCKS})
 
-ITEM_NAME_TO_ID = {name: BASE_ID + 1000 + i for i, name in enumerate(INGREDIENT_ITEM.values())}
-ITEM_NAME_TO_ID.update({name: BASE_ID + 2000 + i for i, name in enumerate(UNLOCK_ITEMS)})
+# ids index the full dumped lists (which never change), so excluding something or adding a chain keeps every other id;
+# a chain takes the id of its first unlock
+_INGREDIENT_INDEX = {k: i for i, k in enumerate(INGREDIENTS)}
+_UNLOCK_INDEX = {k: i for i, k in enumerate(UNLOCKS)}
+ITEM_NAME_TO_ID = {name: BASE_ID + 1000 + _INGREDIENT_INDEX[k] for k, name in INGREDIENT_ITEM.items()}
+ITEM_NAME_TO_ID.update({unlock_item_name(u): BASE_ID + 2000 + _UNLOCK_INDEX[PROGRESSIVE_CHAINS[CHAIN_OF[u]][0] if u in CHAIN_OF else u]
+                        for u in TREE_UNLOCKS})
 ITEM_NAME_TO_ID[names.SHIMMERING_KEY] = BASE_ID + 3000
 ITEM_NAME_TO_ID[names.XP_BUNDLE] = BASE_ID + 3001
 

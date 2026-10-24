@@ -41,8 +41,19 @@ class TestDefault(CraftmineTestBase):
         self.assertEqual(self.multiworld.early_items[self.player].get("Crafting"), 1)
 
     def test_goal_needs_all_special_mines(self):
-        self.collect_all_but(["Progressive Sword"])
+        self.collect_all_but(["Wither Skeletons"])
         self.assertBeatable(False)
+
+    def test_ids_index_the_full_game_lists(self):
+        from ..data import INGREDIENTS, UNLOCKS
+        self.assertEqual(self.world.location_name_to_id["Unlock Foxes"], BASE + 1000 + list(INGREDIENTS).index("foxes"))
+        self.assertEqual(self.world.location_name_to_id["Buy Combat"], BASE + 2000 + list(UNLOCKS).index("combatant"))
+        self.assertEqual(self.world.item_name_to_id["Progressive Sword"],
+                         BASE + 2000 + list(UNLOCKS).index("starter_sword"))
+        self.assertEqual(self.world.item_name_to_id["Combat"], BASE + 2000 + list(UNLOCKS).index("combatant"))
+
+    def test_crafting_table_route_is_early(self):
+        self.assertEqual(self.multiworld.early_items[self.player].get("Inventory Crafting"), 1)
 
 
 class TestAllTogglesOff(CraftmineTestBase):
@@ -59,6 +70,10 @@ class TestAllTogglesOff(CraftmineTestBase):
 
 class TestOneSpecialMine(CraftmineTestBase):
     options = {"special_mines_needed": 1}
+
+    def test_one_mine_is_enough(self):
+        self.collect_all_but(["Wither Skeletons"])
+        self.assertBeatable(True)
 
 
 class TestDragonGoal(CraftmineTestBase):

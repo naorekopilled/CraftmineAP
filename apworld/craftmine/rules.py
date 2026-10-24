@@ -15,6 +15,9 @@ if TYPE_CHECKING:
 
 Rule = Callable[[CollectionState], bool]
 
+# "@craft": the 3x3 menu needs Crafting, and the table itself comes from 2x2 crafting or the starter table
+CRAFT_ITEMS = ("Crafting", "Inventory Crafting", "Crafting table")
+
 
 def learning_needed(cost: int) -> int:
     """Expensive skill-tree nodes stay out of logic until the XP boosts make them a reasonable grind."""
@@ -27,7 +30,7 @@ def learning_needed(cost: int) -> int:
 
 def progression_item_names() -> set[str]:
     """Every item some rule asks for."""
-    found = {"Progressive Learning", names.SHIMMERING_KEY}
+    found = {"Progressive Learning", names.SHIMMERING_KEY} | set(CRAFT_ITEMS)
     for table in (INGREDIENT_RULES, HIDDEN_UNLOCK_RULES, SPECIAL_MINE_RULES, ADVANCEMENT_RULES):
         for alts in table.values():
             for alt in alts:
@@ -49,6 +52,9 @@ class RuleBuilder:
         player = self.player
         if atom.startswith("@"):
             kind, _, arg = atom[1:].partition(":")
+            if kind == "craft":
+                return lambda state: (state.has("Crafting", player)
+                                      and state.has_any(("Inventory Crafting", "Crafting table"), player))
             if kind == "special":
                 return lambda state: any(rule(state) for rule in self.mines.values())
             if kind == "mine":
@@ -83,8 +89,8 @@ def set_all_rules(world: "CraftmineWorld") -> None:
     get = world.get_location
     for key in ITEM_INGREDIENTS:
         set_rule(get(INGREDIENT_LOCATION[key]), builder.alternatives(INGREDIENT_RULES[key]))
-    for key in TREE_UNLOCKS:
-        set_rule(get(NODE_LOCATION[key]), builder.nodes[key])
+    for key, name in NODE_LOCATION.items():
+        set_rule(get(name), builder.nodes[key])
     for key, rule in builder.mines.items():
         set_rule(get(MINE_LOCATION[key]), rule)
     if world.options.advancement_checks:

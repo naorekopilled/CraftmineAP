@@ -47,7 +47,7 @@ class TestRulesData(unittest.TestCase):
             for atom in alt:
                 if atom.startswith("@"):
                     kind, _, arg = atom[1:].partition(":")
-                    ok = {"special": arg == "", "mine": arg in MINES, "node": arg in UNLOCKS,
+                    ok = {"special": arg == "", "craft": arg == "", "mine": arg in MINES, "node": arg in UNLOCKS,
                           "tab": arg in TABS}.get(kind, False)
                 else:
                     name = re.sub(r":\d+$", "", atom)
@@ -85,6 +85,33 @@ class TestRulesData(unittest.TestCase):
         ids = {a["id"] for a in DATA["advancements"]}
         self.assertEqual(set(rules_data.ADVANCEMENT_RULES) | rules_data.SKIPPED_ADVANCEMENTS, ids)
         self.assertFalse(set(rules_data.ADVANCEMENT_RULES) & rules_data.SKIPPED_ADVANCEMENTS)
+
+
+    def test_unobtainable_nodes_are_not_checks(self):
+        # rabbits never spawn in mines (Rabbits spawns parrots) and dragon fireball clouds blame the dragon
+        self.assertEqual(rules_data.NO_CHECK_NODES, {"mega_jump", "safe_falling", "dragon_fire"})
+        self.assertIn("unlocks/all_exploration", rules_data.SKIPPED_ADVANCEMENTS)
+        self.assertIn("unlocks/all_crafting", rules_data.SKIPPED_ADVANCEMENTS)
+
+    def test_bought_nodes_not_items_in_hidden_rules(self):
+        # the game's isUnlocked() means bought, the same thing @node means
+        for key, alts in rules_data.HIDDEN_UNLOCK_RULES.items():
+            for alt in alts:
+                self.assertNotIn("Spellbook", alt, key)
+
+    def test_end_biomes_do_not_give_endermen(self):
+        for table, key in ((rules_data.INGREDIENT_RULES, "nether_forests"),
+                           (rules_data.HIDDEN_UNLOCK_RULES, "ender_pearl_starter"),
+                           (rules_data.HIDDEN_UNLOCK_RULES, "teleportation_wand")):
+            self.assertNotIn(["end"], table[key], key)
+
+    def test_pickaxe_needed_for_stone_and_diamond(self):
+        for key in ("story/mine_stone", "story/mine_diamond", "feats/crystal"):
+            self.assertNotIn([], rules_data.ADVANCEMENT_RULES[key], key)
+
+    def test_crafting_only_through_craft_atom(self):
+        for key, alt in all_rules():
+            self.assertNotIn("Crafting", alt, key)
 
 
 if __name__ == "__main__":

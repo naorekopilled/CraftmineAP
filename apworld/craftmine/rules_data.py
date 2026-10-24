@@ -7,6 +7,7 @@ Atoms:
 - an item name, optionally `Name:count` for a progressive item
 - `@special`: any special mine can be won; `@mine:<id>`: that special mine can be won
 - `@node:<unlock id>`: that skill-tree node can be bought; `@tab:<tab>`: every node of that tab can be bought
+- `@craft`: can use a 3x3 crafting table (Crafting, plus Inventory Crafting or Crafting table to make the table)
 
 Mines always have the default ingredients (Surface World, Plains, Savannas, Stone, the farm animals), and the
 Mine Crafter's random slots fill with "always randomizable" ingredients (zombies, skeletons, spiders, creepers,
@@ -30,7 +31,7 @@ INGREDIENT_RULES: dict[str, list[list[str]]] = {
     "dark_cave_world": [["grid_world", "@special"]],
     # exits
     "cave_exits": [[]],  # 1% from deepslate, or unlocking Cave World
-    "rare_surface_exits": [["Crafting"]],  # craft an Eye of Exit (copper + iron, 3x3)
+    "rare_surface_exits": [["@craft"]],  # craft an Eye of Exit (copper + iron, 3x3)
     # biomes
     "forests": [[]],  # 1% from leaves
     "taigas": [[]],
@@ -42,22 +43,22 @@ INGREDIENT_RULES: dict[str, list[list[str]]] = {
     "dark_forests": [["forests", "jungles", "taigas"]],  # unlocked after those three
     "ice_spikes": [["snowy"]],  # win a mine with Snowy
     "mushroom_fields": [[]],  # 10% from mushrooms
-    "nether_barrens": [["Crafting"]],  # obtain obsidian (diamond pickaxe)
-    "nether_forests": [["endermen"], ["end"]],  # 20% from killing an enderman
+    "nether_barrens": [["@craft"]],  # obtain obsidian (diamond pickaxe)
+    "nether_forests": [["endermen"], ["@mine:enderman_boss"]],  # 20% from killing an enderman
     "deep_dark": [[]],  # 10% from breaking a block in the dark
     "end": [["blazes"]],  # 50% from killing a blaze
     # world types
-    "dry_land": [["badlands", "Crafting"]],  # pick up a lava bucket in a badlands biome
+    "dry_land": [["badlands", "@craft"]],  # pick up a lava bucket in a badlands biome
     "water_world": [["dry_land"]],  # win a mine with Dry Land
     # passive mobs
     "foxes": [["taigas"]],  # obtain sweet berries
     "goats": [["amplified"], ["floating_islands_world"]],  # 10% from breaking a block above y 128
     "ocelots": [[]],  # obtain string
-    "axolotls": [["swamps", "Crafting"]],  # obtain a bucket of axolotl (lush caves come with Swamps)
-    "armadillos": [["Crafting"]],  # craft a brush
+    "axolotls": [["swamps", "@craft"]],  # obtain a bucket of axolotl (lush caves come with Swamps)
+    "armadillos": [["@craft"]],  # craft a brush
     "mooshrooms": [[]],  # 10% from mushrooms
     "pandas": [["jungles"]],  # eat bamboo
-    "parrots": [["jungles", "Crafting"]],  # eat a cookie
+    "parrots": [["jungles", "@craft"]],  # eat a cookie
     "rabbits": [[]],  # take more than 10 fall damage
     "sniffers": [[]],  # 5% from flowers
     "striders": [[]],  # obtain a saddle (village leatherworker)
@@ -73,17 +74,17 @@ INGREDIENT_RULES: dict[str, list[list[str]]] = {
     "magma_cubes": [["nether_barrens"]],  # obtain magma cream or a magma block
     "blazes": [["nether_barrens"], ["nether_forests"]],  # break nether quartz or nether gold ore
     "breezes": [[]],  # obtain a trial key (trial chambers)
-    "pillagers": [["Crafting"]],  # traitor villager trades (lodestone), novice
-    "vindicators": [["Crafting"]],  # apprentice
-    "evokers": [["Crafting"]],  # journeyman
-    "ravagers": [["Crafting"]],  # expert
-    "illusioners": [["Crafting"]],  # master
+    "pillagers": [["@craft"]],  # traitor villager trades (lodestone), novice
+    "vindicators": [["@craft"]],  # apprentice
+    "evokers": [["@craft"]],  # journeyman
+    "ravagers": [["@craft"]],  # expert
+    "illusioners": [["@craft"]],  # master
     "guardians": [[]],  # kill an aquatic mob
     "endermites": [["end"], ["base_end_stone"]],  # 10% from breaking end stone
     "shulkers": [["endermites"]],  # 10% from killing an endermite
     "ghasts": [["desert"], ["swamps"]],  # break a bone block (fossils)
     "zombified_piglins": [[]],  # kill a pig that is on fire
-    "piglins": [["Crafting"]],  # feed a golden carrot to a pig
+    "piglins": [["@craft"]],  # feed a golden carrot to a pig
     "wither_skeletons": [[]],  # 10% from killing a skeleton
     "bees": [[]],  # kill a bee
     "hoglins": [[]],  # 1% from killing a pig
@@ -95,9 +96,9 @@ INGREDIENT_RULES: dict[str, list[list[str]]] = {
     "base_granite": [[]],
     "base_tuff": [[]],
     "base_deepslate": [[]],
-    "base_end_stone": [["end"]],
+    "base_end_stone": [["end", "@craft"], ["end", "Starting pickaxe"]],  # end stone has to drop
     # challenges
-    "icy": [["Crafting"], ["Progressive Axe:2"]],  # use a boat (Viking gives one)
+    "icy": [["@craft"], ["Progressive Axe:2"]],  # use a boat (Viking gives one)
     "bouncy": [[]],  # kill a slime or magma cube
     "one_hp": [[]],  # kill a mob while at half a heart
     "wednesday_frogs": [[]],  # kill a frog
@@ -108,7 +109,7 @@ INGREDIENT_RULES: dict[str, list[list[str]]] = {
     "insomniacs": [["eternal_night"]],
     "ultrawarm": [[]],  # take lava damage
     "explosive_traps": [[]],  # win a mine once more than 10 mines exist
-    "fish_out_of_water": [["Crafting"], ["Angler"]],  # use a fishing rod
+    "fish_out_of_water": [["@craft"], ["Angler"]],  # use a fishing rod
     # special event
     "warden_boss_fight": [[]],  # break amethyst
 }
@@ -135,20 +136,28 @@ PROGRESSIVE_CHAINS: dict[str, list[str]] = {
 }
 
 # Skill-tree nodes the game hides until something happens (PlayerUnlock.becomesVisibleWhen, other than "parent
-# bought"). "isUnlocked(Spellbook)" in the game = having the Spellbook item here.
+# bought"). "isUnlocked(Spellbook)" in the game = the Spellbook node bought.
 HIDDEN_UNLOCK_RULES: dict[str, list[list[str]]] = {
-    "ender_pearl_starter": [["endermen"], ["end"]],  # kill an enderman
+    "ender_pearl_starter": [["endermen"], ["@mine:enderman_boss"]],  # kill an enderman
     "mega_jump": [["desert"], ["taigas"], ["snowy"]],  # kill a rabbit (they live in those biomes)
-    "inventory_crafting_3x3": [["Crafting"], ["Inventory Crafting"]],  # craft anything
-    "crafting_efficiency": [["Crafting"], ["Inventory Crafting"]],  # craft a crafting table
+    "inventory_crafting_3x3": [["@craft"], ["Inventory Crafting"]],  # craft anything
+    "crafting_efficiency": [["Inventory Crafting"]],  # craft a crafting table (2x2)
     "fire_wand": [["blazes"]],  # kill a blaze
     "wind_wand": [["breezes"]],  # kill a breeze
-    "teleportation_wand": [["endermen"], ["end"]],  # kill an enderman
+    "teleportation_wand": [["endermen"], ["@mine:enderman_boss"]],  # kill an enderman
     "sub_mining_efficiency": [["water_world"]],  # win a Water World mine
-    "wing_guardian_lift_off_to_the_sky": [["Spellbook"]],  # more than 10 fall damage with Spellbook
-    "dragon_fire": [["Spellbook", "@mine:ender_dragon_boss"]],  # dragon fireball damage with Spellbook
-    "fire_shield": [["Spellbook"]],  # fire damage with Spellbook
+    "wing_guardian_lift_off_to_the_sky": [["@node:sorcerer_supreme"]],  # more than 10 fall damage with Spellbook
+    "dragon_fire": [["@node:sorcerer_supreme", "@mine:ender_dragon_boss"]],  # dragon fireball damage with Spellbook
+    "fire_shield": [["@node:sorcerer_supreme"]],  # fire damage with Spellbook
 }
+
+# Nodes the game never shows, so they can't be bought: MEGA JUMP needs a rabbit kill but mines replace every
+# creature spawn with the ingredients' mobs and the Rabbits ingredient spawns parrots; Dragon Fire needs damage whose
+# entity is a dragon fireball, but the fireball's cloud credits the dragon. Safe Falling sits under MEGA JUMP.
+# Their items still exist.
+NO_CHECK_NODES = {"mega_jump", "safe_falling", "dragon_fire"}
+
+_PICKAXE = [["@craft"], ["Starting pickaxe"]]
 
 _GEAR_1 = ["Combat", "Armaments", "Progressive Armor:1", "Progressive Sword:2"]
 _GEAR_2 = ["Combat", "Armaments", "Progressive Armor:2", "Progressive Sword:3", "Progressive Apples:2"]
@@ -174,12 +183,13 @@ SKIPPED_ADVANCEMENTS = {
     "mines/get_mine_ingredient", "mines/cash_in_mine_ingredient",
     "mines/all_mine_ingredients",  # needs every ingredient, No drops? and Soul Link included
     "unlocks/in_it_together",  # Soul Link
+    "unlocks/all_exploration", "unlocks/all_crafting",  # need MEGA JUMP, Safe Falling, Dragon Fire (NO_CHECK_NODES)
 }
 
 # "Shimmering Key" is swapped for [[]] by the world when hub door checks are off (keys stay vanilla then).
 ADVANCEMENT_RULES: dict[str, list[list[str]]] = {
-    "feats/crystal": [[]],
-    "feats/dragon_breath": [["@mine:ender_dragon_boss", "Crafting"]],
+    "feats/crystal": _PICKAXE,
+    "feats/dragon_breath": [["@mine:ender_dragon_boss", "@craft"]],
     "feats/end_world": [["end"]],
     "feats/kill_pillager": [["pillagers"]],
     "feats/kill_skeleton": [[]],
@@ -197,22 +207,20 @@ ADVANCEMENT_RULES: dict[str, list[list[str]]] = {
     "mines/player_failed_level": [[]],
     "mines/shimmering_key": [["Shimmering Key"]],
     "mines/special_mine_completed": [["@special"]],
-    "story/deflect_arrow": [["Warded"], ["Crafting"]],
-    "story/follow_exit_eye": [["Crafting"]],
-    "story/iron_tools": [["Crafting"], ["Starting pickaxe"]],
-    "story/mine_diamond": [[]],
-    "story/mine_stone": [[]],
-    "story/obtain_armor": [["Crafting"], ["Progressive Armor:2"]],
-    "story/shiny_gear": [["Crafting"]],
-    "story/smelt_iron": [["Crafting"], ["Progressive Smelter"]],
-    "story/upgrade_tools": [["Crafting"]],
+    "story/deflect_arrow": [["Warded"], ["@craft"]],
+    "story/follow_exit_eye": [["@craft"]],
+    "story/iron_tools": [["@craft"], ["Starting pickaxe"]],
+    "story/mine_diamond": _PICKAXE,
+    "story/mine_stone": _PICKAXE,
+    "story/obtain_armor": [["@craft"], ["Progressive Armor:2"]],
+    "story/shiny_gear": [["@craft"]],
+    "story/smelt_iron": [["@craft"], ["Progressive Smelter"]],
+    "story/upgrade_tools": [["@craft"]],
     "unlocks/all_combatant": [["@tab:combatant", "@special"]],  # checked when a special mine is won
-    "unlocks/all_crafting": [["@tab:crafting", "@special"]],
-    "unlocks/all_exploration": [["@tab:exploration", "@special"]],
     "unlocks/all_gatherer": [["@tab:gatherer", "@special"]],
     "unlocks/all_school_of_hard_knocks": [["@special"]],  # that tab stays vanilla
     "unlocks/free_sticks": [["@node:fire_wand", "@node:wind_wand", "@node:teleportation_wand"]],
-    "unlocks/how_do_i_unlock_that": [["Crafting"], ["Inventory Crafting"]],  # any hidden node shows up
+    "unlocks/how_do_i_unlock_that": [["@craft"], ["Inventory Crafting"]],  # any hidden node shows up
     "unlocks/jump_king": [["@node:jump_king_10"]],
     "unlocks/kaizen": [[]],
     "unlocks/sigma_grindset": [["@node:learning_20"]],
