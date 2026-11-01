@@ -8,7 +8,7 @@ from .data import ADVANCEMENTS, INGREDIENTS, SPECIAL_MINES, TREE_UNLOCKS, UNLOCK
 from .items import INGREDIENT_ITEM, ITEM_NAME_TO_ID
 from .locations import LOCATION_KEY
 from .rules import learning_needed
-from .rules_data import ADVANCEMENT_RULES, HIDDEN_UNLOCK_RULES, INGREDIENT_RULES, SPECIAL_MINE_RULES
+from .rules_data import ADVANCEMENT_RULES, HIDDEN_UNLOCK_RULES, INGREDIENT_RULES, SPECIAL_MINE_RULES, TAB_ITEMS
 
 # a special mine's icon is its own ingredient, not one it shares with the others
 _SHARED_MINE_EFFECTS = {"event_exit", "floating_islands_world", "surface_world", "cave_world", "plains", "desert"}
@@ -32,7 +32,8 @@ def _location(name: str, key: str) -> dict:
         entry["rule"] = _alts(INGREDIENT_RULES[arg])
         entry["after"] = INGREDIENTS[arg]["unlocked_after"]
     elif kind == "node":
-        entry["rule"] = [[f"@node:{arg}"]]
+        # the tab item is already part of @node; listed so the tracker can name it
+        entry["rule"] = [[TAB_ITEMS[UNLOCKS[arg]["tab"]], f"@node:{arg}"]]
     elif kind == "mine":
         entry["rule"] = [[f"@mine:{arg}"]]
         effects = SPECIAL_MINES[arg]["required_effects"]
@@ -56,4 +57,5 @@ def export() -> dict:
                       "hidden": _alts(HIDDEN_UNLOCK_RULES.get(k, [[]])),
                       "learning": learning_needed(UNLOCKS[k]["cost"])}
                   for k in TREE_UNLOCKS},
+        "tabs": TAB_ITEMS,
     }

@@ -40,6 +40,12 @@ class HubDoorChecks(DefaultOnToggle):
     display_name = "Hub Door Checks"
 
 
+class UpgradeTabs(DefaultOnToggle):
+    """Each skill-tree tab has its own item, and you can't buy that tab's upgrades until you have it. One random tab
+    starts open. Upgrades you receive still work while their tab is closed."""
+    display_name = "Upgrade Tabs"
+
+
 @dataclass
 class CraftmineOptions(PerGameCommonOptions):
     goal: Goal
@@ -47,4 +53,5 @@ class CraftmineOptions(PerGameCommonOptions):
     advancement_checks: AdvancementChecks
     crafter_level_checks: CrafterLevelChecks
     hub_door_checks: HubDoorChecks
+    upgrade_tabs: UpgradeTabs
     death_link: DeathLink

@@ -135,6 +135,16 @@ PROGRESSIVE_CHAINS: dict[str, list[str]] = {
     "Progressive Sneak": ["sneak_1", "sneak_2"],
 }
 
+# placeholder: the game has no such items. With upgrade_tabs on, a tab's nodes can't be bought until its item arrives.
+TAB_ITEMS: dict[str, str] = {
+    "combatant": "Combat Tab",
+    "crafting": "Crafting Tab",
+    "exploration": "Exploration Tab",
+    "gatherer": "Gatherer Tab",
+    "pets": "Pets Tab",
+    "school_of_hard_knocks": "School of Hard Knocks Tab",
+}
+
 # Skill-tree nodes the game hides until something happens (PlayerUnlock.becomesVisibleWhen, other than "parent
 # bought"). "isUnlocked(Spellbook)" in the game = the Spellbook node bought.
 HIDDEN_UNLOCK_RULES: dict[str, list[list[str]]] = {
@@ -218,7 +228,7 @@ ADVANCEMENT_RULES: dict[str, list[list[str]]] = {
     "story/upgrade_tools": [["@craft"]],
     "unlocks/all_combatant": [["@tab:combatant", "@special"]],  # checked when a special mine is won
     "unlocks/all_gatherer": [["@tab:gatherer", "@special"]],
-    "unlocks/all_school_of_hard_knocks": [["@special"]],  # that tab stays vanilla
+    "unlocks/all_school_of_hard_knocks": [["@tab:school_of_hard_knocks", "@special"]],
     "unlocks/free_sticks": [["@node:fire_wand", "@node:wind_wand", "@node:teleportation_wand"]],
     "unlocks/how_do_i_unlock_that": [["@craft"], ["Inventory Crafting"]],  # any hidden node shows up
     "unlocks/jump_king": [["@node:jump_king_10"]],

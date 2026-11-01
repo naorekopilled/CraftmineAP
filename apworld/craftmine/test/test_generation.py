@@ -1,4 +1,6 @@
 from . import CraftmineTestBase
+from .. import names
+from ..rules_data import TAB_ITEMS
 
 BASE = 0x434D0000
 
@@ -12,13 +14,16 @@ class TestDefault(CraftmineTestBase):
         self.assertEqual(world.item_name_to_id["Amplified World"], BASE + 1000)
         self.assertEqual(world.item_name_to_id["Shimmering Key"], BASE + 3000)
         self.assertEqual(world.item_name_to_id["Bag of XP"], BASE + 3001)
+        self.assertEqual(world.item_name_to_id["Combat Tab"], BASE + 3002)
+        self.assertEqual(world.item_name_to_id["Pets Tab"], BASE + 3006)
+        self.assertEqual(world.item_name_to_id["School of Hard Knocks Tab"], BASE + 3007)
         self.assertEqual(world.location_name_to_id["Mine Crafter Level 1"], BASE + 5001)
         self.assertEqual(world.location_name_to_id["Hub Door 1"], BASE + 6001)
 
     def test_slot_data_keys(self):
         self.assertEqual(set(self.world.fill_slot_data()), {
             "goal", "special_mines_needed", "advancement_checks", "crafter_level_checks", "hub_door_checks",
-            "death_link", "world_version", "locations", "items"})
+            "upgrade_tabs", "death_link", "world_version", "locations", "items"})
 
     def test_slot_data_maps(self):
         slot = self.world.fill_slot_data()
@@ -54,6 +59,49 @@ class TestDefault(CraftmineTestBase):
 
     def test_crafting_table_route_is_early(self):
         self.assertEqual(self.multiworld.early_items[self.player].get("Inventory Crafting"), 1)
+
+    def test_one_tab_starts_open_and_the_rest_are_in_the_pool(self):
+        tabs = set(TAB_ITEMS.values())
+        start = [i.name for i in self.multiworld.precollected_items[self.player]]
+        self.assertEqual(len(start), 1)
+        self.assertIn(start[0], tabs)
+        self.assertEqual(sorted(i.name for i in self.multiworld.itempool if i.name in tabs),
+                         sorted(tabs - set(start)))
+        self.assertTrue(all(i.advancement for i in self.multiworld.itempool if i.name in tabs))
+
+    def test_a_closed_tab_needs_its_item(self):
+        start = self.multiworld.precollected_items[self.player][0].name
+        tab = next(t for t, item in TAB_ITEMS.items() if item != start)
+        location = names.node_location(tab)  # each tab's root node has the tab's id
+        self.assertFalse(self.can_reach_location(location))
+        self.collect_by_name(TAB_ITEMS[tab])
+        self.assertTrue(self.can_reach_location(location))
+
+    def test_school_nodes_are_checks_without_items(self):
+        from ..data import UNLOCKS
+        school = [u for u in UNLOCKS.values() if u["tab"] == "school_of_hard_knocks"]
+        self.assertEqual(len(school), 6)
+        for unlock in school:
+            self.assertEqual(self.world.get_location(names.node_location(unlock["id"])).game, "Craftmine")
+            self.assertNotIn(unlock["name"], self.world.item_name_to_id)
+
+    def test_slot_data_maps_tab_items(self):
+        slot = self.world.fill_slot_data()
+        self.assertTrue(slot["upgrade_tabs"])
+        self.assertEqual(slot["items"][str(self.world.item_name_to_id["Exploration Tab"])],
+                         {"kind": "tab", "keys": ["exploration"]})
+
+
+class TestUpgradeTabsOff(CraftmineTestBase):
+    options = {"upgrade_tabs": False}
+
+    def test_no_tab_items(self):
+        tabs = set(TAB_ITEMS.values())
+        self.assertFalse([i for i in self.multiworld.itempool if i.name in tabs])
+        self.assertFalse(self.multiworld.precollected_items[self.player])
+
+    def test_nodes_need_no_tab(self):
+        self.assertTrue(self.can_reach_location(names.node_location("combatant")))
 
 
 class TestAllTogglesOff(CraftmineTestBase):

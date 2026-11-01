@@ -14,12 +14,12 @@ Singleplayer only for now, multiplayer planned for the future.
 - Minecraft `25w14craftmine` with Fabric Loader 0.16.14 or newer
 - [Fabric API](https://modrinth.com/mod/fabric-api) `0.119.10+25w14craftmine`
 - Archipelago 0.6.4 or newer (tested on 0.6.7)
-- `craftmineap-0.1.0.jar` and `craftmine.apworld` from the [releases page](../../releases)
+- `craftmineap-0.2.0.jar` and `craftmine.apworld` from the [releases page](../../releases)
 
 ## Install
 
 1. In your launcher, make a new instance for Minecraft `25w14craftmine` (it is a snapshot) with the Fabric loader.
-2. Put Fabric API and `craftmineap-0.1.0.jar` in that instance's `mods` folder.
+2. Put Fabric API and `craftmineap-0.2.0.jar` in that instance's `mods` folder.
 3. Install `craftmine.apworld` like any other apworld.
 
 ## Options
@@ -31,9 +31,10 @@ Singleplayer only for now, multiplayer planned for the future.
 | `advancement_checks` | on | Advancements are checks (36). |
 | `crafter_level_checks` | 10 | Mine Crafter levels 1 up to this number are checks (0 to 48). Later levels take a very long time. |
 | `hub_door_checks` | on | Opening a hub door is a check (10 doors), and Shimmering Keys only come from the multiworld. |
+| `upgrade_tabs` | on | Each skill-tree tab has its own item, and its upgrades can't be bought until you have it. One random tab starts open. |
 | `death_link` | off | Only deaths in a mine are sent, and a received death only kills you while you are in a mine. |
 
-With the defaults a seed has 293 checks: 81 ingredients, 147 skill-tree nodes, 36 advancements, 9 special mines,
+With the defaults a seed has 299 checks: 81 ingredients, 153 skill-tree nodes, 36 advancements, 9 special mines,
 10 Mine Crafter levels and 10 hub doors.
 
 ## Play
@@ -54,9 +55,12 @@ Server messages show up in chat, colored like the text client.
   itself unlocks when its item arrives.
 - Buying a skill-tree node spends your XP, marks it bought and opens its children as usual, and sends its check.
   The node's effect only turns on when its item arrives. Long chains such as the swords, jumps and Learning are
-  progressive items. School of Hard Knocks is not shuffled.
+  progressive items. School of Hard Knocks nodes are checks with no items, so buying them never applies their
+  penalties.
 - The skill tree (`U`) draws a green glow around every upgrade you have received. The normal gold frame still means
   you bought that node.
+- With `upgrade_tabs` on, nodes you can't buy yet get a red glow and name the tab item they need. Upgrades you receive
+  work even while their tab is closed. Nodes bought before `/start` still count.
 - Shimmering Keys and Bags of XP wait until you are back in the hub, since a mine converts or clears your inventory.
   A Bag of XP gives 5 levels.
 - Some nodes stay hidden until the game reveals them. For example, Let's get Pearling shows as `?` until you kill an

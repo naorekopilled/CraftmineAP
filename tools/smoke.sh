@@ -68,6 +68,12 @@ wait_for "$W/mc.log" "Unlocked new Mine Ingredient: Desert Biome" 30 || finish 1
 # a bought node is a check, and its effect waits for its item
 mc "apdev active combatant"
 wait_for "$W/mc.log" "apdev combatant active=false" 30 || finish 1
+# this seed starts with Pets open, so Combat can't be bought before its tab item
+mc "apdev buy combatant"
+wait_for "$W/mc.log" "apdev combatant bought=false" 30 || finish 1
+ap "/send Miner Combat Tab"
+wait_for "$W/ap.log" 'sending "Combat Tab"' 30 || finish 1
+sleep 2
 mc "apdev buy combatant"
 wait_for "$W/mc.log" "apdev combatant bought=true" 30 || finish 1
 wait_for "$W/ap.log" "(Upgrade: Combat)" 30 || finish 1
@@ -80,6 +86,16 @@ wait_for "$W/ap.log" 'sending "Combat"' 30 || finish 1
 sleep 2
 mc "apdev active combatant"
 wait_for "$W/mc.log" "apdev combatant active=true" 30 || finish 1
+
+# School of Hard Knocks nodes are checks with no item, so their penalties never turn on
+ap "/send Miner School of Hard Knocks Tab"
+wait_for "$W/ap.log" 'sending "School of Hard Knocks Tab"' 30 || finish 1
+sleep 2
+mc "apdev buy school_of_hard_knocks"
+wait_for "$W/mc.log" "apdev school_of_hard_knocks bought=true" 30 || finish 1
+wait_for "$W/ap.log" "(Upgrade: School of Hard Knocks)" 30 || finish 1
+mc "apdev active school_of_hard_knocks"
+wait_for "$W/mc.log" "apdev school_of_hard_knocks active=false" 30 || finish 1
 
 # a received gear unlock gives its items on entering a mine, bought or not
 mc "apdev mine_gear ender_pearl"

@@ -7,6 +7,7 @@
 		"DoorMenuMixin",
 		"MineDataMixin",
 		"PlayerAdvancementsMixin",
+		"PlayerMixin",
 		"ServerLevelMixin",
 		"ServerPlayerAccessor",
 		"ServerPlayerMixin",

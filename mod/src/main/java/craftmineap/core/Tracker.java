@@ -27,7 +27,7 @@ public final class Tracker {
 				have.merge(name, 1, Integer::sum);
 			}
 		}
-		Logic.Evaluation evaluation = logic.evaluate(have, state.slotData.hubDoorChecks());
+		Logic.Evaluation evaluation = logic.evaluate(have, state.slotData.hubDoorChecks(), state.slotData.upgradeTabs());
 		List<Entry> entries = new ArrayList<>();
 		state.slotData.locations().forEach((id, key) -> {
 			Logic.Location location = logic.location(key);

@@ -9,7 +9,7 @@ DATA = json.loads((Path(__file__).parent.parent / "data" / "craftmine.json").rea
 INGREDIENTS = {i["id"]: i for i in DATA["ingredients"]}
 UNLOCKS = {u["id"]: u for u in DATA["unlocks"]}
 MINES = {m["id"] for m in DATA["special_mines"]}
-TABS = {u["tab"] for u in DATA["unlocks"]} - {"school_of_hard_knocks"}
+TABS = {u["tab"] for u in DATA["unlocks"]}
 
 
 def item_ingredients():

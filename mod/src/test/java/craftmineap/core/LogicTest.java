@@ -32,10 +32,11 @@ class LogicTest {
 		Logic logic = Logic.bundled();
 		JsonObject fixture = read("/logic_fixture.json");
 		boolean doorsOn = fixture.get("doors_on").getAsBoolean();
+		boolean tabsOn = fixture.get("tabs_on").getAsBoolean();
 		int compared = 0;
 		for (JsonElement element : fixture.getAsJsonArray("states")) {
 			JsonObject state = element.getAsJsonObject();
-			Logic.Evaluation evaluation = logic.evaluate(have(state), doorsOn);
+			Logic.Evaluation evaluation = logic.evaluate(have(state), doorsOn, tabsOn);
 			Set<String> expected = new TreeSet<>();
 			state.getAsJsonArray("in_logic").forEach(k -> expected.add(k.getAsString()));
 			Set<String> actual = new TreeSet<>();
@@ -55,7 +56,7 @@ class LogicTest {
 		Logic logic = Logic.bundled();
 		JsonObject fixture = read("/logic_fixture.json");
 		JsonObject state = fixture.getAsJsonArray("states").get(0).getAsJsonObject();
-		Logic.Evaluation evaluation = logic.evaluate(have(state), true);
+		Logic.Evaluation evaluation = logic.evaluate(have(state), true, true);
 		for (JsonElement key : fixture.getAsJsonArray("locations")) {
 			String k = key.getAsString();
 			assertEquals(evaluation.inLogic(k), evaluation.missing(k).isEmpty(), k);
@@ -64,10 +65,28 @@ class LogicTest {
 
 	@Test
 	void missingNamesTheNeededItems() throws Exception {
-		Logic.Evaluation nothing = Logic.bundled().evaluate(Map.of(), true);
+		Logic.Evaluation nothing = Logic.bundled().evaluate(Map.of(), true, true);
 		assertEquals(java.util.List.of("Shimmering Key:3"), nothing.missing("door:3"));
-		assertTrue(Logic.bundled().evaluate(Map.of("Shimmering Key", 3), true).inLogic("door:3"));
-		assertTrue(Logic.bundled().evaluate(Map.of(), false).inLogic("door:3"));
+		assertTrue(Logic.bundled().evaluate(Map.of("Shimmering Key", 3), true, true).inLogic("door:3"));
+		assertTrue(Logic.bundled().evaluate(Map.of(), false, true).inLogic("door:3"));
+	}
+
+	@Test
+	void nodesNeedTheirTabOnlyWithTabsOn() throws Exception {
+		Logic logic = Logic.bundled();
+		Logic.Evaluation closed = logic.evaluate(Map.of(), true, true);
+		assertFalse(closed.inLogic("node:combatant"));
+		assertTrue(closed.missing("node:combatant").contains("Combat Tab"));
+		assertTrue(logic.evaluate(Map.of("Combat Tab", 1), true, true).inLogic("node:combatant"));
+		assertTrue(logic.evaluate(Map.of(), true, false).inLogic("node:combatant"));
+	}
+
+	@Test
+	void closedTabsAreTheOnesNotOpen() throws Exception {
+		assertEquals(Set.of("combatant", "crafting", "gatherer", "pets", "school_of_hard_knocks"),
+			Logic.bundled().closedTabs(Set.of("exploration")));
+		assertEquals("Exploration Tab", Logic.bundled().tabItem("exploration"));
+		assertEquals("School of Hard Knocks Tab", Logic.bundled().tabItem("school_of_hard_knocks"));
 	}
 
 	@Test

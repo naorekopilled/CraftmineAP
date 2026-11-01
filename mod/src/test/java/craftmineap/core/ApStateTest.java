@@ -17,7 +17,8 @@ class ApStateTest {
 		 "locations": {"100": "ingredient:foxes", "101": "mine:raid", "102": "mine:wither_boss"},
 		 "items": {"200": {"kind": "ingredient", "keys": ["foxes"]},
 		           "201": {"kind": "unlock", "keys": ["starter_sword", "starter_sword_iron", "better_starter_sword", "best_starter_sword"]},
-		           "202": {"kind": "key", "keys": []}, "203": {"kind": "xp", "keys": []}}}
+		           "202": {"kind": "key", "keys": []}, "203": {"kind": "xp", "keys": []},
+		           "204": {"kind": "tab", "keys": ["exploration"]}}}
 		""";
 
 	static ApState state() {
@@ -137,7 +138,7 @@ class ApStateTest {
 	@Test
 	void goalEnderDragon() {
 		ApState state = state();
-		state.slotData = new SlotData("ender_dragon", 9, true, 10, true, false,
+		state.slotData = new SlotData("ender_dragon", 9, true, 10, true, false, false,
 			state.slotData.locations(), state.slotData.items());
 		state.specialMinesWon.add("raid");
 		assertFalse(state.goalReached());

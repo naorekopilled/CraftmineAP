@@ -11,9 +11,11 @@ import java.io.UncheckedIOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * The apworld's rules (craftmineap/logic.json, written by the apworld's logic_export.py), evaluated the way its
@@ -33,6 +35,7 @@ public final class Logic {
 	private final Map<String, Location> locations = new LinkedHashMap<>();
 	private final Map<String, List<List<String>>> mines = new LinkedHashMap<>();
 	private final Map<String, Node> nodes = new LinkedHashMap<>();
+	private final Map<String, String> tabs = new LinkedHashMap<>();
 
 	private Logic(JsonObject json) {
 		json.getAsJsonObject("items").entrySet().forEach(e -> items.put(Long.parseLong(e.getKey()), e.getValue().getAsString()));
@@ -47,6 +50,7 @@ public final class Logic {
 			nodes.put(e.getKey(), new Node(e.getKey(), string(n, "parent"), n.get("tab").getAsString(), rule(n.getAsJsonArray("hidden")),
 				n.get("learning").getAsInt()));
 		}
+		json.getAsJsonObject("tabs").entrySet().forEach(e -> tabs.put(e.getKey(), e.getValue().getAsString()));
 	}
 
 	public static synchronized Logic bundled() {
@@ -103,21 +107,38 @@ public final class Logic {
 		return nodes.get(id);
 	}
 
-	/** have: received item name to count. doorsOn: the slot's hub_door_checks (keys are free logic without it). */
-	public Evaluation evaluate(Map<String, Integer> have, boolean doorsOn) {
-		return new Evaluation(have, doorsOn);
+	/** The item a skill-tree tab needs. */
+	public String tabItem(String tab) {
+		return tabs.get(tab);
+	}
+
+	/** Every gated tab that isn't in open. */
+	public Set<String> closedTabs(Set<String> open) {
+		Set<String> closed = new HashSet<>(tabs.keySet());
+		closed.removeAll(open);
+		return closed;
+	}
+
+	/**
+	 * have: received item name to count. doorsOn: the slot's hub_door_checks (keys are free logic without it).
+	 * tabsOn: the slot's upgrade_tabs (tab items are free logic without it).
+	 */
+	public Evaluation evaluate(Map<String, Integer> have, boolean doorsOn, boolean tabsOn) {
+		return new Evaluation(have, doorsOn, tabsOn);
 	}
 
 	/** One item set; node and mine results are cached, so build one per tracker refresh. */
 	public final class Evaluation {
 		private final Map<String, Integer> have;
 		private final boolean doorsOn;
+		private final boolean tabsOn;
 		private final Map<String, Boolean> nodeCache = new HashMap<>();
 		private final Map<String, Boolean> mineCache = new HashMap<>();
 
-		private Evaluation(Map<String, Integer> have, boolean doorsOn) {
+		private Evaluation(Map<String, Integer> have, boolean doorsOn, boolean tabsOn) {
 			this.have = have;
 			this.doorsOn = doorsOn;
+			this.tabsOn = tabsOn;
 		}
 
 		public boolean inLogic(String locationKey) {
@@ -159,7 +180,7 @@ public final class Logic {
 				};
 			}
 			String item = item(atom);
-			return (item.equals(KEY) && !doorsOn) || has(item, amount(atom));
+			return (item.equals(KEY) && !doorsOn) || (!tabsOn && tabs.containsValue(item)) || has(item, amount(atom));
 		}
 
 		private boolean mine(String key) {
@@ -176,7 +197,8 @@ public final class Logic {
 			if (cached == null) {
 				Node node = nodes.get(id);
 				cached = (node.parent() == null || node(node.parent())) && any(node.hidden())
-					&& (node.learning() == 0 || has("Progressive Learning", node.learning()));
+					&& (node.learning() == 0 || has("Progressive Learning", node.learning()))
+					&& atom(tabs.get(node.tab()));
 				nodeCache.put(id, cached);
 			}
 			return cached;

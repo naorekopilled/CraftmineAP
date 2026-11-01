@@ -88,6 +88,11 @@ public final class Text {
 		return Component.literal("In logic").withStyle(ChatFormatting.GREEN);
 	}
 
+	// under a skill-tree node's description
+	public static Component tabClosed(String tabItem) {
+		return Component.literal("Needs " + tabItem).withStyle(ChatFormatting.RED);
+	}
+
 	public static Component trackerOutOfLogic() {
 		return Component.literal("Out of logic").withStyle(ChatFormatting.RED);
 	}

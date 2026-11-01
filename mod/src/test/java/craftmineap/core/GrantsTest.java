@@ -15,8 +15,10 @@ class GrantsTest {
 		state.acceptItem(4, 202);
 		state.acceptItem(5, 203);
 		state.acceptItem(6, 203);
+		state.acceptItem(7, 204);
 		Grants grants = Grants.from(state);
 		assertEquals(Set.of("foxes"), grants.ingredients());
+		assertEquals(Set.of("exploration"), grants.tabs());
 		assertEquals(Set.of("starter_sword", "starter_sword_iron"), grants.unlocks());
 		assertEquals(1, grants.keys());
 		assertEquals(2, grants.xpBundles());

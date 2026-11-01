@@ -22,6 +22,9 @@ def _dump(data) -> str:
 
 
 class TestLogicExport(CraftmineTestBase):
+    def world_setup(self, seed=7):
+        super().world_setup(seed)  # the start tab comes from the seed, and the fixture has to be the same every run
+
     def test_mod_ships_the_current_export(self):
         text = _dump(export())
         if WRITE:
@@ -44,9 +47,13 @@ class TestLogicExport(CraftmineTestBase):
             for name, amount in have.items():
                 for _ in range(amount):
                     state.collect(self.world.create_item(name), prevent_sweep=True)
+            # a new state already holds the precollected start tab, the mod only knows it as a received item
+            for item in self.multiworld.precollected_items[self.player]:
+                have[item.name] = have.get(item.name, 0) + 1
             states.append({"have": have,
                            "in_logic": sorted(LOCATION_KEY[loc.name] for loc in locations if loc.can_reach(state))})
         return {"doors_on": bool(self.world.options.hub_door_checks),
+                "tabs_on": bool(self.world.options.upgrade_tabs),
                 "locations": sorted(LOCATION_KEY[loc.name] for loc in locations),
                 "states": states}
 

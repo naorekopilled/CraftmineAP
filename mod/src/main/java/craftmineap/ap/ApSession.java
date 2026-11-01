@@ -79,7 +79,7 @@ public final class ApSession {
 
 	public static void close() {
 		if (current != null) {
-			UnlockGate.set(false, java.util.Set.of());
+			UnlockGate.set(false, java.util.Set.of(), java.util.Set.of());
 			current.closed = true;
 			current.disconnect();
 			current.save();

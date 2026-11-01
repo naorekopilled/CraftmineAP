@@ -15,8 +15,11 @@ ITEM_INGREDIENTS = [k for k, i in INGREDIENTS.items()
                     if i["unlock_mode"] in ("UNLOCKED_BY_CONDITION", "UNLOCKED_ON_WIN")
                     and k not in EXCLUDED_INGREDIENTS]
 
-# Skill-tree nodes that are checks and items. School of Hard Knocks stays vanilla.
-TREE_UNLOCKS = [k for k, u in UNLOCKS.items() if u["tab"] != "school_of_hard_knocks"]
+TREE_UNLOCKS = list(UNLOCKS)
+
+# Skill-tree nodes that are items too. School of Hard Knocks is all penalties, so its nodes are only checks: without an
+# item their effects never turn on.
+ITEM_UNLOCKS = [k for k, u in UNLOCKS.items() if u["tab"] != "school_of_hard_knocks"]
 
 CHAIN_OF = {u: chain for chain, members in PROGRESSIVE_CHAINS.items() for u in members}
 

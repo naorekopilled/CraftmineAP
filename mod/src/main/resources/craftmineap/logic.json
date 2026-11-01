@@ -174,7 +174,13 @@
   "1129121898": "Wing Guardian Leaf In Ocean",
   "1129121899": "You Are the Campfire",
   "1129122744": "Shimmering Key",
-  "1129122745": "Bag of XP"
+  "1129122745": "Bag of XP",
+  "1129122746": "Combat Tab",
+  "1129122747": "Crafting Tab",
+  "1129122748": "Exploration Tab",
+  "1129122749": "Gatherer Tab",
+  "1129122750": "Pets Tab",
+  "1129122751": "School of Hard Knocks Tab"
  },
  "locations": {
   "advancement:feats/crystal": {
@@ -472,6 +478,7 @@
    "parent": "unlocks/kaizen",
    "rule": [
     [
+     "@tab:school_of_hard_knocks",
      "@special"
     ]
    ]
@@ -1702,6 +1709,7 @@
    "name": "Upgrade: Alchemy",
    "rule": [
     [
+     "Crafting Tab",
      "@node:alchemy"
     ]
    ]
@@ -1710,6 +1718,7 @@
    "name": "Upgrade: Allez Cuisine!",
    "rule": [
     [
+     "Crafting Tab",
      "@node:allez_cuisine"
     ]
    ]
@@ -1718,6 +1727,7 @@
    "name": "Upgrade: Amphibian",
    "rule": [
     [
+     "Exploration Tab",
      "@node:amphibian"
     ]
    ]
@@ -1726,6 +1736,7 @@
    "name": "Upgrade: Apprentice Shoveler",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:apprentice_shoveler"
     ]
    ]
@@ -1734,6 +1745,7 @@
    "name": "Upgrade: Archer",
    "rule": [
     [
+     "Combat Tab",
      "@node:archer"
     ]
    ]
@@ -1742,6 +1754,7 @@
    "name": "Upgrade: Armaments",
    "rule": [
     [
+     "Combat Tab",
      "@node:armaments"
     ]
    ]
@@ -1750,6 +1763,7 @@
    "name": "Upgrade: Arrowverse",
    "rule": [
     [
+     "Combat Tab",
      "@node:arrowverse"
     ]
    ]
@@ -1758,6 +1772,7 @@
    "name": "Upgrade: Berserker",
    "rule": [
     [
+     "Combat Tab",
      "@node:berserker"
     ]
    ]
@@ -1766,6 +1781,7 @@
    "name": "Upgrade: No Nether Needed",
    "rule": [
     [
+     "Combat Tab",
      "@node:best_starter_sword"
     ]
    ]
@@ -1774,6 +1790,7 @@
    "name": "Upgrade: Shiny Sword",
    "rule": [
     [
+     "Combat Tab",
      "@node:better_starter_sword"
     ]
    ]
@@ -1782,6 +1799,7 @@
    "name": "Upgrade: Bundle of Fortune",
    "rule": [
     [
+     "Crafting Tab",
      "@node:bundle_of_fortune"
     ]
    ]
@@ -1790,6 +1808,7 @@
    "name": "Upgrade: Starter Campfire",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:campfire"
     ]
    ]
@@ -1798,6 +1817,7 @@
    "name": "Upgrade: Chopper",
    "rule": [
     [
+     "Combat Tab",
      "@node:chopper"
     ]
    ]
@@ -1806,6 +1826,7 @@
    "name": "Upgrade: Combat",
    "rule": [
     [
+     "Combat Tab",
      "@node:combatant"
     ]
    ]
@@ -1814,6 +1835,7 @@
    "name": "Upgrade: Crafting",
    "rule": [
     [
+     "Crafting Tab",
      "@node:crafting"
     ]
    ]
@@ -1822,6 +1844,7 @@
    "name": "Upgrade: Artisan Crafting",
    "rule": [
     [
+     "Crafting Tab",
      "@node:crafting_efficiency"
     ]
    ]
@@ -1830,6 +1853,7 @@
    "name": "Upgrade: The Natural Evolution of a Shield",
    "rule": [
     [
+     "Combat Tab",
      "@node:crusher"
     ]
    ]
@@ -1838,6 +1862,7 @@
    "name": "Upgrade: Decked out",
    "rule": [
     [
+     "Combat Tab",
      "@node:decked_out"
     ]
    ]
@@ -1846,6 +1871,7 @@
    "name": "Upgrade: Dirt Connoisseur",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:dirt_connoisseur"
     ]
    ]
@@ -1854,6 +1880,7 @@
    "name": "Upgrade: Dirt is Butter",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:dirt_destroyer_1"
     ]
    ]
@@ -1862,6 +1889,7 @@
    "name": "Upgrade: Mmmmm Dirt Butter",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:dirt_destroyer_2"
     ]
    ]
@@ -1870,6 +1898,7 @@
    "name": "Upgrade: Dirt Enjoyer",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:dirt_enjoyer_1"
     ]
    ]
@@ -1878,6 +1907,7 @@
    "name": "Upgrade: Dirt Fanatic",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:dirt_enjoyer_2"
     ]
    ]
@@ -1886,6 +1916,7 @@
    "name": "Upgrade: Dirt Lover",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:dirt_enjoyer_3"
     ]
    ]
@@ -1894,6 +1925,7 @@
    "name": "Upgrade: Efficient Enchanting",
    "rule": [
     [
+     "Crafting Tab",
      "@node:efficient_enchanting"
     ]
    ]
@@ -1902,6 +1934,7 @@
    "name": "Upgrade: Elytron",
    "rule": [
     [
+     "Exploration Tab",
      "@node:elytra"
     ]
    ]
@@ -1910,6 +1943,7 @@
    "name": "Upgrade: Enchanting",
    "rule": [
     [
+     "Crafting Tab",
      "@node:enchanting"
     ]
    ]
@@ -1918,6 +1952,7 @@
    "name": "Upgrade: Let's get Pearling",
    "rule": [
     [
+     "Exploration Tab",
      "@node:ender_pearl_starter"
     ]
    ]
@@ -1926,6 +1961,7 @@
    "name": "Upgrade: Expert Shoveler",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:expert_shoveler"
     ]
    ]
@@ -1934,7 +1970,17 @@
    "name": "Upgrade: Exploration",
    "rule": [
     [
+     "Exploration Tab",
      "@node:exploration"
+    ]
+   ]
+  },
+  "node:extra_firepower": {
+   "name": "Upgrade: Extra Firepower",
+   "rule": [
+    [
+     "School of Hard Knocks Tab",
+     "@node:extra_firepower"
     ]
    ]
   },
@@ -1942,6 +1988,7 @@
    "name": "Upgrade: Fire Shield",
    "rule": [
     [
+     "Combat Tab",
      "@node:fire_shield"
     ]
    ]
@@ -1950,6 +1997,7 @@
    "name": "Upgrade: Leaf",
    "rule": [
     [
+     "Crafting Tab",
      "@node:fire_wand"
     ]
    ]
@@ -1958,6 +2006,7 @@
    "name": "Upgrade: The Mining of the Sea",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:fishing"
     ]
    ]
@@ -1966,6 +2015,7 @@
    "name": "Upgrade: Angler",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:fishing_rod"
     ]
    ]
@@ -1974,6 +2024,7 @@
    "name": "Upgrade: Fletcher",
    "rule": [
     [
+     "Combat Tab",
      "@node:fletcher"
     ]
    ]
@@ -1982,6 +2033,7 @@
    "name": "Upgrade: Full Metal",
    "rule": [
     [
+     "Combat Tab",
      "@node:full_metal"
     ]
    ]
@@ -1990,6 +2042,7 @@
    "name": "Upgrade: Gatherer",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:gatherer"
     ]
    ]
@@ -1998,6 +2051,7 @@
    "name": "Upgrade: Golden Apples",
    "rule": [
     [
+     "Combat Tab",
      "@node:golden_starter_apples"
     ]
    ]
@@ -2006,6 +2060,7 @@
    "name": "Upgrade: Hunter",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:hunter"
     ]
    ]
@@ -2014,6 +2069,7 @@
    "name": "Upgrade: Inventory Crafting",
    "rule": [
     [
+     "Crafting Tab",
      "@node:inventory_crafting"
     ]
    ]
@@ -2022,6 +2078,7 @@
    "name": "Upgrade: 3x3 Inventory Crafting",
    "rule": [
     [
+     "Crafting Tab",
      "@node:inventory_crafting_3x3"
     ]
    ]
@@ -2030,6 +2087,7 @@
    "name": "Upgrade: Pockets",
    "rule": [
     [
+     "Crafting Tab",
      "@node:inventory_slots_1"
     ]
    ]
@@ -2038,6 +2096,7 @@
    "name": "Upgrade: Deeper Pockets",
    "rule": [
     [
+     "Crafting Tab",
      "@node:inventory_slots_2"
     ]
    ]
@@ -2046,6 +2105,7 @@
    "name": "Upgrade: Deepest Pockets",
    "rule": [
     [
+     "Crafting Tab",
      "@node:inventory_slots_3"
     ]
    ]
@@ -2054,6 +2114,7 @@
    "name": "Upgrade: Journeyman Shoveler",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:journeyman_shoveler"
     ]
    ]
@@ -2062,6 +2123,7 @@
    "name": "Upgrade: +1 jump",
    "rule": [
     [
+     "Exploration Tab",
      "@node:jump_king"
     ]
    ]
@@ -2070,6 +2132,7 @@
    "name": "Upgrade: +1 jump 10",
    "rule": [
     [
+     "Exploration Tab",
      "@node:jump_king_10"
     ]
    ]
@@ -2078,6 +2141,7 @@
    "name": "Upgrade: +1 jump 2",
    "rule": [
     [
+     "Exploration Tab",
      "@node:jump_king_2"
     ]
    ]
@@ -2086,6 +2150,7 @@
    "name": "Upgrade: +1 jump 3",
    "rule": [
     [
+     "Exploration Tab",
      "@node:jump_king_3"
     ]
    ]
@@ -2094,6 +2159,7 @@
    "name": "Upgrade: +1 jump 4",
    "rule": [
     [
+     "Exploration Tab",
      "@node:jump_king_4"
     ]
    ]
@@ -2102,6 +2168,7 @@
    "name": "Upgrade: +1 jump 5",
    "rule": [
     [
+     "Exploration Tab",
      "@node:jump_king_5"
     ]
    ]
@@ -2110,6 +2177,7 @@
    "name": "Upgrade: +1 jump 6",
    "rule": [
     [
+     "Exploration Tab",
      "@node:jump_king_6"
     ]
    ]
@@ -2118,6 +2186,7 @@
    "name": "Upgrade: +1 jump 7",
    "rule": [
     [
+     "Exploration Tab",
      "@node:jump_king_7"
     ]
    ]
@@ -2126,6 +2195,7 @@
    "name": "Upgrade: +1 jump 8",
    "rule": [
     [
+     "Exploration Tab",
      "@node:jump_king_8"
     ]
    ]
@@ -2134,6 +2204,7 @@
    "name": "Upgrade: +1 jump 9",
    "rule": [
     [
+     "Exploration Tab",
      "@node:jump_king_9"
     ]
    ]
@@ -2142,6 +2213,7 @@
    "name": "Upgrade: Learning",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_1"
     ]
    ]
@@ -2150,6 +2222,7 @@
    "name": "Upgrade: Learning 10",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_10"
     ]
    ]
@@ -2158,6 +2231,7 @@
    "name": "Upgrade: Learning 11",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_11"
     ]
    ]
@@ -2166,6 +2240,7 @@
    "name": "Upgrade: Learning 12",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_12"
     ]
    ]
@@ -2174,6 +2249,7 @@
    "name": "Upgrade: Learning 13",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_13"
     ]
    ]
@@ -2182,6 +2258,7 @@
    "name": "Upgrade: Learning 14",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_14"
     ]
    ]
@@ -2190,6 +2267,7 @@
    "name": "Upgrade: Learning 15",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_15"
     ]
    ]
@@ -2198,6 +2276,7 @@
    "name": "Upgrade: Learning 16",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_16"
     ]
    ]
@@ -2206,6 +2285,7 @@
    "name": "Upgrade: Learning 17",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_17"
     ]
    ]
@@ -2214,6 +2294,7 @@
    "name": "Upgrade: Learning 18",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_18"
     ]
    ]
@@ -2222,6 +2303,7 @@
    "name": "Upgrade: Learning 19",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_19"
     ]
    ]
@@ -2230,6 +2312,7 @@
    "name": "Upgrade: Learning 2",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_2"
     ]
    ]
@@ -2238,6 +2321,7 @@
    "name": "Upgrade: Learning 20",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_20"
     ]
    ]
@@ -2246,6 +2330,7 @@
    "name": "Upgrade: Learning 3",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_3"
     ]
    ]
@@ -2254,6 +2339,7 @@
    "name": "Upgrade: Learning 4",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_4"
     ]
    ]
@@ -2262,6 +2348,7 @@
    "name": "Upgrade: Learning 5",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_5"
     ]
    ]
@@ -2270,6 +2357,7 @@
    "name": "Upgrade: Learning 6",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_6"
     ]
    ]
@@ -2278,6 +2366,7 @@
    "name": "Upgrade: Learning 7",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_7"
     ]
    ]
@@ -2286,6 +2375,7 @@
    "name": "Upgrade: Learning 8",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_8"
     ]
    ]
@@ -2294,6 +2384,7 @@
    "name": "Upgrade: Learning 9",
    "rule": [
     [
+     "Exploration Tab",
      "@node:learning_9"
     ]
    ]
@@ -2302,6 +2393,7 @@
    "name": "Upgrade: Lodestone Exits",
    "rule": [
     [
+     "Exploration Tab",
      "@node:lodestone_exits"
     ]
    ]
@@ -2310,6 +2402,7 @@
    "name": "Upgrade: Lucky pick",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:lucky_pick"
     ]
    ]
@@ -2318,6 +2411,7 @@
    "name": "Upgrade: Master Magic Kit",
    "rule": [
     [
+     "Crafting Tab",
      "@node:magic_master_kit"
     ]
    ]
@@ -2326,6 +2420,7 @@
    "name": "Upgrade: Magic Kit",
    "rule": [
     [
+     "Crafting Tab",
      "@node:magic_starter_kit"
     ]
    ]
@@ -2334,6 +2429,7 @@
    "name": "Upgrade: Haute cuisine",
    "rule": [
     [
+     "Crafting Tab",
      "@node:mass_production"
     ]
    ]
@@ -2342,6 +2438,7 @@
    "name": "Upgrade: Master Shoveler",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:master_shoveler"
     ]
    ]
@@ -2350,6 +2447,7 @@
    "name": "Upgrade: Mining",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:mining"
     ]
    ]
@@ -2358,6 +2456,7 @@
    "name": "Upgrade: Mining effeicency",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:mining_efficiency"
     ]
    ]
@@ -2366,6 +2465,7 @@
    "name": "Upgrade: Mining effeicenter",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:mining_efficiency_2"
     ]
    ]
@@ -2374,6 +2474,7 @@
    "name": "Upgrade: Mining effeicentest",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:mining_efficiency_3"
     ]
    ]
@@ -2382,6 +2483,7 @@
    "name": "Upgrade: Mise en place",
    "rule": [
     [
+     "Crafting Tab",
      "@node:mise_en_place"
     ]
    ]
@@ -2390,6 +2492,7 @@
    "name": "Upgrade: When yhou just can't get enough!",
    "rule": [
     [
+     "Exploration Tab",
      "@node:more_more_pearls"
     ]
    ]
@@ -2398,6 +2501,7 @@
    "name": "Upgrade: Pearltastic",
    "rule": [
     [
+     "Exploration Tab",
      "@node:more_pearls"
     ]
    ]
@@ -2406,6 +2510,7 @@
    "name": "Upgrade: More Apples",
    "rule": [
     [
+     "Combat Tab",
      "@node:more_starter_apples"
     ]
    ]
@@ -2414,6 +2519,7 @@
    "name": "Upgrade: Speedrun",
    "rule": [
     [
+     "Exploration Tab",
      "@node:movement_boost"
     ]
    ]
@@ -2422,6 +2528,7 @@
    "name": "Upgrade: Ore Seeker",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:ore_seeker_1"
     ]
    ]
@@ -2430,6 +2537,7 @@
    "name": "Upgrade: Ore Seeker: 2",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:ore_seeker_2"
     ]
    ]
@@ -2438,6 +2546,7 @@
    "name": "Upgrade: Pathfinder",
    "rule": [
     [
+     "Exploration Tab",
      "@node:pathfinder"
     ]
    ]
@@ -2446,6 +2555,7 @@
    "name": "Upgrade: Pet Armadillo",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_armadillo"
     ]
    ]
@@ -2454,6 +2564,7 @@
    "name": "Upgrade: Pet Axolotl",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_axolotl"
     ]
    ]
@@ -2462,6 +2573,7 @@
    "name": "Upgrade: Pet Bee",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_bee"
     ]
    ]
@@ -2470,6 +2582,7 @@
    "name": "Upgrade: Pet Cat",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_cat"
     ]
    ]
@@ -2478,6 +2591,7 @@
    "name": "Upgrade: Pet Chicken",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_chicken"
     ]
    ]
@@ -2486,6 +2600,7 @@
    "name": "Upgrade: Pet Cow",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_cow"
     ]
    ]
@@ -2494,6 +2609,7 @@
    "name": "Upgrade: Pet Creeper",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_creeper"
     ]
    ]
@@ -2502,6 +2618,7 @@
    "name": "Upgrade: Pet Fox",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_fox"
     ]
    ]
@@ -2510,6 +2627,7 @@
    "name": "Upgrade: Pet Frog",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_frog"
     ]
    ]
@@ -2518,6 +2636,7 @@
    "name": "Upgrade: Pet Mooshroom",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_mooshroom"
     ]
    ]
@@ -2526,6 +2645,7 @@
    "name": "Upgrade: Pet Polar Bear",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_polar_bear"
     ]
    ]
@@ -2534,6 +2654,7 @@
    "name": "Upgrade: Pet Slime",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_slime"
     ]
    ]
@@ -2542,6 +2663,7 @@
    "name": "Upgrade: Pet your pets",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_the_animal"
     ]
    ]
@@ -2550,6 +2672,7 @@
    "name": "Upgrade: Pet Turtle",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_turtle"
     ]
    ]
@@ -2558,6 +2681,7 @@
    "name": "Upgrade: Pet Wolf",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_wolf"
     ]
    ]
@@ -2566,6 +2690,7 @@
    "name": "Upgrade: Armor up",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_wolf_armored"
     ]
    ]
@@ -2574,6 +2699,7 @@
    "name": "Upgrade: Direwolf",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_wolf_big"
     ]
    ]
@@ -2582,6 +2708,7 @@
    "name": "Upgrade: Descendant of Sif",
    "rule": [
     [
+     "Pets Tab",
      "@node:pet_wolf_sword"
     ]
    ]
@@ -2590,6 +2717,7 @@
    "name": "Upgrade: Pets",
    "rule": [
     [
+     "Pets Tab",
      "@node:pets"
     ]
    ]
@@ -2598,6 +2726,7 @@
    "name": "Upgrade: Collector",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:pickup_area_size"
     ]
    ]
@@ -2606,7 +2735,17 @@
    "name": "Upgrade: Poseidon",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:poseidon"
+    ]
+   ]
+  },
+  "node:proper_walking_pace": {
+   "name": "Upgrade: Proper Walking Pace",
+   "rule": [
+    [
+     "School of Hard Knocks Tab",
+     "@node:proper_walking_pace"
     ]
    ]
   },
@@ -2614,6 +2753,7 @@
    "name": "Upgrade: Quiver",
    "rule": [
     [
+     "Combat Tab",
      "@node:quiver"
     ]
    ]
@@ -2622,7 +2762,17 @@
    "name": "Upgrade: Rare Earth Specialist",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:rare_earth_specialist"
+    ]
+   ]
+  },
+  "node:rewrite_in_rust": {
+   "name": "Upgrade: Rewrite in Rust",
+   "rule": [
+    [
+     "School of Hard Knocks Tab",
+     "@node:rewrite_in_rust"
     ]
    ]
   },
@@ -2630,6 +2780,7 @@
    "name": "Upgrade: Booster",
    "rule": [
     [
+     "Exploration Tab",
      "@node:rockets"
     ]
    ]
@@ -2638,7 +2789,26 @@
    "name": "Upgrade: Runemaster",
    "rule": [
     [
+     "Crafting Tab",
      "@node:runemaster"
+    ]
+   ]
+  },
+  "node:school_of_actual_hard_knocks": {
+   "name": "Upgrade: School of Actual Hard Knocks",
+   "rule": [
+    [
+     "School of Hard Knocks Tab",
+     "@node:school_of_actual_hard_knocks"
+    ]
+   ]
+  },
+  "node:school_of_hard_knocks": {
+   "name": "Upgrade: School of Hard Knocks",
+   "rule": [
+    [
+     "School of Hard Knocks Tab",
+     "@node:school_of_hard_knocks"
     ]
    ]
   },
@@ -2646,6 +2816,7 @@
    "name": "Upgrade: Shazboots!",
    "rule": [
     [
+     "Exploration Tab",
      "@node:shazboots"
     ]
    ]
@@ -2654,6 +2825,7 @@
    "name": "Upgrade: Shield Bash",
    "rule": [
     [
+     "Combat Tab",
      "@node:shield_bash"
     ]
    ]
@@ -2662,6 +2834,7 @@
    "name": "Upgrade: Silky pick",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:silky_pick"
     ]
    ]
@@ -2670,6 +2843,7 @@
    "name": "Upgrade: Heart of gold",
    "rule": [
     [
+     "Crafting Tab",
      "@node:smelt_value_1"
     ]
    ]
@@ -2678,6 +2852,7 @@
    "name": "Upgrade: Heart of Netherite?",
    "rule": [
     [
+     "Crafting Tab",
      "@node:smelt_value_2"
     ]
    ]
@@ -2686,6 +2861,7 @@
    "name": "Upgrade: Apprentice Smelter",
    "rule": [
     [
+     "Crafting Tab",
      "@node:smelter_1"
     ]
    ]
@@ -2694,6 +2870,7 @@
    "name": "Upgrade: Master Smelter",
    "rule": [
     [
+     "Crafting Tab",
      "@node:smelter_2"
     ]
    ]
@@ -2702,6 +2879,7 @@
    "name": "Upgrade: Swift sneaking",
    "rule": [
     [
+     "Exploration Tab",
      "@node:sneak_1"
     ]
    ]
@@ -2710,6 +2888,7 @@
    "name": "Upgrade: Swiftest sneak",
    "rule": [
     [
+     "Exploration Tab",
      "@node:sneak_2"
     ]
    ]
@@ -2718,6 +2897,7 @@
    "name": "Upgrade: Spellbook",
    "rule": [
     [
+     "Combat Tab",
      "@node:sorcerer_supreme"
     ]
    ]
@@ -2726,6 +2906,7 @@
    "name": "Upgrade: Need for speed",
    "rule": [
     [
+     "Exploration Tab",
      "@node:speed_1"
     ]
    ]
@@ -2734,6 +2915,7 @@
    "name": "Upgrade: Need for speed: II",
    "rule": [
     [
+     "Exploration Tab",
      "@node:speed_2"
     ]
    ]
@@ -2742,6 +2924,7 @@
    "name": "Upgrade: Hot Pursuit",
    "rule": [
     [
+     "Exploration Tab",
      "@node:speed_3"
     ]
    ]
@@ -2750,6 +2933,7 @@
    "name": "Upgrade: Doctors order",
    "rule": [
     [
+     "Combat Tab",
      "@node:starter_apples"
     ]
    ]
@@ -2758,6 +2942,7 @@
    "name": "Upgrade: Starter Compass",
    "rule": [
     [
+     "Exploration Tab",
      "@node:starter_compass"
     ]
    ]
@@ -2766,6 +2951,7 @@
    "name": "Upgrade: Crafting table",
    "rule": [
     [
+     "Crafting Tab",
      "@node:starter_crafting"
     ]
    ]
@@ -2774,6 +2960,7 @@
    "name": "Upgrade: Starting pickaxe",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:starter_pick"
     ]
    ]
@@ -2782,6 +2969,7 @@
    "name": "Upgrade: Warded",
    "rule": [
     [
+     "Combat Tab",
      "@node:starter_shield"
     ]
    ]
@@ -2790,6 +2978,7 @@
    "name": "Upgrade: Training Sword",
    "rule": [
     [
+     "Combat Tab",
      "@node:starter_sword"
     ]
    ]
@@ -2798,6 +2987,7 @@
    "name": "Upgrade: You call that a knoife?",
    "rule": [
     [
+     "Combat Tab",
      "@node:starter_sword_iron"
     ]
    ]
@@ -2806,6 +2996,7 @@
    "name": "Upgrade: Underwater miner",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:sub_mining_efficiency"
     ]
    ]
@@ -2814,7 +3005,17 @@
    "name": "Upgrade: Enigma",
    "rule": [
     [
+     "Crafting Tab",
      "@node:teleportation_wand"
+    ]
+   ]
+  },
+  "node:thorns_plus_plus": {
+   "name": "Upgrade: Thorns++",
+   "rule": [
+    [
+     "School of Hard Knocks Tab",
+     "@node:thorns_plus_plus"
     ]
    ]
   },
@@ -2822,6 +3023,7 @@
    "name": "Upgrade: Tracker",
    "rule": [
     [
+     "Combat Tab",
      "@node:tracker"
     ]
    ]
@@ -2830,6 +3032,7 @@
    "name": "Upgrade: Spearfishing",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:trident"
     ]
    ]
@@ -2838,6 +3041,7 @@
    "name": "Upgrade: Varangian",
    "rule": [
     [
+     "Combat Tab",
      "@node:varangian"
     ]
    ]
@@ -2846,6 +3050,7 @@
    "name": "Upgrade: Viking",
    "rule": [
     [
+     "Combat Tab",
      "@node:viking"
     ]
    ]
@@ -2854,6 +3059,7 @@
    "name": "Upgrade: Heart of the Oak",
    "rule": [
     [
+     "Crafting Tab",
      "@node:wind_wand"
     ]
    ]
@@ -2862,6 +3068,7 @@
    "name": "Upgrade: Wing Guardian Leaf In Ocean",
    "rule": [
     [
+     "Exploration Tab",
      "@node:wing_guardian_lift_off_to_the_sky"
     ]
    ]
@@ -2870,6 +3077,7 @@
    "name": "Upgrade: You Are the Campfire",
    "rule": [
     [
+     "Gatherer Tab",
      "@node:you_are_the_campfire"
     ]
    ]
@@ -3216,6 +3424,14 @@
    "learning": 0,
    "parent": null,
    "tab": "exploration"
+  },
+  "extra_firepower": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "rewrite_in_rust",
+   "tab": "school_of_hard_knocks"
   },
   "fire_shield": {
    "hidden": [
@@ -3914,6 +4130,14 @@
    "parent": "trident",
    "tab": "gatherer"
   },
+  "proper_walking_pace": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "extra_firepower",
+   "tab": "school_of_hard_knocks"
+  },
   "quiver": {
    "hidden": [
     []
@@ -3929,6 +4153,14 @@
    "learning": 0,
    "parent": "lucky_pick",
    "tab": "gatherer"
+  },
+  "rewrite_in_rust": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "school_of_actual_hard_knocks",
+   "tab": "school_of_hard_knocks"
   },
   "rockets": {
    "hidden": [
@@ -3953,6 +4185,22 @@
    "learning": 0,
    "parent": "mega_jump",
    "tab": "exploration"
+  },
+  "school_of_actual_hard_knocks": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": "school_of_hard_knocks",
+   "tab": "school_of_hard_knocks"
+  },
+  "school_of_hard_knocks": {
+   "hidden": [
+    []
+   ],
+   "learning": 0,
+   "parent": null,
+   "tab": "school_of_hard_knocks"
   },
   "shazboots": {
    "hidden": [
@@ -4137,6 +4385,14 @@
    "parent": "runemaster",
    "tab": "crafting"
   },
+  "thorns_plus_plus": {
+   "hidden": [
+    []
+   ],
+   "learning": 2,
+   "parent": "proper_walking_pace",
+   "tab": "school_of_hard_knocks"
+  },
   "tracker": {
    "hidden": [
     []
@@ -4197,5 +4453,13 @@
    "parent": "campfire",
    "tab": "gatherer"
   }
+ },
+ "tabs": {
+  "combatant": "Combat Tab",
+  "crafting": "Crafting Tab",
+  "exploration": "Exploration Tab",
+  "gatherer": "Gatherer Tab",
+  "pets": "Pets Tab",
+  "school_of_hard_knocks": "School of Hard Knocks Tab"
  }
 }

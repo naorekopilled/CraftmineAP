@@ -8,7 +8,7 @@ from . import names
 from .data import ITEM_INGREDIENTS, SPECIAL_MINES, TREE_UNLOCKS, UNLOCKS
 from .items import INGREDIENT_ITEM
 from .locations import ADVANCEMENT_LOCATION, INGREDIENT_LOCATION, MINE_LOCATION, NODE_LOCATION
-from .rules_data import (ADVANCEMENT_RULES, HIDDEN_UNLOCK_RULES, INGREDIENT_RULES, SPECIAL_MINE_RULES)
+from .rules_data import (ADVANCEMENT_RULES, HIDDEN_UNLOCK_RULES, INGREDIENT_RULES, SPECIAL_MINE_RULES, TAB_ITEMS)
 
 if TYPE_CHECKING:
     from . import CraftmineWorld
@@ -30,7 +30,7 @@ def learning_needed(cost: int) -> int:
 
 def progression_item_names() -> set[str]:
     """Every item some rule asks for."""
-    found = {"Progressive Learning", names.SHIMMERING_KEY} | set(CRAFT_ITEMS)
+    found = {"Progressive Learning", names.SHIMMERING_KEY} | set(CRAFT_ITEMS) | set(TAB_ITEMS.values())
     for table in (INGREDIENT_RULES, HIDDEN_UNLOCK_RULES, SPECIAL_MINE_RULES, ADVANCEMENT_RULES):
         for alts in table.values():
             for alt in alts:
@@ -45,6 +45,7 @@ class RuleBuilder:
     def __init__(self, world: "CraftmineWorld"):
         self.player = world.player
         self.doors_on = bool(world.options.hub_door_checks)
+        self.tabs_on = bool(world.options.upgrade_tabs)
         self.mines: dict[str, Rule] = {k: self.alternatives(SPECIAL_MINE_RULES[k]) for k in SPECIAL_MINES}
         self.nodes: dict[str, Rule] = {k: self.node(k) for k in TREE_UNLOCKS}
 
@@ -79,9 +80,11 @@ class RuleBuilder:
         parent = unlock["parent"]
         hidden = self.alternatives(HIDDEN_UNLOCK_RULES.get(unlock_id, [[]]))
         learning = learning_needed(unlock["cost"])
+        tab_item = TAB_ITEMS[unlock["tab"]] if self.tabs_on else None
         player = self.player
         return lambda state: ((parent is None or self.nodes[parent](state)) and hidden(state)
-                              and (learning == 0 or state.has("Progressive Learning", player, learning)))
+                              and (learning == 0 or state.has("Progressive Learning", player, learning))
+                              and (tab_item is None or state.has(tab_item, player)))
 
 
 def set_all_rules(world: "CraftmineWorld") -> None:

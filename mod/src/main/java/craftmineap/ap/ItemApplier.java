@@ -2,6 +2,7 @@ package craftmineap.ap;
 
 import craftmineap.core.ActiveUnlocks;
 import craftmineap.core.Grants;
+import craftmineap.core.Logic;
 import craftmineap.mixin.ServerPlayerAccessor;
 import craftmineap.mixin.ServerPlayerUnlocksInvoker;
 import java.util.List;
@@ -43,7 +44,12 @@ public final class ItemApplier {
 
 	/** Updates the unlock gate from the saved items; runs when the world loads, before any player joins. */
 	public static void refreshGate(ApSession session) {
-		UnlockGate.set(session.isActive(), session.isActive() ? Grants.from(session.state).unlocks() : Set.of());
+		if (!session.isActive()) {
+			UnlockGate.set(false, Set.of(), Set.of());
+			return;
+		}
+		Grants grants = Grants.from(session.state);
+		UnlockGate.set(true, grants.unlocks(), session.slotData().upgradeTabs() ? Logic.bundled().closedTabs(grants.tabs()) : Set.of());
 	}
 
 	/** Applies everything received so far that isn't applied yet. Safe to call any number of times. */

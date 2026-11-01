@@ -4,13 +4,13 @@ from BaseClasses import ItemClassification, Region
 from worlds.AutoWorld import WebWorld, World
 
 from . import names
-from .data import ITEM_INGREDIENTS, TREE_UNLOCKS, unlock_item_name
+from .data import ITEM_INGREDIENTS, ITEM_UNLOCKS, unlock_item_name
 from .items import INGREDIENT_ITEM, ITEM_INFO, ITEM_NAME_TO_ID, CraftmineItem
 from .locations import (ADVANCEMENT_LOCATION, INGREDIENT_LOCATION, LOCATION_KEY, LOCATION_NAME_TO_ID, MINE_LOCATION,
                         NODE_LOCATION, CraftmineLocation)
 from .options import CraftmineOptions
 from .rules import progression_item_names, set_all_rules
-from .rules_data import HUB_DOORS
+from .rules_data import HUB_DOORS, TAB_ITEMS
 
 PROGRESSION = progression_item_names()
 
@@ -63,8 +63,12 @@ class CraftmineWorld(World):
 
     def create_items(self) -> None:
         pool = [self.create_item(INGREDIENT_ITEM[k]) for k in ITEM_INGREDIENTS]
-        pool += [self.create_item(unlock_item_name(u)) for u in TREE_UNLOCKS]
+        pool += [self.create_item(unlock_item_name(u)) for u in ITEM_UNLOCKS]
         pool += [self.create_item(names.SHIMMERING_KEY) for _ in range(self.door_count)]
+        if self.options.upgrade_tabs:
+            start_tab = self.random.choice(list(TAB_ITEMS.values()))
+            self.multiworld.push_precollected(self.create_item(start_tab))
+            pool += [self.create_item(tab) for tab in TAB_ITEMS.values() if tab != start_tab]
         missing = len(self.multiworld.get_unfilled_locations(self.player)) - len(pool)
         pool += [self.create_filler() for _ in range(missing)]
         self.multiworld.itempool += pool
@@ -81,8 +85,9 @@ class CraftmineWorld(World):
             "goal": self.options.goal.current_key,
             "advancement_checks": bool(self.options.advancement_checks),
             "hub_door_checks": bool(self.options.hub_door_checks),
+            "upgrade_tabs": bool(self.options.upgrade_tabs),
             "death_link": bool(self.options.death_link),
-            "world_version": "0.1.0",
+            "world_version": "0.2.0",
             "locations": {str(loc.address): LOCATION_KEY[loc.name]
                           for loc in self.multiworld.get_locations(self.player)},
             "items": {str(ITEM_NAME_TO_ID[name]): info for name, info in ITEM_INFO.items()},

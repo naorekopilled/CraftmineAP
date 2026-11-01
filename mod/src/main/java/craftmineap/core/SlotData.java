@@ -17,6 +17,7 @@ public record SlotData(
 	boolean advancementChecks,
 	int crafterLevelChecks,
 	boolean hubDoorChecks,
+	boolean upgradeTabs,
 	boolean deathLink,
 	Map<Long, String> locations,
 	Map<Long, ItemInfo> items,
@@ -28,8 +29,8 @@ public record SlotData(
 	}
 
 	public SlotData(String goal, int specialMinesNeeded, boolean advancementChecks, int crafterLevelChecks,
-		boolean hubDoorChecks, boolean deathLink, Map<Long, String> locations, Map<Long, ItemInfo> items) {
-		this(goal, specialMinesNeeded, advancementChecks, crafterLevelChecks, hubDoorChecks, deathLink, locations, items,
+		boolean hubDoorChecks, boolean upgradeTabs, boolean deathLink, Map<Long, String> locations, Map<Long, ItemInfo> items) {
+		this(goal, specialMinesNeeded, advancementChecks, crafterLevelChecks, hubDoorChecks, upgradeTabs, deathLink, locations, items,
 			items.values().stream().filter(i -> i.kind().equals("ingredient")).flatMap(i -> i.keys().stream())
 				.collect(Collectors.toUnmodifiableSet()),
 			locations.entrySet().stream().collect(Collectors.toUnmodifiableMap(Map.Entry::getValue, Map.Entry::getKey)));
@@ -61,6 +62,8 @@ public record SlotData(
 			json.get("advancement_checks").getAsBoolean(),
 			json.get("crafter_level_checks").getAsInt(),
 			json.get("hub_door_checks").getAsBoolean(),
+			// worlds saved before 0.2.0 don't have it
+			json.has("upgrade_tabs") && json.get("upgrade_tabs").getAsBoolean(),
 			json.get("death_link").getAsBoolean(),
 			locations,
 			items
@@ -74,6 +77,7 @@ public record SlotData(
 		json.addProperty("advancement_checks", advancementChecks);
 		json.addProperty("crafter_level_checks", crafterLevelChecks);
 		json.addProperty("hub_door_checks", hubDoorChecks);
+		json.addProperty("upgrade_tabs", upgradeTabs);
 		json.addProperty("death_link", deathLink);
 		JsonObject locationsJson = new JsonObject();
 		locations.forEach((id, key) -> locationsJson.addProperty(id.toString(), key));

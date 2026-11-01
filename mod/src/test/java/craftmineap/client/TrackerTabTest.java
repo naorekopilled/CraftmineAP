@@ -47,7 +47,7 @@ class TrackerTabTest {
 			locations.put(id++, key);
 		}
 		ApState state = new ApState();
-		state.slotData = new SlotData("special_mines", 9, true, 48, true, false, locations, Map.of());
+		state.slotData = new SlotData("special_mines", 9, true, 48, true, false, false, locations, Map.of());
 		state.acceptItem(1, KEY_ID);
 		locations.forEach((locationId, key) -> {
 			if (key.equals("door:1")) {
